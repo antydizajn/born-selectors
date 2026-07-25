@@ -1,0 +1,1896 @@
+                                                                         Two Operational Principles Single Out Quantum Theory
+
+                                                                                                          Kenji Nakahira
+                                                                        Quantum Information Science Research Center, Quantum ICT Research Institute,
+                                                                                  Tamagawa University, Machida, Tokyo 194-8610, Japan
+                                                                                                   (Dated: May 25, 2026)
+                                                            Quantum theory combines density matrices, Born probabilities, tensor-product composites, positive-operator-
+                                                          valued measures (POVMs), and quantum channels. In a finite-dimensional causal operational theory, we prove
+                                                          that two postulates suffice: local input-output statistics identify channels, and every state admits an equivalent-
+                                                          system purification, unique up to reversible dynamics. The full complex quantum formalism follows; every
+                                                          consistent probability rule is realized as a POVM, so measurement no-restriction is derived rather than assumed.
+
+
+                                               Standard quantum theory describes an enormous range of                 composites, and dynamics together as parts of one coherent
+
+
+
+
+arXiv:2605.23217v1 [quant-ph] 22 May 2026
+                                            phenomena with a compact set of rules. A physical system                  formalism. This is the goal of the present work.
+                                            is assigned a complex Hilbert space. States are density ma-                  In this paper, Hilbert spaces are not assumed at the outset.
+                                            trices, measurements are positive-operator-valued measures                We work in a standard OPT framework formulated in terms
+                                            (POVMs), and outcome probabilities are given by the Born                  of systems, states, measurement outcomes, channels, compo-
+                                            rule. Composite systems are represented by tensor products                sition, and probabilities. More specifically, we use the finite-
+                                            of Hilbert spaces [1–4]. Deterministic physical processes are             dimensional causal OPT framework developed in [9, 12, 21];
+                                            called channels; in quantum theory, they are completely pos-              below we call it the present framework. Technical details are
+                                            itive trace-preserving (CPTP) maps [4, 5]. In applications                given in Appendix A. The claim of this paper is that two addi-
+                                            these ingredients are normally used as a single package. States           tional requirements remove this freedom and single out stan-
+                                            need measurements to produce probabilities, composites need               dard complex quantum theory. The first requirement is lo-
+                                            a rule for combining systems, and dynamics must be compat-                cal equivalence: every channel is completely identified by the
+                                            ible with the states and measurements of all composites. The              statistics of local input-output experiments, in which states
+                                            formalism tells us how to calculate, but it does not by itself            are prepared at the channel’s input and measurements are per-
+                                            explain why these ingredients must fit together in this partic-           formed at its output. The second is equivalent-system (ES)
+                                            ular way. Could a theory have all density matrices but only a             purification: every state of a system A is the marginal of a
+                                            restricted set of measurements? Could it have the Born rule               pure state on AÃ, where Ã is an ancillary system equivalent to
+                                            for single systems but a different rule for composites or dy-             A, and any two such purifications are related by a reversible
+                                            namics? Or are density matrices, POVMs, tensor products,                  channel on the ancillary system. Equivalence of systems here
+                                            and complete positivity consequences of simpler operational               is operational: it means reversible interconvertibility inside
+                                            principles?                                                               the theory, not equality of a preassigned Hilbert-space dimen-
+                                               A natural way to sharpen this question is to use the broader           sion. These requirements do not directly assume density ma-
+                                            framework of operational-probabilistic theories (OPTs), also              trices, the Born rule, tensor products of Hilbert spaces, CPTP
+                                            called generalized probabilistic theories. In this framework,             maps, or the no-restriction hypothesis. They are formulated
+                                            one can specify the preparable states, available measurements,            only in terms of states, measurement outcomes, channels, re-
+                                            composition rule, and allowed channels more freely than in                versible dynamics, and pure-state extensions inside the OPT.
+                                            quantum theory [6–22]. This freedom is not merely formal.                 Thus the assumptions are operational in the sense relevant for
+                                            For example, one can keep all density matrices as states while            a reconstruction. They constrain two basic questions: how
+                                            restricting the available measurements. One can also consider             experiments identify devices and how mixed states arise from
+                                            real quantum theory [23, 24], quantum theories with superse-              larger pure systems. They do not presuppose the Hilbert-space
+                                            lection rules [25–27], theories based on Jordan algebras [28–             representation to be derived. They also connect two normally
+                                            31], theories that explore alternatives to the Born rule [32, 33],        separate aspects of the formalism. Local equivalence concerns
+                                            and frameworks based on quantum logic, diagrammatic lan-                  how a physical device is identified from accessible statistics,
+                                            guages, category theory, or abstract approaches to measure-               whereas ES purification concerns how the state space sup-
+                                            ments [34–40]. These examples show that one may reproduce                 ports pure extensions. The theorem shows that these two re-
+                                            some familiar quantum ingredients while changing others, or               quirements jointly constrain the measurement and composi-
+                                            work in frameworks that contain quantum theory as a spe-                  tion rules, rather than leaving them as independent choices.
+                                            cial case. A reconstruction should therefore not stop once it                Our main result is that, if the present framework satis-
+                                            has recovered density matrices, the Born rule, or a Hilbert-              fies local equivalence and ES purification, then it is stan-
+                                            space-like state space at one stage of the argument. Even if              dard finite-dimensional complex quantum theory. Each sys-
+                                            such a result follows from operationally natural assumptions,             tem is assigned a finite-dimensional complex Hilbert space,
+                                            it does not by itself explain why the allowed measurements,               its states are exactly all density matrices on that space, its
+                                            composites, and dynamics must also take their standard quan-              measurements are exactly POVMs, composites are given by
+                                            tum form. The stronger task is to derive states, measurements,            tensor products of Hilbert spaces, and channels are exactly
+                                                                                                                                       2
+
+Standard OPT              Local equivalence
+                                                                      TABLE I. Representative examples showing the independence of the
+         measurements     identified by local statistics
+states                                                                two requirements. Classical theory, real quantum theory, and com-
+                                                                      plex quantum theory refer to their standard finite-dimensional ver-
+                                                           Quantum    sions.
+    composites          + ES purification                   theory    Theory                       Local equivalence     ES purification
+                                  ρ from pure Ψ
+                                                                      Classical theory                     ✓                   ×
+                                                                      Real quantum theory                  ×                   ✓
+           channels           Ψ
+                                             ρ                        Complex quantum theory               ✓                   ✓
+ specified separately
+
+
+FIG. 1. Schematic picture of the reconstruction. In a standard OPT,
+states, measurements, composites, and channels can in principle be    versely, having the full set of density matrices as states rules
+specified separately. Once local equivalence and ES purification      out theories that keep the usual quantum POVM elements but
+are imposed, these ingredients are fixed to the standard complex      restrict the preparable states. Recovering both sides together
+quantum structure: density matrices, POVMs, the Born rule, tensor-
+product composition, and CPTP maps.
+                                                                      is what yields the full probabilistic content of quantum theory.
+                                                                          It is also important that neither requirement separately as-
+                                                                      sumes complex quantum theory. As Table I indicates, stan-
+CPTP maps. Equivalently, within the present framework,                dard classical theory satisfies local equivalence but not ES pu-
+there is no intermediate theory in which only some of the             rification, whereas standard real quantum theory satisfies ES
+usual quantum ingredients—states, measurements, compos-               purification but not local equivalence. Classical theory has lo-
+ites, or channels—are quantum while both requirements still           cally identifiable channels, but its mixed states cannot all be
+hold. The reconstruction is summarized in Fig. 1.                     explained as marginals of pure correlated states. Real quan-
+   A particularly important point is that measurement no-             tum theory has a purification structure, but it fails local equiv-
+restriction and the full density-matrix state space are both de-      alence: local input-output statistics are not sufficient to iden-
+rived conclusions, not assumptions. An effect is the probabil-        tify all channels. Thus neither local identifiability by itself
+ity assignment associated with one possible measurement out-          nor ES purification by itself is sufficient. The quantum con-
+come: it assigns to each state the probability of that outcome.       clusion comes from their compatibility. The examples also
+More generally, a finite family of probability assignments is a       show that neither postulate is a restatement of Hilbert-space
+probability rule if, for every state, the resulting probabilities     quantum mechanics. Each captures a feature that survives in
+are nonnegative and sum to one. Every physical measurement            some nonquantum or nonstandard theories, but the two fea-
+gives such a rule. Measurement no-restriction says, roughly,          tures cannot be combined there without forcing the standard
+that every mathematically consistent probability rule is phys-        complex structure.
+ically available as a measurement [7, 17, 41, 42]. In quantum             This perspective clarifies the relation to previous recon-
+theory, this is the familiar POVM structure: a measurement            structions. Reconstructions of quantum theory have used
+is a finite set of positive operators {Ei } satisfying i Ei = I,
+                                                      P
+                                                                      the number of distinguishable states, dimension, reversibil-
+and the probability of outcome i is tr(ρEi ). In a general OPT,       ity, local structure, self-duality, Jordan-algebraic structure,
+by contrast, a mathematically consistent probability rule need        and the structure of composites as key features characteriz-
+not correspond to a physically available measurement. The-            ing quantum theory [6, 11, 15, 22, 25, 30, 31, 43, 44]. In
+ories with restricted measurements exploit precisely this gap.        OPTs, whether no-restriction is assumed is an important issue,
+Our result shows that the gap disappears once local equiva-           since dropping it allows theories with familiar state spaces
+lence and ES purification hold together. At the same time,            but restricted measurements [7, 17]. The reconstruction
+on the state side, we do not merely show that the states of           of Chiribella–D’Ariano–Perinotti derives finite-dimensional
+each system can be embedded into a set of density matrices.           quantum theory from five requirements imposed on a causal
+We show that the state space is the whole set of density ma-          OPT: local discriminability, perfect discriminability, ideal
+trices. Thus both sides of the usual quantum duality, states          compression, pure conditioning, and purification [12, 21].
+and measurements, are fixed simultaneously. This matters be-          The present work has a different aim. It adopts local equiv-
+cause no-restriction is often mathematically convenient, but it       alence, which is equivalent to local discriminability, and im-
+is not a harmless convention in a general OPT. A theory can           poses ES purification rather than the purification requirement
+have the same states as quantum theory and still have fewer           used in that reconstruction. Perfect discriminability, ideal
+allowed measurement outcomes. Such a theory would give                compression, and pure conditioning are not assumed. The
+different experimental possibilities while retaining a familiar-      question is therefore not a mechanical reduction in the number
+looking state space. The theorem shows that this possibility          of postulates, but how much of the quantum formalism fol-
+is incompatible with the two requirements used here. This             lows from the compatibility between local input-output iden-
+is why the result goes beyond identifying the set of quantum          tifiability and purification by an equivalent ancillary system.
+states. It also fixes which mathematically consistent proba-          The answer is that this compatibility fixes the full state, mea-
+bility rules are physically available as measurements. Con-           surement, composition, and dynamical structures. Thus the
+                                                                                                                                   3
+
+point is to isolate a pair of experimentally interpretable con-     Ã to have the same Hilbert-space dimension as A. The condi-
+straints whose joint force reaches beyond state spaces and          tion is therefore close to the familiar quantum statement that
+fixes the measurement and dynamical parts that are often as-        every density matrix on HA can be purified in HA ⊗HA . How-
+sumed separately.                                                   ever, it is stated without assuming Hilbert spaces, dimensions,
+   Two requirements.—A standard OPT is a general frame-             or the tensor product of Hilbert spaces.
+work for describing states, measurements, channels, and the            ES purification is motivated by the purification principle
+probabilities obtained by composing them in circuits. Each          used in the Chiribella–D’Ariano–Perinotti reconstruction [9,
+system A is assigned a set StN (A) of states and a set Eff(A) of    12, 21], but it puts a different constraint on the ancillary sys-
+effects. Throughout the main text, “state” means normalized         tem. In that purification principle, every state has a purifi-
+state. There is also a unique deterministic effect eA , which       cation with some ancillary system, and any two purifications
+gives total probability. Each state ρ satisfies eA (ρ) = 1, and     using the same ancillary system are related by a reversible
+each effect a assigns to a state ρ the probability a(ρ).            channel on that system. ES purification instead requires the
+   The first requirement says that channels are identified by       purifying system to be equivalent to the original system. In
+experimentally accessible input-output statistics. Intuitively,     this respect, ES purification is stronger. In another respect, it
+local equivalence says that local input-output statistics com-      is weaker: the reversibility condition is required only for this
+pletely determine a channel.                                        equivalent ancillary system, not for every choice of a common
+                                                                    purifying system. This formulation is useful for the present
+Postulate 1 (Local equivalence) For any systems A and B,            reconstruction because it links mixedness directly to corre-
+two channels Λ and E from A to B are equal whenever they            lations with a system that is reversibly interconvertible with
+give the same probabilities for every input state and every ef-     the original one. The point is not to forbid purifications with
+fect at the output. Equivalently,                                   other ancillary systems, but to require that an equivalent ancil-
+                                                                    lary system is enough to purify every state. Operationally, the
+ a(Λ(ρ)) = a(E(ρ)), ∀ρ ∈ StN (A), a ∈ Eff(B)      ⇒     Λ = E.      apparent mixedness of A can therefore be explained by corre-
+                                                                    lations with such an ancillary system, and the explanation is
+                                                                    fixed up to reversible dynamics on that system. This restric-
+If this requirement failed, then two devices with identical         tion to an equivalent system gives the postulate enough force
+statistics in all direct input-output experiments could never-      to constrain the geometry of each individual state space.
+theless behave differently when connected to an external sys-          Main result.—The main result is that, in the present frame-
+tem. Then identifying a channel would require probing cor-          work, the two requirements together exclude all theories other
+relations with an environment, rather than only the input-          than quantum theory.
+output behavior of the device itself. Local equivalence rules
+out such locally invisible differences and makes channel iden-      Theorem 1 (Quantum theory from two principles) Let
+tity directly accessible in the laboratory. Local equivalence is    a finite-dimensional causal OPT satisfy local equivalence
+equivalent to local discriminability: for any two distinct states   and ES purification. Then the theory is standard finite-
+of a composite system AB, some product effect a ⊗ b, with           dimensional complex quantum theory: every system A is
+a ∈ Eff(A) and b ∈ Eff(B), gives different probabilities; see       associated with a finite-dimensional complex Hilbert space
+Appendix B.                                                         HA . Its states are exactly the density matrices on HA , its
+   The second requirement concerns purification by an ancil-        measurements are exactly POVMs, composite systems are
+lary system Ã equivalent to the original system A. Here A and      tensor products of Hilbert spaces, and channels are exactly
+Ã are called equivalent if there is a reversible channel between   CPTP maps.
+them, that is, a channel with an inverse channel. Intuitively, a
+state of A can be represented as the marginal of a pure state           The theorem has three main aspects. First, the state space is
+on AÃ, so that its apparent mixedness is explained by cor-         not merely a subset of density matrices; it is the whole set of
+relations with an equivalent ancillary system. Any two such         density matrices. More precisely, if nA is the maximal number
+purifications are then related by a reversible channel on Ã.       of perfectly distinguishable states and Denn denotes the set
+                                                                    of n-dimensional density matrices, then StN (A) can be iden-
+Postulate 2 (ES purification) For each system A, there exists       tified with DennA . Second, measurement no-restriction is a
+a system Ã equivalent to A such that every state ρ ∈ StN (A)       conclusion rather than an assumption. In the terminology in-
+has a pure state Ψ ∈ StN (AÃ) satisfying (id ⊗ eÃ )(Ψ) = ρ,       troduced above, this means that every mathematically consis-
+where id denotes the identity channel on A. Moreover, any           tent probability rule is physically available as a measurement.
+two such purifications Ψ, Φ ∈ StN (AÃ) of the same ρ satisfy       That is, any finite family {ai }ni=1 of probability assignments
+                                                                    satisfying ai (ρ) ≥ 0 and i ai (ρ) = 1 for all states ρ is re-
+                                                                                                P
+Φ = (id ⊗ U)(Ψ) for some reversible channel U on Ã.
+                                                                    alized by a physical measurement, with outcome probabili-
+The requirement says not only that every state can be purified,     ties ai (ρ). Third, the conclusion is not limited to states and
+but also that an equivalent ancillary system is enough as the       measurements. The Born rule, tensor-product composition,
+purifying system. In quantum theory, this is satisfied by taking    and CPTP maps all follow from the same two requirements.
+                                                                                                                                   4
+
+Thus the theorem rules out not only theories with nonquan-          dependent sectors. It then uses the dimension identities for
+tum single-system state spaces, but also theories that keep         composites, implied by local equivalence and the preceding
+only part of the quantum formalism, for example by restrict-        steps, to exclude the non-complex alternatives in the classi-
+ing the allowed states or measurements, or by changing the          fication. Only complex matrix state spaces remain. Thus
+rule for composites or channels. It is therefore not merely a       the state space is the full set of complex density matrices.
+state-space reconstruction. It is a reconstruction of the finite-   The no-restriction hypothesis then fixes the measurements to
+dimensional complex quantum formalism as a whole. Here,             be POVMs. At this stage one still has to rule out theories
+“standard quantum theory” is meant in this operational sense:       with the correct local states and measurements but nonstan-
+under the identifications supplied by the proof, the theory         dard composites or channels. The proof combines purifica-
+has the same states, measurements, composites, and channels         tion with a state-specification argument, standard in opera-
+as finite-dimensional complex quantum theory for the corre-         tional reconstructions [9, 10, 12, 26], to force tensor-product
+sponding systems.                                                   composition and CPTP maps. Thus the proof derives, in or-
+   Proof strategy.—The complete proof is given in the Ap-           der, the geometry of state spaces, measurement no-restriction,
+pendix. Here we outline the logic of the proof and the roles        the complex density-matrix form of states, and finally the
+played by the two requirements. Let St+ (A) be the convex           full standard finite-dimensional quantum formalism. The de-
+cone generated by the state space StN (A). The proof has three      tailed proof is long because each step must avoid importing
+main steps:                                                         the conclusion through no-restriction, Hilbert-space composi-
+                                                                    tion, or an assumed set of quantum channels. For this reason,
+   (1) prove that St+ (A) is a symmetric cone;
+                                                                    the Appendix establishes the symmetric-cone structure, the
+   (2) derive the no-restriction hypothesis;
+                                                                    classification-based reduction to complex matrix state spaces,
+   (3) derive complex quantum theory.                               and the channel-identification steps inside the OPT framework
+   First, we prove that the state cone St+ (A) of every system A    rather than treating them as background facts.
+is a symmetric cone. A symmetric cone is, roughly speaking,            Conclusion.—In the present finite-dimensional causal OPT
+a convex cone whose interior has high symmetry and whose            framework, states, measurements, channels, and composites
+geometry gives a natural duality between states and proba-          may in principle be specified separately. The quantum for-
+bility assignments. ES purification supplies two ingredients        malism is special in that these ingredients take their stan-
+needed for this geometry. It realizes mixed states as marginals     dard forms together. We have shown that this unity follows
+of pure states on equivalent ancillary systems, and it allows       from the compatibility of two requirements. First, local input-
+decompositions of a mixed state to be produced by measure-          output statistics completely identify channels. Second, every
+ments on the purifying system. This is the operational content      state can be purified with an equivalent ancillary system, and
+behind steering-type arguments familiar from quantum theory.        such purifications are unique up to a reversible channel on
+Local equivalence ensures that the channel identities used in       that ancillary system. When these requirements are imposed,
+these arguments are fixed by local statistics. Together these       the state space of every system is the whole set of density
+facts yield homogeneity of the state cone and the self-duality      matrices, measurements are exactly POVMs, composite sys-
+needed for a symmetric-cone structure.                              tems are represented by tensor products of Hilbert spaces, and
+   Second, we use the symmetric-cone structure to derive the        channels are exactly CPTP maps. Thus the result is not merely
+no-restriction hypothesis. In a standard OPT, a mathemati-          a reconstruction of quantum state spaces. It also derives mea-
+cally consistent probability rule need not be physically avail-     surement no-restriction, the Born-rule form of probabilities,
+able as a measurement. The cone geometry first gives a state-       tensor-product composition, and the usual quantum channels.
+side representation of positive probability assignments and,        The standard formalism of quantum theory can therefore be
+together with the preceding symmetry arguments, identifies          understood not as a list of separately postulated ingredients,
+the cone of such assignments with the cone generated by phys-       but as a unified structure determined by the compatibility of
+ical measurement outcomes. ES purification then provides the        local input-output identifiability with purification by an equiv-
+steering argument that turns any finite family of such assign-      alent ancillary system.
+ments whose probabilities sum to one into an actual measure-           We thank O. Hirota, M. Sohma, T. S. Usuda, and K. Kato
+ment. Local equivalence, together with the uniqueness part          for insightful discussions.
+of ES purification, rules out any remaining locally invisible
+distinction between this measurement and the probability rule
+we started with. Consequently, every mathematically consis-
+tent probability rule is physically realized as a measurement.
+This is the step at which the measurement structure ceases to
+be an independent choice.
+   Third, we reduce the remaining symmetric-cone possibil-
+ities to complex quantum theory. The proof uses the stan-
+dard classification theorem for symmetric cones. It first rules
+out decompositions of a single-system state space into in-
+                                                                                                                                         5
+
+                                        Appendix A: Operational-probabilistic theories (OPTs)
+
+    A theory satisfying all assumptions stated in this section will be called an operational-probabilistic theory (OPT). This no-
+tion is essentially the same as the causal operational-probabilistic framework described in Chaps. II–VI of Ref. [9], with the
+assumption of local discriminability omitted; the presentation below is slightly different. An OPT generalizes the operational
+and probabilistic features of quantum theory and is closely related to what are often called generalized probabilistic theories.
+    Throughout, natural numbers are positive integers. Let R and C denote the sets of real and complex numbers, respectively.
+Let R≥0 denote the set of nonnegative real numbers, and let [0, 1] denote the set of real numbers between 0 and 1, inclusive. Let
+Cn denote the set of n-dimensional complex column vectors, and let Cn×n denote the set of complex square matrices of order n.
+For each natural number n, let Hern and Her+n denote the sets of complex Hermitian matrices of order n and positive semidefinite
+matrices of order n, respectively. Let Denn denote the set of density matrices of order n, namely Denn B {ρ ∈ Her+n | tr ρ = 1}.
+The real vector space spanned by Denn is Hern . The identity matrix of order n is denoted by In . All real vector spaces appearing
+in this paper are assumed to be finite dimensional. For a real vector space V and a convex cone C ⊆ V, the dual cone of C,
+denoted by C∗ , is the set { f ∈ V∗ | f (x) ≥ 0 (∀x ∈ C)}, where V∗ is the dual vector space of V; this is again a convex cone. For
+convex sets X and Y and the real vector spaces V and W that they span, a linear isomorphism satisfying f (X) = Y, written as
+ f : V → W, will be called, by abuse of terminology, a linear isomorphism from X onto Y. If such a linear isomorphism exists,
+X and Y are called linearly isomorphic, or simply isomorphic, and we write X  Y. In particular, a linear isomorphism from X
+to itself is called a linear automorphism of X.
+
+
+                                                        1.       Framework of OPTs
+
+   We assume that there are objects called systems, denoted by symbols such as A, B, C, . . . . Let Sys be the set of all systems.
+For every pair of systems A and B, there are objects called tests from A to B. A test F from A to B is a finite collection { fi }ki=1 ,
+where k may depend on the test, and each element fi is called a transformation. Intuitively, performing the test F produces a
+classical outcome i ∈ {1, . . . , k} and applies the corresponding transformation fi . Although Ref. [9] allows more general outcome
+sets, we restrict attention to finite-outcome tests only to simplify notation; all constructions and proofs below use only this finite-
+outcome fragment, so this convention entails no essential change in the present arguments. The set of all transformations from
+A to B is denoted by Trans(A, B). A transformation f is called deterministic, or a channel, if the singleton collection { f } is a test.
+A test from A to A is often called a test on A, and the same convention is used for transformations and channels.
+   There is a special system I, called the trivial system, such that every probability distribution (i.e., every collection {pi ∈ R≥0 }ki=1
+satisfying ki=1 pi = 1) is a test from I to I, and there are no other tests from I to I. Hence Trans(I, I) = [0, 1]. Elements of
+           P
+Trans(I, I), i.e., real numbers between 0 and 1, are called probabilities. We define
+
+                                            St(A) B Trans(I, A),             Eff(A) B Trans(A, I).
+
+Elements of St(A) are called states of A, and elements of Eff(A) are called effects of A. A test from A to I is called a measurement
+on A. Intuitively, performing a measurement {ai }ki=1 produces one of the outcomes 1, . . . , k and applies the corresponding effect
+ai . By definition, a is an effect of A iff there exists a measurement on A containing a. Diagrammatically, a transformation
+f ∈ Trans(A, B), a state ρ ∈ St(A), an effect a ∈ Eff(A), and a probability p are represented as follows:
+                                                             B
+                                                         f           A          a        p
+                                                                     ρ           A
+                                                             A   ,       ,           ,    .                                          (A1)
+
+Thus transformations are represented by boxes and systems by wires. The wire for the trivial system I and the frame of a
+probability box are often omitted, as in this diagram.
+
+Example 1 In quantum theory, Trans(A, B) is the set of trace-nonincreasing completely positive (CP) maps from CnA ×nA to
+CnB ×nB . For each system A in quantum theory, nA is called the level of A. A collection { fi ∈ Trans(A, B)}ki=1 is a test iff ki=1 fi
+                                                                                                                                 P
+is trace preserving. In particular, f ∈ Trans(A, B) is a channel iff f is trace preserving. We have nI = 1, and each probability
+p is identified with the map C1×1 ∋ z 7→ pz ∈ C1×1 . Identifying a positive semidefinite matrix ρ ∈ Her+nA with the CP map
+C1×1 ∋ z 7→ zρ ∈ CnA ×nA , St(A) can be regarded as the set of positive semidefinite matrices of order nA with trace at most 1. Thus
+ρ ∈ St(A) is deterministic iff tr ρ = 1; note that, in the present terminology, matrices with tr ρ < 1 are also called states. Similarly,
+identifying a positive semidefinite matrix E ∈ Her+nA with the CP map CnA ×nA ∋ X 7→ tr(EX) ∈ C1×1 , Eff(A) can be regarded as
+the set of positive semidefinite matrices of order nA whose largest eigenvalue is at most 1. In particular, E is deterministic iff
+E = InA .
+                                                                                                                                          6
+
+   Tests can be connected in series and in parallel as follows. We assume that, for all systems A, B, and C, any test F B { fi }ki=1
+from A to B and any test G B {g j }lj=1 from B to C can be composed. The composite is a test from A to C with kl outcomes,
+denoted by G ◦ F = {g j ◦ fi }(k,l)
+                              (i, j)=(1,1) . Here g j ◦ fi is the composite of fi and g j , and is represented by vertically connecting the
+boxes:
+                                                                                         C
+                                                                                     gj
+                                                                                         B
+                                                                                     fi
+                                                                                         A .
+
+
+We also assume that any two systems A and B can be connected in parallel. The resulting system is called the composite system
+of A and B and is denoted by AB. We assume that, for systems A, B, A′ , and B′ , any test F B { fi }ki=1 from A to B and any test
+H B {h j }lj=1 from A′ to B′ can be connected in parallel. The parallel connection is a test from AA′ to BB′ with kl outcomes,
+denoted by F ⊗ H = { fi ⊗ h j }(k,l)
+                               (i, j)=(1,1) . Here fi ⊗ h j denotes the parallel connection of fi and h j , represented by placing the boxes
+side by side:
+
+                                                                                 B             D
+                                                                               fi            hj
+                                                                                 A             C   .
+
+Therefore g ◦ f ∈ Trans(A, C) and f ⊗ h ∈ Trans(AA′ , BB′ ) for all f ∈ Trans(A, B), g ∈ Trans(B, C), and h ∈ Trans(A′ , B′ ). If f
+and g are deterministic, then g ◦ f is deterministic; if f and h are deterministic, then f ⊗ h is deterministic. For a state ρ ∈ St(A)
+and a transformation f ∈ Trans(A, B), the composite f ◦ ρ ∈ St(B) is often written as f (ρ). In particular, for a state ρ ∈ St(A)
+and an effect a ∈ Eff(A), the composite a(ρ) is an element of Trans(I, I) and hence is a probability.
+
+Example 2 In quantum theory, composition is composition of maps, and parallel composition is the tensor product. In particular,
+the composite of a state ρ ∈ St(A) and an effect E ∈ Eff(A) is the probability tr(Eρ).
+
+  Composition and parallel composition are assumed to be compatible in the following sense. For each system A, there is a
+channel idA on A, called the identity channel. For any test F from A to a system B, F ◦ {idA } = F holds, and for any test G from
+B to A, {idA } ◦ G = G holds. Thus f ◦ idA = f = idB ◦ f for every f ∈ Trans(A, B). Diagrammatically,
+
+                                                                   B                                           B
+                                                               f                         B
+                                                                   A   =             f         =               B
+                                                                                         A                 f
+                                                                   A                                           A   ,
+
+where identity channels are drawn as wires. The dashed boxes in the diagram are only aids for readability; intuitively, system
+wires can be stretched freely. We assume that, for any composable tests F , G, and H, composition is associative: H ◦ (G ◦ F ) =
+(H ◦ G) ◦ F . Hence h ◦ (g ◦ f ) = (h ◦ g) ◦ f for transformations:
+                                                                           D                           D
+
+                                                                       h                           h
+                                                                           C                           C
+                                                                       g             =             g
+                                                                           B                           B
+                                                                       f                           f
+                                                                           A                           A   .                          (A2)
+
+The dashed lines play the role of parentheses and can be omitted. We assume the following unit and associativity laws for parallel
+composition of systems and tests. First, AI = A = IA and A(BC) = (AB)C. Second, idAB = idA ⊗ idB and idI ⊗ f = f = f ⊗ idI .
+Finally, for any tests F , G, and H for which the relevant parallel compositions are defined, parallel composition is associative:
+F ⊗ (G ⊗ H) = (F ⊗ G) ⊗ H. Hence f ⊗ (g ⊗ h) = ( f ⊗ g) ⊗ h for transformations:
+                                                      B   B'               B''                         B           B'   B''
+
+                                                  f       g            h             =             f               g    h
+                                                      A   A'               A''                         A           A'   A''   .       (A3)
+                                                                                                                                                                                7
+
+We also assume the interchange law: for any tests for which the relevant serial and parallel compositions are defined, (G ⊗ G′ ) ◦
+(F ⊗ F ′ ) = (G ◦ F ) ⊗ (G′ ◦ F ′ ). Hence (g ⊗ g′ ) ◦ ( f ⊗ f ′ ) = (g ◦ f ) ⊗ (g′ ◦ f ′ ) for transformations:
+                                                                         C        C'                     C       C'
+                                                                     g           g'                  g          g'
+                                                                         B        B'       =             B       B'
+
+                                                                     f           f'                  f          f'
+                                                                         A        A'                     A       A'   .                                                    (A4)
+
+Equations (A2), (A3), and (A4) imply that the result of connecting three or more transformations by composition and parallel
+composition does not depend on the order in which these operations are performed. We assume that the composite p ◦ q of
+probabilities is the ordinary product pq of real numbers. Then the parallel composition p ⊗ q of probabilities is also pq, since
+p ⊗ q = (p ◦ idI ) ⊗ (idI ◦ q) = (p ⊗ idI ) ◦ (idI ⊗ q) = p ◦ q. Mathematically, these assumptions can be understood as giving a strict
+monoidal category whose objects are systems and whose morphisms are transformations, or tests.
+  For each A, we assume that at least one deterministic effect exists, and we denote one such effect by eA . The singleton {eA } is
+a measurement; intuitively, applying it always yields the outcome 1 and applies the effect eA , which we will depict as
+
+                                                                                           A .
+
+
+Lemma 2 below shows that the deterministic effect of A is unique. In this sense, this paper deals only with causal theories in
+the sense of Ref. [9]. A state of A satisfying eA (ρ) = 1 is called normalized; the set of normalized states of A is denoted by
+StN (A). In the main text, normalized states are simply called states. Since the composition of channels is a channel, if ρ ∈ St(A)
+is deterministic then eA (ρ) is a channel from I to I. The only channel from I to I is 1, so eA (ρ) = 1; deterministic states are
+therefore normalized. Note that we show in Lemma 3 that the converse holds after adding several assumptions stated below.
+   Assume that, for any test {ρi }ki=1 from I to A, each state ρi ∈ St(A) can be written as ρi = pi ρi with a deterministic state ρi and
+a probability pi . Here the parallel composition pi ⊗ ρi of the probability pi and the deterministic state ρi is written as pi ρi ; this
+notation will be generalized later. This means that a j (ρi ) = pi a j (ρi ) holds for every measurement {a j }lj=1 and every j. Moreover,
+   j a j (ρi ) =   j pi a j (ρi ) = pi , where the last equality uses the fact that   j a j (ρi ) = 1, since ρi is deterministic. Thus pi can be
+P                P                                                                  P
+regarded as the marginal probability of obtaining the classical outcome i. When pi > 0, the state ρi can intuitively be interpreted
+as the state conditioned on the classical outcome i being obtained. We have
+
+                                                       St(A) = {pσ | p ∈ [0, 1], σ ∈ StN (A)}.                                                                             (A5)
+
+Indeed, for every state ρ ∈ St(A), there exists a test containing ρ. Hence ρ can be written as ρ = pρ with some probability p and
+some deterministic state ρ. Since deterministic states are normalized, ρ ∈ StN (A). Conversely, an object pσ on the right-hand
+side is a state, because it is the parallel composition of a probability p and a state σ. Since an empty StN (A) would make St(A)
+empty and contain no useful information, we assume that each system has at least one normalized state.
+
+Example 3 In quantum theory, eA = InA . A state ρ is normalized iff tr ρ = 1. For any state ρ, putting p B tr ρ and σ B p−1 ρ
+(with arbitrary normalized σ if p = 0) gives a normalized state σ with ρ = pσ.
+   For systems A and B, equality of transformations f and g from A to B is defined operationally: f = g iff (a| f |ρ) = (a|g|ρ) for
+every system E and every ρ ∈ StN (AE) and a ∈ Eff(BE), where (a| f |ρ) B a(( f ⊗ idE )(ρ)). This notation is used several times in
+this section. The definition can be drawn as
+                                                                 a                         a
+                          B        B                         B                         B
+                      f       =   g         ⇔            f               E   =         g         E           (∀E ∈ Sys, ρ ∈ StN (AE), a ∈ Eff(BE)).                        (A6)
+                          A        A                         A                         A
+                                                                 ρ                         ρ
+
+Since every state is a probability multiple of a normalized state, the condition is equivalent to the one obtained by replacing
+ρ ∈ StN (AE) with ρ ∈ St(AE). In the special case A = I, states ρ and σ of B are equal iff a(ρ) = a(σ) (∀a ∈ Eff(B)).1 Similarly,
+
+
+
+1 Indeed, by the definition of equality of transformations, ρ = σ iff b((ρ ⊗
+                                                                                                     b ∈ Eff(BE). Put a B b ◦ (idB ⊗ τ) ∈ Eff(B). Then the left-hand side is a(ρ),
+  idE )(τ)) = b((σ ⊗ idE )(τ)) for all systems E, τ ∈ StN (IE) = StN (E), and                        and similarly the right-hand side is a(σ).
+                                                                                                                                                           8
+
+in the case B = I, effects a and b of A are equal iff a(ρ) = b(ρ) (∀ρ ∈ StN (A)).2 Equivalently, the latter equality may be checked
+on all states of A.
+   For transformations f and g from A to B, if there exists a transformation h from A to B such that (a|h|ρ) = (a| f |ρ) + (a|g|ρ) for
+every E, ρ ∈ StN (AE), and a ∈ Eff(BE), then we write h = f + g. Such a transformation f + g need not exist for arbitrary f and
+g. Finite sums ki=1 fi are defined similarly. For a probability p and a transformation f , the parallel composition p ⊗ f is often
+                      P
+written simply as p f , and p f is called the probability multiple of f by p. These conventions define sums of transformations
+and multiplication by probabilities. The transformation f ∈ Trans(A, B) satisfying (a| f |ρ) = 0 for every E, ρ ∈ StN (AE), and
+a ∈ Eff(BE) is denoted by 0A,B , or simply 0. For every f ∈ Trans(A, B), 0 f = 0A,B , which shows that 0A,B exists.
+                                                                                               P
+   We formally extend the above definitions and consider finite real linear combinations i ci fi with fi ∈ Trans(A, B) and ci ∈ R.
+After identifying operationally equivalent linear combinations, i.e., identifying i ci fi and j d j g j whenever i ci (a| fi |ρ) =
+                                                                                         P            P                     P
+
+   j d j (a|g j |ρ) for all E, ρ ∈ StN (AE), and a ∈ Eff(BE), the resulting real vector space
+P
+                                                                                                 is denoted by TransR (A, B). It is the
+real vector space spanned by Trans(A, B). If f ∈ TransR (A, B) is represented as f = i ci fi (ci ∈ R, fi ∈ Trans(A, B)) and
+                                                                                               P
+g ∈ TransR (B, C) is represented as g = j d j g j (d j ∈ R, g j ∈ Trans(B, C)), define g ◦ f B i j ci d j g j ◦ fi ∈ TransR (A, C).
+                                              P                                                       P P
+Similarly, if h ∈ TransR (A′ , B′ ) is represented as h = k qk hk (qk ∈ R, hk ∈ Trans(A′ , B′ )), define f ⊗ h B i k ci qk fi ⊗
+                                                               P                                                             P P
+hk ∈ TransR (AA′ , BB′ ). These definitions are independent of representatives because operational equivalence is defined by all
+statistics, including all ancillary systems. Indeed, if one representative is replaced by an operationally equivalent one, then the
+statistics obtained after inserting it into the serial or parallel contexts used above remain unchanged; the surrounding parts can be
+absorbed into the ancillary system, state, and effect appearing in the definition of operational equivalence. By linearity of these
+statistics, the same remains true after taking finite real linear combinations, so the resulting element of the appropriate real vector
+space is unchanged. The analogue of Eq. (A6) holds for elements of TransR (A, B). Thus, for elements f and g of TransR (A, B),
+equality holds iff (a| f |ρ) = (a|g|ρ) for all such E, ρ, and a. Set StR (A) B TransR (I, A) and EffR (A) B TransR (A, I). These are the
+real vector spaces spanned by St(A) and Eff(A), respectively. Elements of StR (A), EffR (A), and TransR (A, B) are drawn using the
+same kind of boxes as in Eq. (A1).
+   For each A, StR (A) is assumed finite dimensional. Its dimension is called the dimension of A and denoted by dA . States and
+effects separate one another, so the dimension of either real vector space cannot exceed the dimension of the dual of the other;
+hence EffR (A) also has dimension dA . We assume from now on that StN (A) is closed in StR (A). This is naturally interpreted as
+the requirement that the limit of normalized states is again a normalized state. Equivalently, whenever a sequence of normalized
+states converges in StR (A), its limit is also a normalized state.
+   For a test F B { fi }ki=1 from A to B, we assume that any two of its outcomes can be merged. For example, if the chosen
+elements are f1 and f2 , then the collection G B {gi }k−1   i=1 with g1 = f1 + f2 and gi B fi+1 for i = 2, . . . , k − 1 is a test. This is
+called coarse-graining of f1 and f2 . Intuitively, G is obtained from F by identifying the classical outcomes 1 and 2. Thus, if
+there exists a test containing f1 and f2 , then f1 + f2 is a transformation. Other pairs can be coarse-grained in the same way. We
+also assume that conditioned tests are allowed: if F B { fi }ki=1 is a test from A to B and, for each i, G(i) B {g(i)    li
+                                                                                                                      j } j=1 is a test from
+
+                j ◦ fi | i = 1, . . . , k, j = 1, . . . , li } is a test from A to C. Intuitively, one first performs F and then, depending on
+B to C, then {g(i)
+the classical outcome i, performs G(i) .
+
+Lemma 2 The deterministic effect of A is uniquely eA .
+
+Proof Let a be a deterministic effect of A. For any state ρ ∈ St(A), there exists τ ∈ St(A) such that ρ + τ is deterministic: if ρ is
+deterministic, take τ B 0, and otherwise, complete ρ to a test and coarse-grain all remaining outcomes. Consider the conditioned
+test that applies a after ρ and eA after τ. It is a test from I to I, hence a(ρ) + eA (τ) = 1. Since also eA (ρ) + eA (τ) = 1, we get
+a(ρ) = eA (ρ). As ρ was arbitrary, equality of effects gives a = eA .                                                               □
+    This lemma, together with the fact that the parallel composition of deterministic effects is deterministic, implies eAB = eA ⊗ eB .
+It also gives idI = eI = 1. Indeed, idI is a deterministic effect of I, and {eI } is a probability distribution. Moreover, for
+any measurement {ai }ki=1 on A, coarse-graining all its outcomes gives the deterministic effect ki=1 ai ; hence, by Lemma 2,
+                                                                                                      P
+
+   i=1 ai = eA .
+Pk
+
+Lemma 3 A state is deterministic iff it is normalized.
+
+Proof We have already shown that deterministic states are normalized. Conversely, let ρ ∈ StN (A). As in the proof of Lemma 2,
+choose τ ∈ St(A) such that ρ + τ is deterministic. Then eA (ρ) + eA (τ) = 1, and since eA (ρ) = 1, we have eA (τ) = 0. For any
+
+
+2 Indeed, by the definition of equality of transformations, a = b iff c((a ⊗
+                                                                                   Eff(E). Put σ B (idA ⊗ c)(ρ) ∈ St(A). Then the left-hand side is a(σ), and
+  idE )(ρ)) = c((b⊗ idE )(ρ)) for all systems E, ρ ∈ StN (AE), and c ∈ Eff(IE) =   similarly the right-hand side is b(σ).
+                                                                                                                                          9
+
+a ∈ Eff(A), coarse-grain the remaining effects in a measurement containing a to obtain b with a + b = eA . Hence 0 ≤ a(τ) ≤
+eA (τ) = 0, so a(τ) = 0. Equality of states gives τ = 0, and thus ρ = ρ + τ is deterministic.                             □
+
+Lemma 4 StN (A) is convex.
+
+Proof For normalized states ρ and σ of A and p ∈ [0, 1], use the probability test {p, 1 − p} followed by the singleton tests {ρ}
+and {σ}. Then {pρ, (1 − p)σ} is a test, and coarse-graining gives the deterministic state pρ + (1 − p)σ ∈ StN (A).            □
+   Similarly, Trans(A, B), and in particular St(A) and Eff(A), are convex. From the definitions of sums and probability multiples,
+every f ∈ Trans(A, B) preserves convex combinations: f ( ki=1 pi ρi ) = ki=1 pi f (ρi ) for every probability distribution {pi }ki=1 and
+                                                               P            P
+states ρi of A. Thus f can be regarded as an affine map from St(A) to St(B), and it has a unique linear extension flin : StR (A) →
+               3
+
+StR (B) satisfying f (ρ) = flin (ρ) for all ρ ∈ St(A). At this stage, however, distinct transformations from A to B may still induce
+the same linear map StR (A) → StR (B); this possible non-injectivity will be removed later by local equivalence. We identify each
+y ∈ EffR (A) with the linear functional x 7→ y(x) on StR (A); this identifies EffR (A) with StR (A)∗ .
+   Let St+ (A), Eff+ (A), and Trans+ (A, B) be the convex cones generated by St(A), Eff(A), and Trans(A, B), respectively. We call
+St+ (A) and Eff+ (A) the state cone and effect cone of A. If f ∈ Trans+ (A, B) and g ∈ Trans+ (B, C), then g ◦ f ∈ Trans+ (A, C).
+Similarly, if f ∈ Trans+ (A, B) and h ∈ Trans+ (A′ , B′ ), then f ⊗ h ∈ Trans+ (AA′ , BB′ ). Each a ∈ Eff+ (A) maps each x ∈ St+ (A)
+to a nonnegative real number, and hence Eff+ (A) ⊆ St+ (A)∗ . Note that the identification EffR (A) = StR (A)∗ does not by itself
+imply Eff+ (A) = St+ (A)∗ ; in an OPT, the latter equality need not hold. If f and g are elements of TransR (A, B) and satisfy
+g − f ∈ Trans+ (A, B), we write f ≤ g or g ≥ f .
+
+Example 4 In quantum theory, TransR (A, B) and Trans+ (A, B) are the sets of Hermiticity-preserving maps and CP maps from
+CnA ×nA to CnB ×nB , respectively. In particular, StR (A) and EffR (A) are identified with HernA , while St+ (A) and Eff+ (A) are identified
+with Her+nA . Since effects are identified with maps X 7→ tr(EX), quantum theory satisfies Eff+ (A) = St+ (A)∗ .
+
+   A finite family of normalized states {ρi ∈ StN (A)}ki=1 is perfectly distinguishable if there exists a measurement {ai ∈ Eff(A)}ki=1
+such that ai (ρ j ) = δi, j for all i and j. The maximum number of perfectly distinguishable normalized states of A is called the
+informational dimension of A and is denoted by nA . Thus there exists a perfectly distinguishable family of size nA , but no such
+family of size nA + 1. A perfectly distinguishable family is linearly independent in StR (A), so its size is at most dA . We assume
+that there exists a system with informational dimension at least 2.
+
+Example 5 In quantum theory, the informational dimension equals the level nA of A. A family {ρi ∈ StN (A)}ki=1 is perfectly
+distinguishable iff the states are mutually orthogonal, where σ and τ are density matrices of order nA and are orthogonal iff
+tr(στ) = 0.
+
+   A channel U ∈ Trans(A, B) is reversible if there exists a channel Ũ ∈ Trans(B, A) such that Ũ ◦ U = idA and U ◦ Ũ = idB .
+Then Ũ is called the inverse channel of U and is denoted by U −1 . If there exists a reversible channel from A to B, the systems
+A and B are called equivalent, written A ≃ B. In particular, since idA is a reversible channel on A, every system A is equivalent
+to itself. We assume that the order of systems in a composite can be interchanged up to equivalence, i.e., AB ≃ BA. Thus
+properties of the composite system AB that are invariant under equivalence also hold for the reordered composite system BA.
+If A ≃ B and B ≃ C, then there exist reversible channels U ∈ Trans(A, B) and V ∈ Trans(B, C), and V ◦ U ∈ Trans(A, C)
+is reversible with inverse U −1 ◦ V −1 . Hence A ≃ C. Similarly, if A ≃ B and C ≃ D, then there exist reversible channels
+U ∈ Trans(A, B) and W ∈ Trans(C, D), and U ⊗ W ∈ Trans(AC, BD) is reversible with inverse U −1 ⊗ W −1 . Hence AC ≃ BD.
+By repeated use of the order-interchange assumption, associativity of composites, and compatibility of equivalence with parallel
+composition, any finite permutation of tensor factors changes a composite system only up to equivalence. In the proofs below,
+whenever composite systems differ only by such a permutation, we choose a reversible channel implementing the corresponding
+equivalence and suppress it from the notation.
+
+Example 6 In quantum theory, A ≃ B iff nA = nB . A reversible channel from A to B has the form X 7→ V XV † with a unitary
+matrix V, where † denotes conjugate transpose; its inverse has the same form with V −1 .
+
+
+
+3 Indeed, take an arbitrary effect a ∈ Eff(B) and put a
+                                                             f B a ◦ f ∈ Eff(A).     claimed formula.
+  Put σ B ki=1 pi ρi . Then a f (σ) = ki=1 pi a f (ρi ), equivalently a( f (σ)) =
+              P                            P
+  Pk
+    i=1 pi a( f (ρi )). Since this holds for every a, equality of states gives the
+                                                                                                                                     10
+
+   By Eq. (A5) and the convexity of StN (A), every x ∈ St+ (A) can be written as x = aσ with a ∈ R≥0 and σ ∈ StN (A). In particular,
+if x , 0, then a > 0 and eA (x) = a. Thus every nonzero x ∈ St+ (A) can be written as x = eA (x)x with x B x/eA (x) ∈ StN (A). The
+state x = x/eA (x) is called the normalization of x. The following elementary consequence will be used later:
+
+                                             x ∈ St+ (A), eA (x) ≤ 1    ⇒    x ∈ St(A),
+                                             x ∈ St+ (A), eA (x) = 1    ⇒    x ∈ StN (A).                                         (A7)
+
+Indeed, the case x = 0 is immediate. If x , 0, then x = eA (x)x with x ∈ StN (A). Hence eA (x) ≤ 1 implies x ∈ St(A) by Eq. (A5),
+and eA (x) = 1 implies x = x ∈ StN (A).
+  A normalized state ρ ∈ StN (A) is pure if every decomposition ρ = pσ + (1 − p)τ with normalized states σ and τ of A and
+0 < p < 1 implies σ = τ = ρ. A normalized state that is not pure is called mixed. The refinement set of ρ ∈ StN (A) is
+
+                                                     Dρ B {σ ∈ St+ (A) | σ ≤ ρ}.
+
+Note that σ ≤ ρ means ρ − σ ∈ St+ (A). A state ρ is internal if the real vector space spanned by Dρ is StR (A).
+
+Example 7 In quantum theory, Dρ is the set of positive semidefinite matrices σ satisfying σ ≤ ρ, and ρ is internal iff it is full
+rank.
+
+
+                                                      2.    Assumptions of OPTs
+
+   For clarity, we summarize the assumptions made in the preceding subsection. Except for local discriminability, which is not
+included here, the assumptions below are taken from the causal OPT framework of Chaps. II–VI of Ref. [9], or are immediate
+consequences of that framework, and are rewritten in the present notation.
+   (1) There are systems, and for each pair A and B, tests from A to B are defined. Each test is a finite collection of transforma-
+       tions.
+   (2) There is a trivial system I. Tests from I to I are exactly finite probability distributions {pi ∈ R≥0 }ki=1 with ki=1 pi = 1.
+                                                                                                                       P
+   (3) Tests can be composed in series and in parallel; systems can be composed in parallel. These operations satisfy the
+       evident identity, associativity, unit, and interchange laws, including idAB = idA ⊗ idB and idI ⊗ f = f = f ⊗ idI . For any
+       tests for which the relevant serial and parallel compositions are defined, the interchange law is (G ◦ F ) ⊗ (G′ ◦ F ′ ) =
+       (G ⊗ G′ ) ◦ (F ⊗ F ′ ).
+   (4) Composition of probabilities is ordinary multiplication.
+   (5) Equality of transformations is defined by operational statistics: f = g iff (a| f |ρ) = (a|g|ρ) for every E, ρ ∈ StN (AE), and
+       a ∈ Eff(BE).
+   (6) Each system A has a deterministic effect eA .
+   (7) Each system has at least one normalized state, and every state has the form pσ with p ∈ [0, 1] and σ ∈ StN (A).
+   (8) Tests are closed under coarse-graining.
+                                                                                     j } j=1 from B to C, the collection {g j ◦ fi | i =
+   (9) Conditioned tests are allowed: from a test { fi }ki=1 from A to B and tests {g(i) li                                 (i)
+
+       1, . . . , k, j = 1, . . . , li } is a test from A to C.
+  (10) StR (A) is finite dimensional, and StN (A) is closed in StR (A).
+  (11) There exists at least one system with informational dimension at least 2.
+  (12) AB ≃ BA.
+
+
+                                                           3.   Quantum theory
+
+  In view of the examples above, we define quantum theory as the following special case of an OPT.
+   (1) Trans(A, B) is the set of trace-nonincreasing CP maps from CnA ×nA to CnB ×nB . In particular nI = 1, and the map C1×1 ∋
+       z 7→ pz ∈ C1×1 is identified with the probability p.
+   (2) A collection { fi ∈ Trans(A, B)}ki=1 is a test iff ki=1 fi is trace preserving.
+                                                         P
+   (3) Composition is composition of maps, and parallel composition is the tensor product.
+This satisfies all the examples of quantum theory stated above. The quantum theory considered in this paper need not contain
+an n-level system for every natural number n; for example, one may consider a quantum theory containing only systems of even
+levels.
+                                                                                                                                      11
+
+                                                     4.    Basic properties of OPTs
+
+   We collect several elementary properties of OPTs. Many of the lemmas below are close to lemmas, corollaries, or theorems
+in Ref. [9], and we briefly indicate the correspondence.
+
+Lemma 5 For every system A, StN (A) is a compact convex set and St+ (A) is a closed convex cone. Moreover, A has a normalized
+pure state.
+
+This elementary lemma will be used frequently without further mention.
+Proof We first show that StN (A) is compact and convex. It is closed and convex, and it remains to prove boundedness.
+Since StR (A) is finite dimensional, all norms are equivalent. Use the operational norm of Ref. [9], ∥x∥A B supa∈Eff(A) a(x) −
+inf b∈Eff(A) b(x). For ρ ∈ StN (A), a(ρ) ≤ eA (ρ) = 1 and b(ρ) ≥ 0(ρ) = 0. The upper and lower bounds are attained by eA and
+0, respectively. Hence ∥ρ∥A = 1. Thus StN (A) is bounded, and therefore compact. Next, St+ (A) is the cone generated by the
+nonempty compact convex set StN (A), which does not contain 0; such a cone is closed, e.g., by Proposition 1.4.7 of Ref. [45].
+Finally, any nonempty compact convex set has an extreme point, and every extreme point of StN (A) is a normalized pure state. □
+
+Lemma 6 A transformation f ∈ Trans(A, B) is a channel iff eB ◦ f = eA .
+
+Proof This is Lemma 5 of Ref. [9], which holds in any OPT and hence applies here.                                                      □
+
+Lemma 7 Reversible channels map normalized pure states to normalized pure states.
+
+Proof Let U ∈ Trans(A, B) be reversible and let ψ ∈ StN (A) be pure. By Lemma 6, eB (U(ψ)) = eA (ψ) = 1, so U(ψ) is
+normalized. If U(ψ) = pρ + (1 − p)σ with distinct normalized ρ and σ and 0 < p < 1, then applying U −1 gives a nontrivial
+convex decomposition of ψ, a contradiction. Thus U(ψ) is pure.                                                         □
+
+Lemma 8 There exists a normalized state of A that is an interior point of the state cone St+ (A) in StR (A).
+
+Proof Since StR (A) = Span StN (A) is dA -dimensional, choose a basis ρ1 , . . . , ρdA of StR (A) consisting of elements of StN (A).
+Put σ B di=1 ρi /dA . Then eA (σ) = 1, so σ is normalized. Put U B { di=1 λi ρi | |λi − 1/dA | < 1/dA (∀i ∈ {1, . . . , dA })}. Then U is
+         PA                                                         PA
+an open neighborhood of σ, and each element of U has the form i λi ρi (λi > 0), so U ⊆ St+ (A). Thus σ is an interior point. □
+                                                                 P
+
+
+Lemma 9 A normalized state of A is internal iff it is an interior point of St+ (A).
+
+Proof Suppose first that ρ is internal but not an interior point. By Lemma 5, St+ (A) is a closed convex cone. Since ρ ∈ St+ (A)
+and ρ is not an interior point, ρ lies on the boundary of St+ (A). Hence the supporting hyperplane theorem gives a nonzero
+functional f ∈ St+ (A)∗ such that f (ρ) = 0. For every σ ∈ Dρ , one has 0 ≤ f (σ) ≤ f (ρ) = 0, and hence f (σ) = 0. Since Dρ spans
+StR (A), this implies f = 0, a contradiction.
+   Conversely, suppose that ρ is an interior point of St+ (A). Then, for every τ ∈ St+ (A), there exists a sufficiently small ε > 0
+such that ρ − ετ ∈ St+ (A). Equivalently, ετ ∈ Dρ . Hence St+ (A) ⊆ Span Dρ , and taking spans gives Span Dρ = StR (A). Thus ρ is
+internal.                                                                                                                         □
+
+Lemma 10 For every internal normalized state ρ ∈ StN (A) and every x ∈ St+ (A), there exists ε > 0 such that εx ∈ Dρ .
+
+This is essentially a special case of Lemma 16 of Ref. [9].
+Proof If x = 0, the claim is trivial. Otherwise, by Lemma 9, ρ is an interior point of St+ (A), and hence ρ − εx ∈ St+ (A) for
+sufficiently small ε > 0.                                                                                                   □
+
+
+                                                          Appendix B: Postulates
+
+  We consider OPTs satisfying the following two postulates.
+                                                                                                                               12
+
+                                                               1.   Local equivalence
+
+  The first postulate states that channels from A to B can be identified by states of A and effects of B.
+
+Postulate 1 (Local equivalence) For arbitrary systems A and B and channels Λ and E from A to B, if a(Λ(ρ)) = a(E(ρ)) for all
+ρ ∈ StN (A) and a ∈ Eff(B), then Λ = E. Equivalently,
+
+                               a           a
+                                B           B                                                       B           B
+                              Λ     =     ℰ        (∀ρ ∈ StN (A), a ∈ Eff(B))           ⇒       Λ           =   ℰ
+                                A           A                                                       A           A   .
+                               ρ           ρ
+
+This postulate corresponds to what Ref. [26] calls local equality. We shall use the following equivalent formulation.
+
+Lemma 11 In an OPT, the following two properties are equivalent.
+   (1) The theory satisfies local equivalence.
+   (2) For arbitrary systems A and B and transformations f and g from A to B, if a( f (ρ)) = a(g(ρ)) for all ρ ∈ StN (A) and
+       a ∈ Eff(B), then f = g.
+
+Proof Since channels are special transformations, (2) ⇒ (1) is immediate. We prove (1) ⇒ (2). Complete f and g to binary
+tests { f, h} and {g, q} by coarse-graining suitable tests; then f + h and g + q are channels. Choose any τ ∈ StN (B) and put
+R B τ ◦ eB ∈ Trans(B, B), which is a channel. For U = idB or U = R, define the following channels from A to B:
+                                                                      B                         B
+                                                           B                            B
+                                                                     τ                          τ
+                                               B       U                      B         U
+                                           F       =       B    +     B
+                                                                              G     =   B   +   B
+                                               A       f                      A         g       q
+                                                           A
+                                                                     h                  A
+                                                                      A   ,                     A       .
+
+The transformations F and G are channels because they are obtained by conditioning on the outcomes of the binary tests { f, h}
+and {g, q}, respectively, and then coarse-graining all resulting outcomes. For every ρ ∈ StN (A) and a ∈ Eff(B), the assumption
+gives eB ( f (ρ)) = eB (g(ρ)), and hence eB (h(ρ)) = eB (q(ρ)). Therefore
+
+                                        a(R(h(ρ))) = a(τ)eB (h(ρ)) = a(τ)eB (q(ρ)) = a(R(q(ρ))).
+
+Since a ◦ U ∈ Eff(B), the assumption also gives a(U( f (ρ))) = a(U(g(ρ))). Hence
+
+                            a(F(ρ)) = a(U( f (ρ))) + a(R(h(ρ))) = a(U(g(ρ))) + a(R(q(ρ))) = a(G(ρ)).
+
+Local equivalence applied to the channels F and G gives F = G. Taking U = R gives R ◦ f + R ◦ h = R ◦ g + R ◦ q; since
+R ◦ f = R ◦ g, it follows that R ◦ h = R ◦ q. Taking U = idB gives f + R ◦ h = g + R ◦ q, and hence f = g.                    □
+   In the standard OPT framework, equality of transformations is defined by statistics involving arbitrary ancillary systems. If
+local equivalence holds, Lemma 11 shows that no ancillary system is needed to identify a transformation. It is known that
+the following property, called local tomography, is equivalent to local equivalence; see Lemma 34 of Ref. [26]. Note that, in
+Ref. [26], property (2) of Lemma 11 is called local equivalence; Lemma 11 shows that it is equivalent to the definition adopted
+here.
+
+Definition 12 (Local tomography) A theory satisfies local tomography if, for every pair of systems A and B, any two normal-
+ized states ρ and σ of AB that satisfy (a ⊗ b)(ρ) = (a ⊗ b)(σ) for all a ∈ Eff(A) and b ∈ Eff(B) must satisfy ρ = σ.
+Local tomography can also be expressed as the dimensional identity [9]
+
+                                                                    dAB = dA dB .                                            (B1)
+
+The contrapositive formulation, namely that for any two distinct normalized states ρ, σ ∈ StN (AB), there exist effects a ∈ Eff(A)
+and b ∈ Eff(B) such that (a ⊗ b)(ρ) , (a ⊗ b)(σ), is also called local discriminability [9].
+                                                                                                                                                   13
+
+Lemma 13 For every A and B, StR (AB) is spanned by product states ρ ⊗ σ with ρ ∈ StN (A) and σ ∈ StN (B).
+
+Proof Since StR (A) = Span StN (A) and StR (B) = Span StN (B), choose bases {ρi ∈ StN (A)}di=1             A
+                                                                                                              and {σ j ∈ StN (B)}dj=1   B
+                                                                                                                                          , and dual
+bases {ai ∈ EffR (A)}i=1 and {b j ∈ EffR (B)} j=1 . If i, j ci, j ρi ⊗ σ j = 0, then, for every k and l, ck,l = (ak ⊗ bl )( i, j ci, j ρi ⊗ σ j ) = 0.
+                     dA                      dB       P                                                                    P
+Thus these product states are linearly independent. By local tomography, dAB = dA dB , so they form a basis of StR (AB).                            □
+
+Lemma 14 The map sending f ∈ TransR (A, B) to the linear map f˜ : StR (A) ∋ x 7→ f (x) ∈ StR (B) is bijective.
+
+Proof We first prove injectivity. Let f, g ∈ TransR (A, B) induce the same linear map from StR (A) to StR (B), and put h B f − g ∈
+TransR (A, B). Then h(x) = 0 for every x ∈ StR (A). It is enough to prove h = 0, namely a((h ⊗ idE )(ω)) = 0 for every system
+E and every ω ∈ StN (AE) and a ∈ Eff(BE). Fix such E, ω, and a. By Lemma 13, applied to A and E, write ω = i ci ρi ⊗ ηi
+                                                                                                                       P
+with ci ∈ R, ρi ∈ StN (A), and ηi ∈ StN (E). Then (h ⊗ idE )(ω) = i ci h(ρi ) ⊗ ηi = 0, because h(ρi ) = 0 for every i. Hence
+                                                                      P
+a((h ⊗ idE )(ω)) = 0. Thus h = 0, and injectivity follows.
+   For surjectivity, every rank-one linear map from StR (A) to StR (B) has the form x 7→ a(x)τ with a ∈ EffR (A) = StR (A)∗ and
+τ ∈ StR (B), and is represented by τ ◦a ∈ TransR (A, B). Rank-one maps span the space of all linear maps, so the map is surjective.
+                                                                                                                                □
+                                       ˜
+By this bijection, we identify f with f below.
+    Consequently, the map ⊗ : StN (A) × StN (B) → StN (AB) extends uniquely to a bilinear map ⊗ : StR (A) × StR (B) → StR (AB).
+Similarly, for f ∈ TransR (A, B) and g ∈ TransR (A′ , B′ ), the parallel composition f ⊗ g is the unique linear map satisfying
+( f ⊗ g)(ρ ⊗ σ) = f (ρ) ⊗ g(σ) (∀ρ ∈ StN (A), σ ∈ StN (B)). Mathematically, the structure of transformations under composition
+and parallel composition can be regarded as a subcategory of the strict monoidal category of finite-dimensional real vector spaces
+and linear maps.
+
+Lemma 15 The parallel composition ψ ⊗ ϕ of normalized pure states ψ ∈ StN (A) and ϕ ∈ StN (B) is pure. Also, the parallel
+composition ρ ⊗ σ of internal normalized states ρ ∈ StN (A) and σ ∈ StN (B) is internal.
+
+Proof The purity assertion is Lemma 18 of Ref. [9]; the internality assertion is Theorem 2 of the same reference. These results
+hold for any OPT satisfying local discriminability and hence apply here.                                                     □
+
+
+                                                       2.   Equivalent-system purification
+
+  The second postulate states that every state ρ ∈ StN (A) can be purified, essentially uniquely, by a pure state Ψ ∈ StN (AÃ)
+where Ã is equivalent to A. We first define purification.
+
+Definition 16 (Purification) For ρ ∈ StN (A), if there exist a system A′ and a normalized pure state Ψ ∈ StN (AA′ ) such that
+(idA ⊗ eA′ )(Ψ) = ρ, i.e.,
+
+                                                                    A                    A
+                                                                            A'   =       ρ
+                                                                        Ψ                    ,
+
+then Ψ is called a purification of ρ. Similarly, a normalized pure state Φ ∈ StN (A′ A) satisfying (eA′ ⊗ idA )(Φ) = ρ is also called a
+purification of ρ. The system A′ is called the purifying system.
+
+Postulate 2 (Equivalent-system (ES) purification) For every system A, there exists a system Ã equivalent to A such that every
+normalized state ρ ∈ StN (A) has a purification in AÃ. Moreover, if Ψ and Ψ′ are both normalized states of AÃ and are purifications
+of ρ, then there exists a reversible channel U on Ã such that
+                                                                                                 ～
+                                                                                                 A
+                                                                        ～
+                                                               A        A            A       U
+                                                                   Ψ'        =                   ～
+                                                                                                 A
+
+                                                                                         Ψ           .
+
+Such a system Ã is called a conjugate system of A.
+                                                                                                                                   14
+
+  If Ψ ∈ StN (AÃ) is a purification of ρ ∈ StN (A), the complementary state of ρ with respect to Ψ is defined by
+
+                                                           ～                       ～
+                                                           A                       A
+                                                          ρ
+                                                          ～       =       A
+
+                                                                              Ψ        .
+
+By definition, Ψ is also a purification of the complementary state ρ̃. By definition, a conjugate system Ã of A is equivalent to
+A. Conversely, any system C equivalent to A is also a conjugate system of A. Indeed, since Ã ≃ C, there exists a reversible
+channel W ∈ Trans(Ã, C). If Ψ ∈ StN (AÃ) purifies ρ, then Φ B (idA ⊗ W)(Ψ) ∈ StN (AC) is normalized and pure by Lemma 7,
+and (idA ⊗ eC )(Φ) = (idA ⊗ eÃ )(Ψ) = ρ. If Φ1 and Φ2 are both normalized states of AC and purify ρ, then (idA ⊗ W −1 )(Φ1 ) and
+(idA ⊗ W −1 )(Φ2 ) are purifications in AÃ; since Ã is conjugate to A, they are related by a reversible channel U on Ã. Thus Φ1 and
+Φ2 are related by the reversible channel W ◦ U ◦ W −1 on C. Consequently, a conjugate system can be replaced by any equivalent
+system. In particular, if Ã is conjugate to A, then A can also be regarded as conjugate to Ã. For conjugate systems Ã and B̃ of A
+and B, the composite Ã B̃ is equivalent to AB and hence is a conjugate system of AB. For each system A, we fix once and for all
+one conjugate system and denote it by Ã. Whenever a purifying system is required to be conjugate to a given system, we shall
+also use any equivalent system as a conjugate system, suppressing the corresponding reversible equivalences from the notation.
+   As stated in the main text, this postulate is stronger than the standard purification postulate of Chiribella–D’Ariano–
+Perinotti [9, 12, 21] in the sense that it requires purification with a system Ã equivalent to A. On the other hand, the standard
+purification postulate asserts uniqueness for purifications using arbitrary purifying systems B, whereas ES purification does not
+require this for general B. The authors of Ref. [9] raised the question of whether OPTs satisfying local discriminability and pu-
+rification, in their sense, are necessarily quantum. Subsequent work derived finite-dimensional quantum theory by adding three
+further operational postulates to local discriminability and purification in a causal OPT [12]. Although the present definition of
+purification differs slightly as explained above, the present work addresses this motivation more directly by deriving standard
+finite-dimensional quantum theory from only local equivalence, equivalently local discriminability, and ES purification.
+
+
+                                            Appendix C: Derivation of symmetric cones
+
+  In what follows, we derive quantum theory from local equivalence and ES purification. The argument has four main steps.
+
+   (1) The state cone St+ (A) is shown to be symmetric for every A (Theorem 28).
+   (2) The no-restriction hypothesis is established (Theorem 35); the hypothesis is explained at the beginning of Sec. C 4.
+   (3) The normalized state space is identified with DennA for every A, namely StN (A)  DennA (Theorem 45).
+   (4) These results are combined to conclude that the OPT is quantum theory (Theorem 51).
+
+Throughout the rest of this supplement, we work in a fixed OPT satisfying local equivalence and ES purification.
+   In a real vector space V, a convex cone C is homogeneous if it has interior points and, for any two interior points x and y of
+C, there exists a linear automorphism Γ x,y of C such that Γ x,y (x) = y. In a real inner-product space V, a convex cone C ⊆ V is
+self-dual if {y ∈ V | ⟨y, x⟩ ≥ 0 (∀x ∈ C)} is equal to C. A cone in a real inner-product space is called a symmetric cone if it is
+homogeneous and self-dual. This section proves that every state cone St+ (A) is symmetric.
+
+
+                                                          1.      Preparations
+
+   We collect basic properties of OPTs satisfying local equivalence and ES purification. As noted in the main text, ES purification
+differs slightly from the purification postulate of Ref. [9]. Therefore, although several arguments are close to those used under
+the standard purification postulate, some proofs require modifications.
+
+Lemma 17 For any two normalized pure states ψ and ϕ of A, there exists a reversible channel U on A such that ϕ = U(ψ).
+
+This is the same assertion as Lemma 20 of Ref. [9].
+Proof Let Ã be equivalent to A and choose a normalized pure state α ∈ StN (Ã). By Lemma 15, both α ⊗ ψ and α ⊗ ϕ are pure.
+Moreover,
+
+                                                              ～                    ～
+                                                              A                   A
+                                                                      A   =
+                                                          α        ψ              α ,
+                                                                                                                                                                            15
+
+so α ⊗ ψ is a purification of α, and similarly for α ⊗ ϕ. ES purification gives a reversible channel U on A such that
+                                                                                                                A
+                                                                        ～                               ～
+                                                                     A              A                   A   U
+                                                                    α           ϕ           =                   A
+                                                                                                    α       ψ
+                                                                                                                    .
+Applying eÃ ⊗ idA yields ϕ = U(ψ).                                                                                                                                          □
+
+Lemma 18 If Ψ and Ψ′ are both normalized states of AÃB and are purifications of ρ ∈ StN (A), then there exists a reversible
+channel U on ÃB such that Ψ′ = (idA ⊗ U)(Ψ).
+This gives the part of the standard purification postulate needed below.
+Proof Choose a normalized pure state φ ∈ StN ( B̃). Then φ ⊗ Ψ and φ ⊗ Ψ′ are pure by Lemma 15, and
+                                                           ～                                                    ～
+                                                           B         A              ～                           B       A
+                                                                                    A           B       =
+                                                       φ                        Ψ                           φ           ρ
+                                                                                                                                ,
+so both purify φ ⊗ ρ. ES purification gives a reversible channel U on ÃB with
+                                                                                                                            ～       B
+                                                                                                                        A
+                                                   ～
+                                                   B       A         A
+                                                                        ～           B
+                                                                                                        ～
+                                                                                                        B       A               U
+                                               φ                    Ψ'                      =                           A
+                                                                                                                            ～       B
+                                                                                                    φ                   Ψ               ,
+and applying eB̃ ⊗ idAÃB gives the claim.                                                                                                                                   □
+
+Lemma 19 If Ψ ∈ StN (AB) and Ψ′ ∈ StN (AC) are both purifications of ρ ∈ StN (A), then there exists a channel Λ ∈ Trans(B, C)
+such that Ψ′ = (idA ⊗ Λ)(Ψ).
+This is close to Lemma 21 of Ref. [9], but the statement is slightly different because the standard purification postulate cannot
+be used directly.
+Proof Choose normalized pure states α ∈ StN (Ã), β ∈ StN (B), and γ ∈ StN (C). Regard Φ B Ψ ⊗ α ⊗ γ and Φ′ B Ψ′ ⊗ α ⊗ β
+as states of AÃBC after permuting tensor factors. Following the convention stated above, we suppress the reversible channels
+implementing these permutations. By Lemma 15, both are pure, and both purify ρ with purifying system ÃBC. Lemma 18,
+applied with BC in the role of the system B in Lemma 18, gives a reversible channel U on ÃBC such that
+                                                                                                                ～
+                                                                                                                A       B           C
+                                                   A       ～
+                                                           A         B              C                   A               U
+                                                               Φ'                           =                   ～
+                                                                                                                A       B           C
+                                                                                                                    Φ                   .                                  (C1)
+Define
+
+                                                                                            ～                   C
+                                                                     C                      A           B
+                                                                    Λ           =                   U
+                                                                     B                      ～                   C
+                                                                                            A
+                                                                                            α           B       γ
+                                                                                                                    .                                                      (C2)
+Then Λ is a channel, and
+
+                                                                                                                                        ～       C
+                                                                                        ～                                               A   B                      C
+                                                                                        A           B       C
+                 A        C       A   ～
+                                      A        B       C   (C1)             A                   U                               A           U       (C2)   A       Λ
+                     Ψ'       =           Φ'                   =                        ～
+                                                                                        A           B       C
+                                                                                                                    =                   ～
+                                                                                                                                        A       C    =             B
+                                                                                                                                    α       B   γ
+                                                                                            Φ                                                                  Ψ
+                                                                                                                                    Ψ                                  .
+Note that the equation labels displayed above equal signs (here, (C1) and (C2)) indicate the identities used in the diagrammatic
+calculation; the same convention is used below.                                                                               □
+                                                                                                                                                                                                  16
+
+Lemma 20 Let ρ ∈ StN (A) and let Ψ ∈ StN (AB) be a purification of ρ. Let {σi ∈ St(A)}ni=1 satisfy                                                                      i=1 σi = ρ. Then there exists
+                                                                                                                                                                    Pn
+a measurement {bi }ni=1 on B such that (idA ⊗ bi )(Ψ) = σi for every i.
+
+This is essentially Theorem 6 of Ref. [9].
+Proof The case n = 1 is immediate with b1 B eB . Assume n ≥ 2. From a system of informational dimension at least 2,
+repeated composition yields a system C having n perfectly distinguishable normalized states {φi }ni=1 and a measurement {ci }ni=1
+distinguishing them. Indeed, tensor powers of two perfectly distinguishable states give 2m perfectly distinguishable product
+states for sufficiently large m, and coarse-graining the corresponding distinguishing measurement gives any desired number
+n ≤ 2m . Put
+                                                                      A           C               n            A            C
+                                                                          Ω           =        �
+                                                                                               i=1
+                                                                                                   σi                   φi
+                                                                                                                                .                                                               (C3)
+
+Then eAC (Ω) = i=1 eA (σi )eC (φi ) = eA (ρ) = 1, and Eq. (A7) shows that Ω is normalized. Let Φ ∈ StN (ACD) be a purification of
+                Pn
+Ω, with D conjugate to AC. Since
+
+                                                 A                                    A                                n         A                  A
+
+                                                     Φ
+                                                         C        D
+                                                                          =
+                                                                                          Ω
+                                                                                                  C
+                                                                                                              =        �
+                                                                                                                       i=1
+                                                                                                                           σi           =       ρ
+                                                                                                                                                        ,
+
+the state Φ also purifies ρ. By Lemma 19, there is a channel Λ ∈ Trans(B, CD) such that Φ = (idA ⊗ Λ)(Ψ). Define
+
+                                                                                                  ci
+                                                                          bi                       C               D
+                                                                                      =
+                                                                              B                           Λ
+                                                                                                      B                .                                                                        (C4)
+
+Since Λ is a channel and {ci ⊗ eD }ni=1 is a measurement on CD, {bi }ni=1 is a measurement on B. Moreover,
+
+                                                             ci
+                               A       bi   (C4)     A
+                                                              C           D
+                                                                                              A           ci                                A       ci      (C3)    A
+                                        B    =                    Λ               =                           C             D       =                   C    =     σi
+                                   Ψ                          B                                           Φ                                     Ω
+                                                         Ψ                                                                                                              .
+
+                                                                                                                                                                                                   □
+
+Lemma 21 If Ψ ∈ StN (AB) is a purification of ρ ∈ StN (A), then, for every σ ∈ Dρ , there exists an effect b ∈ Eff(B) such that
+σ = (idA ⊗ b)(Ψ).
+
+This is essentially Corollary 9 of Ref. [9].
+Proof Put τ B ρ − σ. Since σ ∈ Dρ , one has σ, τ ∈ St+ (A), σ ≤ ρ, and τ ≤ ρ. Since eA is positive and eA (ρ) = 1, one has
+eA (σ) ≤ 1 and eA (τ) ≤ 1. Hence Eq. (A7) implies that σ and τ are states of A. Applying Lemma 20 to ρ = σ + τ, there exists a
+measurement {b, c} on B such that (idA ⊗ b)(Ψ) = σ. Thus the required effect is b.                                          □
+
+Lemma 22 The complementary state of an internal normalized state is internal.
+
+This is essentially the statement obtained by combining Theorems 8 and 9 and Lemma 30 of Ref. [9].
+Proof Let ρ ∈ StN (A) be internal, let Ψ ∈ StN (AÃ) be a purification of ρ, and put ρ̃ B (eA ⊗ idÃ )(Ψ). It is enough to
+show dim Span(Dρ̃ ) = dim StR (Ã) = dim EffR (A). Indeed, a reversible channel between A and Ã induces a linear isomorphism
+StR (A)  StR (Ã), while EffR (A) = StR (A)∗ . Hence both dimensions equal dA . Consider the linear map
+
+                                                                                                       a                ～
+                                                 τ : EffR (A) ∋                a          7→              A
+                                                                                                                       A
+                                                                                                                                ∈ StR (Ã).
+                                                                                  A
+                                                                                                              Ψ
+                                                                                                                                                                                            17
+
+If τ(a) = 0, then for every σ ∈ Dρ , Lemma 21 gives b ∈ Eff(Ã) with σ = (idA ⊗ b)(Ψ), and hence
+
+                                                                                    a                        a        b
+                                                                                        A       =            A         A
+                                                                                                                          ～
+
+                                                                                    σ                            Ψ            .
+
+The right-hand side equals b(τ(a)) = b(0) = 0. Since Dρ spans StR (A), a = 0; hence τ is injective. Thus dim τ(EffR (A)) =
+dim EffR (A). For each a ∈ Eff(A), a ≤ eA gives τ(a) ≤ ρ̃, hence τ(a) ∈ Dρ̃ , so τ(EffR (A)) ⊆ Span Dρ̃ . Conversely, for σ̃ ∈ Dρ̃ ,
+applying Lemma 21 to the purification Ψ of ρ̃ gives a ∈ Eff(A) with σ̃ = (a ⊗ idÃ )(Ψ) = τ(a). Hence Dρ̃ ⊆ τ(Eff(A)), and so
+Span Dρ̃ ⊆ τ(EffR (A)). Therefore τ(EffR (A)) = Span Dρ̃ and the dimensions coincide.                                           □
+
+Lemma 23 Let ρ ∈ StN (A) be internal and let Ψ ∈ StN (AB) be a purification of ρ. For any elements f and g of TransR (A, C),
+                                                         C                              C
+                                                     f            B                     g            B
+                                                                                                                                      C                    C
+
+                                                         A
+                                                                           =            A
+                                                                                                                 ⇒                f            =           g
+                                                                                                                                      A                    A   .
+                                                             Ψ                              Ψ
+The converse is immediate. This is the linear-map version of Theorem 8 of Ref. [9]. As explained in Sec. B 1, f ⊗ idB is the
+unique linear map satisfying ( f ⊗ idB )(ρ ⊗ σ) = f (ρ) ⊗ σ on product normalized states, and similarly for g ⊗ idB .
+Proof For every σ ∈ Dρ , Lemma 21 gives b ∈ Eff(B) with σ = (idA ⊗ b)(Ψ). Hence f (σ) = ( f ⊗ b)(Ψ) = (g ⊗ b)(Ψ) = g(σ).
+Since Dρ spans StR (A), we obtain f = g.                                                                              □
+
+
+                                                                                    2.          Homogeneity
+
+Lemma 24 Let Ψρ ∈ StN (AÃ) be a purification of an internal normalized state ρ ∈ StN (A). Then there exist Eρ ∈ Eff(ÃA) and a
+positive real number pρ such that
+
+                                                A                Eρ                                                   Eρ                   A
+                                                                                                                                               ～
+                                                             ～
+                                                             A                 = pρ A                             ～
+                                                                                                                  A
+                                                                                                                              A                        = pρ A～
+                                                                       A
+                                                    Ψρ                                                                            Ψρ
+                                                                                                     ,                                                                 .                   (C5)
+
+Note that the left and right equalities displayed in the diagram mean, respectively, (idA ⊗ Eρ ) ◦ (Ψρ ⊗ idA ) = pρ idA and (Eρ ⊗
+idÃ ) ◦ (idÃ ⊗ Ψρ ) = pρ idÃ .
+
+This is essentially a special case of Corollary 19 of Ref. [9].
+Proof By Lemma 22, the complementary state ρ̃ of ρ with respect to Ψρ is internal. By Lemma 15, ρ ⊗ ρ̃ is internal. Lemma 10
+therefore gives pρ > 0 with pρ Ψρ ≤ ρ ⊗ ρ̃, i.e., pρ Ψρ ∈ Dρ⊗ρ̃ . Since Ψρ ⊗ Ψρ is the parallel composition of normalized pure
+states, it is pure by Lemma 15; it purifies ρ ⊗ ρ̃ in the sense that (idA ⊗ eÃA ⊗ idÃ )(Ψρ ⊗ Ψρ ) = ρ ⊗ ρ̃. Applying Lemma 21 to
+pρ Ψρ ∈ Dρ⊗ρ̃ gives an effect Eρ ∈ Eff(ÃA) such that
+
+                                                                  A                Eρ                    ～
+                                                                                                         A                            A
+                                                                                                                                                   ～
+                                                                                                                                                   A
+                                                                           A
+                                                                               ～
+                                                                                            A                    = pρ                     Ψρ
+                                                                      Ψρ                    Ψρ                                                         .
+
+This equation can be rewritten as
+
+                              A            Eρ                                                                                         Eρ                   ～
+                                                                                                                                                           A
+                                       ～
+                                       A                     ～
+                                                             A             pρ A                  ～
+                                                                                                 A                A                            A                           A   pρ A～
+                                  Ψρ            A                 =                                                               ～
+                                                                                                                                  A                Ψρ              =
+                                                                                        Ψρ                                                                                     Ψρ
+                                                Ψρ                                                       ,            Ψρ                                                               .   (C6)
+
+Since Ψρ is a purification of the internal state ρ, the left equality of Eq. (C6) and Lemma 23 imply the left equality of Eq. (C5).
+Similarly, since Ψρ is a purification of the internal state ρ̃, the right equality of Eq. (C6) and Lemma 23 with the two systems
+interchanged imply the right equality of Eq. (C5).                                                                               □
+                                                                                                                                                                                                                                     18
+
+Lemma 25 For internal normalized states τ and ρ of A, there exists a linear automorphism Γτ,ρ of St+ (A) such that Γτ,ρ (τ) = ρ
+and both Γτ,ρ and Γ−1
+                   τ,ρ belong to Trans+ (A, A).
+
+
+Proof For σ ∈ {τ, ρ}, let Ψσ ∈ StN (AÃ) be a purification of σ, and let Eσ and pσ be as in Lemma 24. Define
+                                                     A                        A                Eτ                         A                      A                    Eρ
+                                                Γτ,ρ         = pτ−1                        ～
+                                                                                           A                            Γρ,τ       = pρ−1                         ～
+                                                                                                                                                                  A
+                                                                                                        A                                                                    A
+                                                     A                            Ψρ                        ,             A                          Ψτ
+                                                                                                                                                                                 .                                                  (C7)
+Then Lemma 24 yields
+
+            A
+                                                                                                                                                     Eρ
+                                   A                Eτ
+         Γτ,ρ                                   ～
+                                                A                                                                   A              Eτ            ～
+                                                                                                                                                 A                    (C5)               A             Eρ           (C5)
+            A      = pτ−1 pρ−1                           A           Eρ            = pτ−1 pρ−1                                          A                              = pρ−1                      ～
+                                                                                                                                                                                                   A                    =       A
+                                       Ψρ                        ～                                                             ～
+         Γρ,τ                                                   A
+                                                                              A
+                                                                                                                               A
+                                                                                                                                        Ψτ                    A
+                                                                                                                                                                                             Ψρ                 A
+
+            A                                            Ψτ
+                                                                                                                        Ψρ
+                                                                                                                                                                                                                                ,
+and
+
+            A
+                                                                                                                                                     Eτ
+                                   A                Eρ
+         Γρ,τ                                   ～
+                                                A                                                                   A              Eρ            ～
+                                                                                                                                                 A                    (C5)               A             Eτ           (C5)
+            A      = pρ−1 pτ−1                           A           Eτ            = pρ−1 pτ−1                                          A                              =         pτ−1              ～
+                                                                                                                                                                                                   A                    =       A
+                                       Ψτ                        ～                                                             ～
+         Γτ,ρ                                                   A
+                                                                              A
+                                                                                                                               A
+                                                                                                                                        Ψρ                    A
+                                                                                                                                                                                             Ψτ                 A
+
+            A                                            Ψρ
+                                                                                                                        Ψτ
+                                                                                                                                                                                                                                ,
+so Γρ,τ is the inverse of Γτ,ρ . Moreover,
+
+               A              A            Eτ                             A                Eτ                                                            Eτ                  ～
+                                                                                                                                                                             A
+          Γτ,ρ                         ～
+                                       A
+                                                                                       ～
+                                                                                       A                                                                      A
+                                                                                                                                                                                  (C5)        A             ～               A
+               A
+                   =   pτ−1       Ψρ                A    =    pτ−1            Ψρ                    A                    =     pτ−1     A
+                                                                                                                                                     ～                               =                      A       =       ρ
+                                                                                                                ～
+                                                                                                                A
+                                                                                                                                                 A
+                                                                                                                                                                  Ψτ                              Ψρ
+           τ                                    τ                                                   Ψτ                                      Ψρ                                                                                  ,
+where the second equality uses that Ψτ purifies τ and the last equality uses that Ψρ purifies ρ. Formula (C7) also shows that
+Γτ,ρ ∈ Trans+ (A, A), and similarly for its inverse. Hence Γτ,ρ is a linear automorphism of St+ (A).                       □
+
+Proposition 26 (Homogeneity of state cones) In every OPT satisfying local equivalence and ES purification, St+ (A) is homo-
+geneous for every system A.
+
+Proof If A = I, the state cone is a half-line and is homogeneous. Assume A , I. By Lemma 8, the cone has an interior point.
+Let x and y be arbitrary interior points of St+ (A). Write x = λ x x and y = λy y with λ x B eA (x) > 0 and λy B eA (y) > 0, and
+normalized states x and y. These normalized states are also interior points, and hence internal by Lemma 9. Lemma 25 gives a
+linear automorphism Γ x,y of St+ (A) sending x to y. Then Υ x,y B λ−1
+                                                                    x λy Γ x,y is a linear automorphism of St+ (A) sending x to y. □
+   The following lemma is Theorem 2 of Ref. [43] translated into the present OPT notation.
+
+Lemma 27 In an OPT, suppose that St+ (A) is homogeneous and that, for any two normalized pure states ψ and ϕ of A, there
+exists a reversible channel U on A with ϕ = U(ψ). Then St+ (A) is a symmetric cone.
+
+Proof Define an order on StR (A) by x ≤ y iff y − x ∈ St+ (A). A reversible channel U is a normalized order isomorphism in the
+sense of Ref. [43]. Indeed, U is a linear bijection satisfying U(St+ (A)) = St+ (A), and Lemma 6 gives eA ◦ U = eA . Thus the
+theory satisfies pure transitivity in the sense of Ref. [43]. Since St+ (A) is homogeneous by assumption, Theorem 2 of Ref. [43]
+implies that St+ (A) is self-dual. Hence it is homogeneous and self-dual, and therefore symmetric.                            □
+
+Theorem 28 (Symmetry of state cones) In every OPT satisfying local equivalence and ES purification, St+ (A) is a symmetric
+cone for every system A.
+
+Proof Proposition 26 gives homogeneity of St+ (A). Lemma 17 gives transitivity of reversible channels on normalized pure
+states. Lemma 27 then implies that St+ (A) is symmetric.                                                              □
+                                                                                                                                                               19
+
+                                                  3.    Symmetric cones and Euclidean Jordan algebras
+
+   By Theorem 28, St+ (A) is a symmetric cone. It is well known that the real vector space spanned by a symmetric cone can
+be regarded as a Euclidean Jordan algebra (EJA). This subsection recalls how the vector space spanned by St+ (A) is naturally
+associated with an EJA, and records basic facts about symmetric cones and EJAs. For proofs, see for example Ref. [46].
+   An EJA is a finite-dimensional real inner-product space E equipped with a bilinear product • and a unit element u such that,
+for all x and y in E, x • y = y • x, x • (x2 • y) = x2 • (x • y) where x2 B x • x, u • x = x, and
+
+                                                            ⟨x • y, z⟩ = ⟨y, x • z⟩ ,      ∀x, y, z ∈ E.                                                     (C8)
+
+The positive cone of E is E+ B {x2 | x ∈ E}. This cone is symmetric. Conversely, as recalled below, for every symmetric cone
+C, there exists an EJA E with C = E+ . If x and y are in E and satisfy y − x ∈ E+ , we write x ≤ y or y ≥ x.
+   An element p ∈ E with p • p = p is called an idempotent. A nonzero idempotent p is primitive if there do not exist nonzero
+idempotents p1 and p2 with p1 + p2 = p and p1 • p2 = 0. For a convex cone C, a half-line R≥0 x B {cx | c ∈ R≥0 } generated
+by nonzero x ∈ C is an extreme ray of C if x = y + z with y and z in C implies that y and z are in R≥0 x. We also say that such
+x lies on an extreme ray of C. For every primitive idempotent p, R≥0 p is an extreme ray of E+ , and every extreme ray of E+ is
+of this form. Elements x and y in E are called orthogonal, written x ⊥ y, if x • y = 0. A family of primitive idempotents {pi }ri=1
+satisfying ri=1 pi = u is called a Jordan frame. The natural number r is uniquely determined and called the rank of E. Elements
+           P
+of a Jordan frame are mutually orthogonal. Any family of mutually orthogonal primitive idempotents has size at most r and can
+be extended to a Jordan frame. In particular, a mutually orthogonal family of r primitive idempotents is already a Jordan frame.
+For all x and y in E+ ,
+
+                                                        ⟨x, y⟩ = 0       ⇔       x•y=0         ⇔      x ⊥ y,                                                 (C9)
+
+where the right equivalence is the definition of orthogonality. Thus any nonzero mutually orthogonal family in E+ has at most r
+elements.
+   Every x ∈ E admits a spectral decomposition x = ri=1 λi pi , where λi ∈ R and {pi }ri=1 is a Jordan frame. The list of λi is called
+                                                      P
+the spectrum of x. In this decomposition, x ∈ E+ iff all λi ≥ 0. The map x 7→ ri=1 λi is called the trace and is denoted by tr.
+                                                                                 P
+Below we use the standard trace inner product on an EJA, namely ⟨x, y⟩ B tr(x • y). Then ⟨u, x⟩ = tr x for the unit u, and E+ is
+self-dual with respect to this inner product.
+
+Theorem 29 (Koecher–Vinberg theorem [47, 48]) For any symmetric cone C and any interior point u of C, there exists an EJA
+E whose underlying real vector space is the span of C, whose unit is u, and whose positive cone satisfies E+ = C.
+    In every OPT satisfying local equivalence and ES purification, St+ (A) is symmetric by Theorem 28. Since the only x ∈ St+ (A)
+with eA (x) = 0 is 0, eA is an interior point of the dual cone St+ (A)∗ . Below we fix, for each A, an EJA structure EA whose positive
+cone is St+ (A) and whose trace trA agrees with the deterministic effect: trA x = eA (x) for all x ∈ EA . Such a choice is always
+possible: for a symmetric cone C and an interior point e of its dual cone, one can put an EJA structure on Span C whose positive
+cone is C and whose trace functional is e; see Chap. III of Ref. [46]. Let uA be the unit of EA , and let the inner product of EA be
+the trace inner product. Then eA (x) = trA x = ⟨uA , x⟩. As a real vector space, EA = StR (A), and St+ (A) = E+A . Since EffR (A) is
+identified with StR (A)∗ , it is also identified with E∗A . We write rA for the rank of EA and call it the rank of A. A state ρ ∈ St+ (A)
+is normalized iff trA ρ = 1, and a normalized state is pure iff it is a primitive idempotent, because primitive idempotents are
+precisely the extreme points of the convex set {x ∈ E+A | trA x = 1}.
+    A nonzero linear subspace E′ of an EJA E is a subalgebra if x • y ∈ E′ for all x and y in E′ . Such a subalgebra has a unit
+u satisfying u′ • x = x for all x ∈ E′ . For every nonzero idempotent p of E, the set {x ∈ E | p • x = x} is a subalgebra. Two
+  ′
+
+subalgebras E1 and E2 are orthogonal, written E1 ⊥ E2 , if x • y = 0 for every x ∈ E1 and y ∈ E2 . For their units u1 and u2 , one
+has4
+
+                                                                   E1 ⊥ E2           ⇔   u1 ⊥ u2 .                                                         (C10)
+
+A direct-sum decomposition E = E1 ⊕ E2 means that E = E1 ∔ E2 as real vector spaces and that the two subalgebras are
+orthogonal. Here ⊕ denotes direct sums as EJAs, whereas ∔ denotes direct sums as real vector spaces. If E = E1 ⊕ E2 , then
+
+
+
+4 The implication E
+                     1 ⊥ E2 ⇒ u1 ⊥ u2 is immediate. Conversely, suppose                  this gives a • b = 0. Every x ∈ E1 can be written as x = x+ − x− with x+
+  u1 ⊥ u2 . For a ∈ E+1 and b ∈ E+2 , one has a ≤ cu1 and b ≤ du2 for some c             and x− in E+1 , and every y ∈ E2 as y = y+ − y− with y+ and y− in E+2 . By
+  and d in R≥0 , hence 0 ≤ ⟨a, b⟩ ≤ ⟨cu1 , du2 ⟩ = cd ⟨u1 , u2 ⟩ = 0. By Eq. (C9),       bilinearity, x • y = 0 for every x ∈ E1 and y ∈ E2 , so E1 ⊥ E2 .
+                                                                                                                                    20
+
+every x ∈ E can be written uniquely as x = x1 + x2 (x1 ∈ E1 , x2 ∈ E2 ). The linear map P1 : E → E defined by P1 (x) B x1 is
+called the projection onto E1 . The projection onto E2 is defined similarly. For x ∈ E+ , the components satisfy xi ∈ E+i . Indeed,
+if x = y2 and y = y1 + y2 with yi ∈ Ei , then x = y2 = y21 + y22 by orthogonality, so xi = y2i ∈ E+i . Thus the projection onto E1 maps
+E+ into E+1 .
+   A linear isomorphism preserving both product and inner product is called an EJA isomorphism. Such a map preserves spectra,
+maps the unit of the domain to the unit of the codomain, maps the positive cone onto the positive cone, and preserves the trace. If
+there exists an EJA isomorphism from E1 to E2 , we say that they are EJA-isomorphic, written E1 EJA E2 . An EJA isomorphism
+from E to itself is an EJA automorphism. For a linear map g : E → E, the adjoint map g∗ is defined by ⟨g(x), y⟩ = ⟨x, g∗ (y)⟩.
+   A linear subspace W of an EJA E is an ideal if x • y ∈ W for every x ∈ W and y ∈ E. A nonzero EJA is simple if its
+only ideals are {0} and itself. If an EJA is not simple, it decomposes as E = E1 ⊕ E2 for nonzero EJAs E1 and E2 . Let H and
+O denote the quaternions and octonions. For F ∈ {R, C, H, O}, let Hern (F) be the set of Hermitian matrices of order n over F.
+Simple EJAs are classified into five types: real Herr (R), complex Herr = Herr (C), quaternionic Herr (H), spin factors Spind with
+d ≥ 5 and d , 6, and the exceptional algebra Her3 (O) [28]. Their ranks and dimensions are summarized in Table II. Except
+for the exceptional EJA isomorphisms Her1 (R) EJA Her1 EJA Her1 (H) (EJA R), the simple EJAs in this classification are
+mutually non-EJA-isomorphic. Note that the algebras Spin3 , Spin4 , Spin6 , Her1 (O), and Her2 (O) are also simple, but they are
+EJA-isomorphic to Her2 (R), Her2 , Her2 (H), R, and Spin10 , respectively, so excluding them entails no essential loss.
+
+
+                                           TABLE II. Ranks and dimensions of simple EJAs
+                                                      Type Rank Dimension
+                                                     Herr (R) r    r(r + 1)/2
+                                                      Herr     r       r2
+                                                     Herr (H) r     r(2r − 1)
+                                                      Spind    2        d
+                                                     Her3 (O) 3        27
+
+
+
+
+                                                    4.     No-restriction hypothesis
+
+   The no-restriction hypothesis asserts that any collection {ai }ni=1 of elements of St+ (A)∗ satisfying ni=1 ai = eA is a measure-
+                                                                                                         P
+ment. We show that every OPT satisfying local equivalence and ES purification satisfies this hypothesis. For z ∈ EA , define
+z† ∈ EffR (A) by
+
+                                                         z† : EA ∋ x 7→ ⟨z, x⟩ ∈ R.                                             (C11)
+
+Then u†A = eA .
+   The proof of no-restriction below has three steps. First, Lemma 32 reduces the no-restriction hypothesis to the cone equality
+Eff+ (A) = St+ (A)∗ . Second, Lemma 30 proves that Eff+ (A) is closed, and Lemma 34 uses this closedness to obtain a normalized
+pure state ψ with ψ† ∈ Eff+ (A). Third, Theorem 35 uses transitivity of reversible channels on pure states to obtain s† ∈ Eff+ (A)
+for every normalized pure state s, and then uses self-duality and spectral decomposition to prove Eff+ (A) = St+ (A)∗ .
+
+Lemma 30 For every system A, Eff+ (A) is a closed convex cone.
+
+Proof By Lemma 5, St+ (Ã) is a closed convex cone. Let ρ ∈ StN (A) be internal and let Ψρ ∈ StN (AÃ) be a purification. Such a
+state exists by Lemmas 8 and 9. Let Eρ and pρ be as in Lemma 24. Consider the linear maps
+
+                                                                            a            ～
+                                          Ψ
+                                          bρ : EffR (A) ∋         a   7→    A
+                                                                                         A
+                                                                                                 ∈ StR (Ã)
+                                                                  A
+                                                                                Ψρ
+
+and
+
+                                                              ～
+                                                                                    Eρ
+                                                             A
+                                        bρ : StR (Ã) ∋
+                                        E                    x    7→ pρ−1       ～
+                                                                                A                ∈ EffR (A).
+                                                                            x                A
+                                                                                                                                                                                 21
+
+Lemma 24 gives, for all x ∈ StR (Ã),
+
+                                                                         Eρ                                                       Eρ                    ～
+                                                                                                                                                        A
+                                                                     ～                         ～                                                            (C5)       ～
+                                                                  A                            A                                           A                       A
+                               Ψρ ◦ E
+                              (b    bρ )(x) =         pρ−1       x                A                    =       pρ−1       A
+                                                                                                                              ～
+                                                                                                                                               Ψρ            =     x
+                                                                                                                                                                           ,
+                                                                                      Ψρ                                  x
+
+and, for all a ∈ EffR (A),
+
+                                                                                      Eρ                                  a
+                                                                                                                                                            (C5)
+                                     Ψρ )(a) = pρ−1 a                                                                                          Eρ                  a
+                                                                                                       = pρ−1
+                                                                                  ～
+                                bρ ◦ b
+                               (E
+                                                                  A
+                                                                                  A
+                                                                                            A
+                                                                                                                              A
+                                                                                                                                           ～                 =     A
+                                                                                                                                           A
+                                                                                                                                                                           .
+                                                                         Ψρ                                                       Ψρ                    A
+
+
+
+Thus E bρ is the inverse of Ψ
+                            bρ . Since a linear isomorphism between finite-dimensional vector spaces maps closed convex cones
+to closed convex cones, Eρ (St+ (Ã)) is a closed convex cone. It remains to identify it with Eff+ (A). If x ∈ St+ (Ã), then E
+                           b                                                                                                    bρ (x)
+is built by composing x with pρ Eρ ∈ Eff+ (ÃA), so it lies in Eff+ (A). Conversely, if a ∈ Eff+ (A), then Ψρ (a) ∈ St+ (Ã). Thus
+                                  −1                                                                              b
+Ψ
+bρ (Eff+ (A)) ⊆ St+ (Ã). Applying Ebρ and using Ebρ ◦ Ψ
+                                                       bρ = idEffR (A) gives a ∈ E                    bρ (St+ (Ã)) = Eff+ (A).
+                                                                                 bρ (St+ (Ã)). Hence E                             □
+
+Lemma 31 The map † : EA ∋ z 7→ z† ∈ EffR (A) is injective.
+
+Proof If z† = w† , then ⟨z − w, x⟩ = 0 for all x ∈ EA . Taking x = z − w and using positive definiteness gives z = w.                                                             □
+
+                                                                           i=1 ai = eA is a measurement.
+                                                                      Pn
+Lemma 32 Every family {ai ∈ Eff+ (A)}ni=1 satisfying
+
+Proof Choose an internal normalized state ρ ∈ StN (A) and a purification Ψ ∈ StN (ÃA) of it. Let ρ̃ B (idÃ ⊗ eA )(Ψ) ∈ StN (Ã)
+be the complementary state of ρ associated with Ψ. By Lemma 22, ρ̃ is internal. For each i, define σ̃i B (idÃ ⊗ ai )(Ψ). Since
+  i=1 ai = eA , one has
+Pn
+
+
+                                          n       ～               n           ～        ai                       ～                                   ～
+
+                                         �                       �
+                                               A                              A                                 A                                   A
+                                                        =                                              =                      A        =        ρ～
+                                         i=1 σi
+                                              ～                                            A
+                                                                 i=1
+                                                                                  Ψ                                 Ψ
+                                                                                                                                                        .
+
+Moreover, ai ∈ Eff+ (A) implies σ̃i ∈ St+ (Ã), and eÃ (σ̃i ) ≤ eÃ (ρ̃) = 1. Hence, by Eq. (A7), each σ̃i is a state. Lemma 20
+can therefore be applied, regarding the systems Ã and A as the systems A and Ã in Lemma 20. It follows that there exists a
+measurement {bi }ni=1 on A such that (idÃ ⊗ bi )(Ψ) = σ̃i for every i. Hence
+
+                                                         A
+                                                             ～        bi                       A
+                                                                                                   ～
+                                                                                                                    A
+                                                                                                                      ～       ai
+                                                                          A       =         σi
+                                                                                            ～              =                       A
+                                                                 Ψ                                                        Ψ            .                                       (C12)
+
+After applying the reversible equivalence that interchanges the two tensor factors, which we suppress from the notation,
+Eq. (C12) has the form (bi ⊗ idÃ )(Ψ) = (ai ⊗ idÃ )(Ψ). The resulting state is a purification of the internal state ρ with puri-
+fying system Ã. Therefore Lemma 23, applied with f = bi , g = ai , B = Ã, and C = I, gives bi = ai . Thus {ai }ni=1 is equal to the
+measurement {bi }ni=1 .                                                                                                             □
+   In view of this lemma, in order to prove the no-restriction hypothesis it is enough to prove Eff+ (A) = St+ (A) . We first
+                                                                                                                         ∗
+
+establish two preparatory lemmas.
+
+Lemma 33 Let χ B uA /rA ∈ E+A . For every linear automorphism g of E+A and for its adjoint map g∗ , the elements g(χ) and g∗ (χ)
+have the same spectrum.
+
+Proof By the polar decomposition for linear automorphisms of E+A [46, Theorem III.5.1], there are an interior point y of E+A
+and an EJA automorphism h such that g = Py ◦ h, where Py : EA ∋ z 7→ 2y • (y • z) − y2 • z ∈ EA . EJA automorphisms
+map uA to uA , preserve spectra, and preserve the inner product. Moreover, for all x and z in EA , ⟨h∗ (x), z⟩ = ⟨x, h(z)⟩ =
+⟨h(h−1 (x)), h(z)⟩ = ⟨h−1 (x), z⟩, and hence h∗ = h−1 . Further, Py is self-adjoint, namely P∗y = Py , and satisfies Py (uA ) = y2 .
+                                                                                                                                            22
+
+Therefore g(uA ) = Py (h(uA )) = Py (uA ) = y2 , whereas g∗ (uA ) = h−1 (Py (uA )) = h−1 (y2 ). Since h−1 is an EJA automorphism, y2
+and h−1 (y2 ) have the same spectrum. Thus g(uA ) and g∗ (uA ) have the same spectrum. Dividing by rA , one obtains the same
+conclusion for g(χ) and g∗ (χ).                                                                                                   □
+
+Lemma 34 For every system A, there exists a normalized pure state ψ ∈ StN (A) such that ψ† ∈ Eff+ (A).
+
+Proof Put χ B uA /rA . Then χ is normalized and internal. Fix a normalized pure state, equivalently a primitive idempotent,
+p, and for 0 < t < 1 put ρt B (1 − t)p + tχ. This state is again normalized and internal, and converges to p as t ↓ 0. By
+Lemma 25, there exists Ft B Γχ,ρt ∈ Trans+ (A, A) such that Ft is a linear automorphism of E+A and Ft (χ) = ρt . Moreover,
+at B (eA ◦ Ft )/rA ∈ Eff+ (A). Let Ft∗ be the adjoint of Ft , and put ψt B Ft∗ (χ) ∈ EA . Then, for every z ∈ EA ,
+                                        at (z) = eA (Ft (z))/rA = ⟨χ, Ft (z)⟩ = ⟨Ft∗ (χ), z⟩ = ⟨ψt , z⟩ ,
+
+and therefore at = ψ†t by Eq. (C11).
+   By Lemma 33, ψt = Ft∗ (χ) and ρt = Ft (χ) have the same spectrum. Taking a Jordan frame containing p, the spectrum of
+ρt = (1 − t)p + tχ is 1 − t + t/rA , t/rA , . . . , t/rA . Hence ψt ∈ E+A and trA ψt = 1, while trA ψ2t = (1 − t + t/rA )2 + (rA − 1)(t/rA )2 ,
+which converges to 1 as t ↓ 0. By Lemma 5, StN (A) = {z ∈ E+A : trA z = 1} is compact. Hence there exist a sequence 0 < tm < 1
+with limm→∞ tm = 0 and an element ψ ∈ E+A such that limm→∞ ψtm = ψ. Since trA and x 7→ x2 are continuous, trA ψ = 1 and
+trA ψ2 = 1. Writing the spectrum of ψ in decreasing order as λ1 , . . . , λrA , one has λi ≥ 0, ri=1       λi = 1, and ri=1    λi = 1. Thus
+                                                                                                       PA                PA 2
+λ1 = 1 and λ2 = · · · = λrA = 0, and consequently ψ is a primitive idempotent, namely a normalized pure state. Each atm belongs
+to Eff+ (A) and satisfies atm = ψ†tm . Since the map z 7→ z† is linear and hence continuous, atm converges to ψ† . By Lemma 30,
+Eff+ (A) is closed, and therefore ψ† ∈ Eff+ (A).                                                                                            □
+
+Theorem 35 (No-restriction hypothesis) Every OPT satisfying local equivalence and ES purification satisfies the no-restriction
+hypothesis.
+
+Proof By Lemma 32, it is enough to prove Eff+ (A) = St+ (A)∗ . The inclusion Eff+ (A) ⊆ St+ (A)∗ is immediate, so we prove
+Eff+ (A) ⊇ St+ (A)∗ . If rA = 1, then E+A is the ray R≥0 uA , and St+ (A)∗ is the ray R≥0 eA . Since eA ∈ Eff+ (A), one has St+ (A)∗ =
+R≥0 eA ⊆ Eff+ (A). We henceforth assume rA ≥ 2.
+   We first show that s† ∈ Eff+ (A) for every normalized pure state, equivalently every primitive idempotent, s. By Lemma 34,
+there exists a normalized pure state ψ such that ψ† ∈ Eff+ (A). By Lemma 17, there exists a reversible channel U on A such that
+U(ψ) = s. By Lemma 6, eA ◦U = eA , and hence U is a linear automorphism of StN (A). Since St+ (A) is the convex cone generated
+by StN (A), U is also a linear automorphism of St+ (A) = E+A . Since U preserves trA , its adjoint satisfies U ∗ (uA ) = uA . Write the
+polar decomposition of U [46, Theorem III.5.1] as U = Py ◦ h, where y is an interior point of E+A , h is an EJA automorphism,
+and Py is the linear map defined by Py : EA ∋ z 7→ 2y • (y • z) − y2 • z ∈ EA . From h∗ = h−1 , P∗y = Py , and h(uA ) = uA , we obtain
+uA = U ∗ (uA ) = h−1 (y2 ). Therefore y2 = h(uA ) = uA , and since y ∈ E+A it follows that y = uA . Indeed, if y = i µi pi is a spectral
+                                                                                                                   P
+decomposition, where µi ∈ R≥0 and {pi }i is a Jordan frame, then y = i µi pi and y = uA imply µi = 1, hence y = i pi = uA .
+                                                                       2                 2
+                                                                           P 2                                              P
+Thus Py = PuA is the identity map, and U = PuA ◦h = h is an EJA automorphism. Since U is an EJA automorphism and preserves
+the inner product, for every x ∈ EA , one has
+                                       (ψ† ◦ U −1 )(x) = ⟨ψ, U −1 (x)⟩ = ⟨U(ψ), x⟩ = ⟨s, x⟩ = s† (x).
+Hence ψ† ◦ U −1 = s† . Since U −1 is a reversible channel, s† ∈ Eff+ (A).
+  It remains to prove Eff+ (A) ⊇ St+ (A)∗ . Let b ∈ St+ (A)∗ be arbitrary. By self-duality of E+A , there exists z ∈ E+A such that z† = b,
+namely b(x) = ⟨z, x⟩ for all x ∈ EA . Let z = i λi si be a spectral decomposition, where λi ∈ R≥0 and {si }i is a Jordan frame.
+                                                 P
+Since the map z 7→ z† is linear and b = z† , one has b = i λi s†i . Since each s†i belongs to Eff+ (A) and Eff+ (A) is a convex cone,
+                                                           P
+b ∈ Eff+ (A).                                                                                                                           □
+
+Corollary 36 The map † : EA ∋ z 7→ z† ∈ EffR (A) is a linear isomorphism from E+A onto Eff+ (A). In particular, for every
+a ∈ Eff+ (A), there exists z ∈ E+A such that z† = a, namely a(x) = ⟨z, x⟩ for all x ∈ EA .
+
+Proof The map † is linear and injective by Lemma 31. Moreover, Theorem 35 gives Eff+ (A) = St+ (A)∗ . Since E+A is self-dual,
+for every a ∈ Eff+ (A), there is z ∈ E+A such that a(x) = ⟨z, x⟩ for all x ∈ EA . Thus † is surjective as well. Therefore † is a linear
+isomorphism from E+A onto Eff+ (A).                                                                                                  □
+                                            +                                                   †    †
+   Since † is a linear isomorphism from EA onto Eff+ (A), x ≤ y for x and y in EA implies x ≤ y , and conversely. Together with
+0† = 0 and u†A = eA , this shows that, for every x ∈ EA , the condition 0 ≤ x ≤ uA is equivalent to 0 ≤ x† ≤ eA , namely to x† being
+an effect.
+                                                                                                                                       23
+
+                                            5.   Basic properties of informational dimension
+
+  Using the no-restriction hypothesis, one can prove nA = rA and nAB = nA nB rather directly. We record these facts here.
+
+Lemma 37 If two normalized states ρ and σ of system A are perfectly distinguishable, then ⟨ρ, σ⟩ = 0.
+
+Proof Let {a, b} be a measurement that perfectly distinguishes {ρ, σ}. By Corollary 36, there is z ∈ E+A with z† = a, namely
+a(x) = ⟨z, x⟩ for all x ∈ EA , and z ≤ uA . Since a(ρ) = 1 and a(σ) = 0, one has ⟨uA − z, ρ⟩ = 0 and ⟨z, σ⟩ = 0. By Eq. (C9),
+(uA − z) • ρ = 0, equivalently z • ρ = ρ, and z • σ = 0. Hence ⟨ρ, σ⟩ = ⟨z • ρ, σ⟩ = ⟨ρ, z • σ⟩ = 0, where the second equality uses
+Eq. (C8).                                                                                                                        □
+
+Lemma 38 The informational dimension nA of A is equal to its rank rA .
+
+Proof We first prove nA ≥ rA . Let {pi }ri=1           be a Jordan frame of EA . Each pi is a normalized pure state. Since i pi = uA , one
+                                                    A
+                                                                                                                           P
+
+has i pi = eA , and by Theorem 35 the family {p†i }ri=1             is a measurement. Moreover, pi ⊥ p j for i , j and trA pi = 1, whence
+      P †                                                         A
+
+
+pi (p j ) = ⟨pi , p j ⟩ = δi, j . Thus {pi }i=1 is perfectly distinguishable, and nA ≥ rA .
+ †                                          rA
+
+   We next prove nA ≤ rA . By definition of informational dimension, there are normalized states {ρi }ni=1      A
+                                                                                                                   of A and a measurement
+{ai }i=1 perfectly distinguishing them. For distinct i and j, the states ρi and ρ j are perfectly distinguishable, and hence Lemma 37
+     nA
+
+gives ⟨ρi , ρ j ⟩ = 0. By Eq. (C9), the states ρi are mutually orthogonal. Since they are nonzero mutually orthogonal elements of
+E+A , their number is at most the rank rA . Hence nA ≤ rA .                                                                              □
+
+Lemma 39 Every family of nA perfectly distinguishable normalized pure states of system A is a Jordan frame of EA .
+
+Proof By Lemma 38, nA = rA . Let {ψi ∈ StN (A)}ni=1  A
+                                                         be a family of perfectly distinguishable normalized pure states. Each ψi
+is a normalized pure state, and hence a primitive idempotent of EA . For distinct i and j in {1, . . . , nA }, the states ψi and ψ j are
+perfectly distinguishable, so Lemma 37 gives ⟨ψi , ψ j ⟩ = 0. By Eq. (C9), this is equivalent to ψi ⊥ ψ j . Thus {ψi }ni=1A
+                                                                                                                             is a family
+of rA mutually orthogonal primitive idempotents. A family of mutually orthogonal primitive idempotents contains at most rA
+elements, and when it contains rA elements it is a Jordan frame. Therefore {ψi }ni=1
+                                                                                  A
+                                                                                     is a Jordan frame.                                □
+
+Lemma 40 For every normalized pure state ψ of system A, the ray R≥0 ψ† is an extreme ray of Eff+ (A).
+
+Proof The ray R≥0 ψ is an extreme ray of E+A . By Corollary 36, † is a linear isomorphism from E+A onto Eff+ (A). Since linear
+isomorphisms map extreme rays to extreme rays, R≥0 ψ† is an extreme ray of Eff+ (A).                                        □
+
+Lemma 41 For every normalized pure state ϕ of system A and every normalized pure state φ of system B, one has (ϕ ⊗ φ)† =
+ϕ† ⊗ φ† .
+
+Proof Put a B ϕ† ⊗ φ† . Since ϕ ≤ uA and φ ≤ uB , one has ϕ† ≤ eA and φ† ≤ eB . Hence φ† and ϕ† are effects, and so is a. We
+first prove that a lies on an extreme ray of Eff+ (AB). Let b ∈ Eff+ (AB) satisfy 0 ≤ b ≤ a. It suffices to show that b = µa for
+some µ ∈ R≥0 . By Lemma 13, the parallel compositions of normalized states of A and normalized states of B span StR (AB). It
+is therefore enough to show that b(ρ ⊗ σ) = µa(ρ ⊗ σ) for arbitrary ρ ∈ StN (A) and σ ∈ StN (B). Applying idA ⊗ σ to each term
+in 0 ≤ b ≤ a, one obtains 0 ≤ b ◦ (idA ⊗ σ) ≤ φ† (σ)ϕ† . Since, by Lemma 40, R≥0 ϕ† is an extreme ray of Eff+ (A), the element
+b ◦ (idA ⊗ σ) also belongs to this ray. Thus there exists ξσ ∈ R≥0 such that
+
+                                                         b ◦ (idA ⊗ σ) = ξσ ϕ† .                                                   (C13)
+
+Similarly, applying uA ⊗ idB to each term in 0 ≤ b ≤ a gives 0 ≤ b ◦ (uA ⊗ idB ) ≤ ϕ† (uA )φ† = φ† , where the last equality uses
+ϕ† (uA ) = ⟨ϕ, uA ⟩ = trA ϕ = 1. By Lemma 40, R≥0 φ† is an extreme ray of Eff+ (B), and hence b ◦ (uA ⊗ idB ) belongs to this ray.
+Thus there exists µ ∈ R≥0 such that
+
+                                                         b ◦ (uA ⊗ idB ) = µφ† .                                                   (C14)
+
+It follows that ξσ = b(uA ⊗ σ) = µφ† (σ). The first equality is obtained by applying Eq. (C13) to uA and using ϕ† (uA ) = 1;
+the second by applying Eq. (C14) to σ. Substituting this into Eq. (C13) and applying the resulting equation to ρ, we get
+b(ρ ⊗ σ) = µϕ† (ρ)φ† (σ) = µa(ρ ⊗ σ). Hence a lies on an extreme ray of Eff+ (AB).
+                                                                                                                                        24
+
+   By Corollary 36, there exists c ∈ E+AB such that c† = a, namely a(x) = ⟨c, x⟩ for all x ∈ EAB . Since a lies on an extreme
+ray of Eff+ (AB), the corresponding element c lies on an extreme ray of E+AB . This follows because the inverse of † is a linear
+isomorphism from Eff+ (AB) onto E+AB and maps extreme rays to extreme rays. Hence c = αψ for some α ∈ R≥0 and some
+normalized pure state ψ. Moreover, α = α ⟨ψ, ψ⟩ = ⟨c, ψ⟩ = a(ψ) ≤ 1. On the other hand, α ⟨ψ, ϕ ⊗ φ⟩ = ⟨c, ϕ ⊗ φ⟩ = a(ϕ⊗φ) = 1.
+For normalized states x and y, one has 0 ≤ y ≤ uAB , and hence ⟨x, y⟩ ≤ ⟨x, uAB ⟩ = 1. Therefore α ≤ 1 and ⟨ψ, ϕ ⊗ φ⟩ ≤ 1 imply
+α = 1, namely c = ψ, and ⟨ψ, ϕ ⊗ φ⟩ = 1, namely ⟨c, ϕ ⊗ φ⟩ = 1. By Lemma 15, the parallel composition ϕ ⊗ φ of normalized
+pure states is itself a normalized pure state. We use the fact that if normalized pure states, equivalently primitive idempotents, p
+and q satisfy ⟨p, q⟩ = 1, then p = q. Indeed, p2 = p, q2 = q, and tr p = tr q = 1 imply ⟨p, p⟩ = tr p2 = 1 and ⟨q, q⟩ = tr q2 = 1,
+whence ⟨p − q, p − q⟩ = 1 + 1 − 2 = 0 and therefore p = q. Since c is a normalized pure state and ⟨c, ϕ ⊗ φ⟩ = 1, we have
+c = ϕ ⊗ φ. Therefore (ϕ ⊗ φ)† = c† = a = ϕ† ⊗ φ† .                                                                                 □
+
+Lemma 42 nAB = nA nB .
+
+Proof Let {ϕi }ni=1
+                  A
+                     and {φ j }nj=1
+                                 B
+                                    be, respectively, families of nA and nB perfectly distinguishable normalized pure states of systems
+A and B. By Lemma 39, these are Jordan frames of EA and EB , respectively. Put pi j B ϕi ⊗ φ j for every i and j. By Lemma 15,
+pi j is a primitive idempotent of EAB . Moreover, ( i, j pi j )† = i, j p†i j = i, j ϕ†i ⊗ φ†j = eA ⊗ eB = eAB = u†AB , where the second
+                                                         P            P         P
+
+equality uses Lemma 41, and the third uses i ϕ†i = u†A = eA and j φ†j = u†B = eB . By Lemma 31, i, j pi j = uAB . Thus {pi j }i, j is
+                                                  P                     P                                  P
+a family of primitive idempotents whose sum is uAB , and hence is a Jordan frame of EAB . Therefore rAB = nA nB . By Lemma 38,
+nAB = rAB , and hence nAB = nA nB .                                                                                                    □
+
+
+                                             Appendix D: Reconstruction of quantum theory
+
+                                        1.   Identifying normalized states with density matrices
+
+   For an OPT satisfying local equivalence and ES purification, we have shown that St+ (A) is a symmetric cone (Theorem 28)
+and that the no-restriction hypothesis holds (Theorem 35). Using these facts together with ES purification, one can prove rather
+directly that EA is a simple EJA. We first record the following lemma.
+
+Lemma 43 Suppose that the EJA EA decomposes as a direct sum EA = E1 ⊕ E2 , where neither E1 nor E2 is {0}. For every
+system B and every k ∈ {1, 2}, put
+
+                                                  Kk B Span{x ⊗ y | x ∈ Ek , y ∈ EB }.
+
+Then Kk is an EJA, and the direct sum EAB = K1 ⊕ K2 holds as EJAs.
+
+Proof Let πk : EA → EA be the projection onto Ek . Since πk maps every x ∈ E+A into an element of E+k , and hence into E+A , the
+functional ek B eA ◦ πk belongs to St+ (A)∗ . Moreover, for every x ∈ EA , (e1 + e2 )(x) = eA ((π1 + π2 )(x)) = eA (x), so e1 + e2 = eA .
+By Theorem 35, {e1 , e2 } is a measurement on A. Put e1,B B e1 ⊗ eB and e2,B B e2 ⊗ eB . Since {e1 , e2 } and {eB } are measurements,
+{e1,B , e2,B } is a measurement on AB. By Corollary 36, for every k ∈ {1, 2}, there exists uk,B ∈ E+AB such that u†k,B = ek,B , namely
+ek,B (x) = ⟨uk,B , x⟩ for all x ∈ EAB . Since e1,B + e2,B = eAB , one has u1,B + u2,B = uAB .
+   For k ∈ {1, 2}, consider the subspace
+
+                                                     Fk B {x ∈ EAB | uk,B • x = x}.
+
+If x ∈ E+1 and y ∈ E+B , then e2,B (x ⊗ y) = e2 (x)eB (y) = 0, and hence ⟨u2,B , x ⊗ y⟩ = 0. By Eq. (C9), u2,B • (x ⊗ y) = 0. Therefore
+u1,B • (x ⊗ y) = (uAB − u2,B ) • (x ⊗ y) = x ⊗ y, and x ⊗ y ∈ F1 . Since E+1 spans E1 and E+B spans EB , K1 ⊆ F1 . Similarly, K2 ⊆ F2 .
+   By Lemma 13, EAB = Span{x ⊗ y | x ∈ EA , y ∈ EB }. Since EA = E1 ⊕ E2 , the direct sum of real vector spaces EAB = K1 ∔ K2
+holds. Write an arbitrary z ∈ EAB uniquely as z = k1 + k2 with k1 ∈ K1 and k2 ∈ K2 . Since K2 ⊆ F2 , u2,B • k2 = k2 , and hence
+u1,B • k2 = (uAB − u2,B ) • k2 = k2 − k2 = 0. Together with K1 ⊆ F1 , this gives u1,B • z = u1,B • (k1 + k2 ) = u1,B • k1 = k1 . Similarly,
+u2,B • z = k2 . In particular, if z ∈ F1 , then z = u1,B • z = k1 ∈ K1 , and hence F1 ⊆ K1 . Thus F1 = K1 , and similarly F2 = K2 .
+Taking z = uAB gives u1,B = u1,B • uAB ∈ K1 = F1 , and hence u1,B • u1,B = u1,B . Similarly, u2,B • u2,B = u2,B . Thus u1,B and u2,B are
+idempotents, and K1 and K2 are subalgebras with units u1,B and u2,B , respectively. Moreover, u1,B • u2,B = u1,B • (uAB − u1,B ) =
+u1,B − u1,B = 0, and hence K1 ⊥ K2 by Eq. (C10). Therefore EAB = K1 ⊕ K2 as EJAs.                                                        □
+
+Proposition 44 In an OPT satisfying local equivalence and ES purification, EA is simple for every system A.
+                                                                                                                                    25
+
+Proof Suppose, for contradiction, that EA is not simple. Then EA = E1 ⊕ E2 for nonzero EJAs E1 and E2 . Let rA be the rank of
+A, and put χ B uA /rA . We have eA (χ) = trA χ = (trA uA )/rA = 1, so χ ∈ StN (A). Since χ is an interior point of E+A , it is internal
+by Lemma 9. Write χ = χ1 + χ2 with χ1 ∈ E+1 and χ2 ∈ E+2 . Then χ1 , 0 and χ2 , 0. Indeed, for each k ∈ {1, 2} and for the
+unit uk of Ek , there is λ > 0 such that uk ≤ λχ. Applying the projection onto Ek gives uk ≤ λχk , and therefore χk , 0. Hence χ
+belongs to neither E1 nor E2 . Now take a purification Ψ ∈ StN (AÃ) of χ. Applying Lemma 43 with B = Ã, we have a direct sum
+decomposition EAÃ = K1 ⊕ K2 . Hence Ψ = Ψ1 + Ψ2 with Ψ1 ∈ K1+ and Ψ2 ∈ K2+ . Suppose first that Ψ1 , 0 and Ψ2 , 0, and put
+                                                                                   +
+pk B eAÃ (Ψk ) > 0. Then p1 + p2 = eAÃ (Ψ) = 1. The elements Ψk B p−1  k Ψk ∈ Kk are normalized states, and Ψ is the nontrivial
+convex combination Ψ = p1 Ψ1 + p2 Ψ2 of two distinct normalized states. This contradicts the purity of Ψ. Hence Ψ1 = 0 or
+Ψ2 = 0. If Ψ1 = 0, then Ψ = Ψ2 ∈ K2+ ; since idA ⊗ eÃ maps K2 into E2 , this gives χ = (idA ⊗ eÃ )(Ψ) ∈ E2 , contradicting χ < E2 .
+The case Ψ2 = 0 is analogous. Therefore EA is simple.                                                                                □
+
+Theorem 45 For every system A, StN (A)  DennA .
+
+Proof Since Her1 (R) EJA Her1 EJA Her1 (H), the case nA = 1 gives EA EJA Her1 . We now assume nA ≥ 2 and consider the
+EJA EAA . By Proposition 44, both EA and EAA are simple. Therefore the classification of simple EJAs in Table II applies to both.
+By Lemma 42, the rank of EAA is n2A C r, and by Eq. (B1) its dimension is (dim EA )2 C d. Using these relations and Table II,
+one sees that EA is not EJA-isomorphic to Her3 (O), HernA (R), HernA (H), or Spin s . More explicitly:
+
+    • If EA EJA Her3 (O), then nA = 3, so r = 9 and d = 272 . The simple EJAs of rank 9 are Her9 (R), Her9 , and Her9 (H), with
+      dimensions 45, 81, and 153, respectively. None of these is 272 .
+
+    • If EA EJA HernA (R), then r = n2A and d = n2A (nA + 1)2 /4. Since r = n2A ≥ 4, the simple EJAs of rank r are only Herr (R),
+      Herr , and Herr (H). The smallest of their dimensions is that of Herr (R), namely r(r + 1)/2, but d = n2A (nA + 1)2 /4 <
+      n2A (n2A + 1)/2 = r(r + 1)/2. Hence d is not the dimension of any simple EJA of rank r.
+
+    • If EA EJA HernA (H), then r = n2A and d = n2A (2nA − 1)2 . Since r = n2A ≥ 4, the simple EJAs of rank r are again only
+      Herr (R), Herr , and Herr (H). The largest of their dimensions is that of Herr (H), namely r(2r − 1), but d = n2A (2nA − 1)2 >
+      n2A (2n2A − 1) = r(2r − 1). Hence d is not the dimension of any simple EJA of rank r.
+
+    • If EA EJA Spin s with s ≥ 5 and s , 6, then nA = 2, so r = 4 and d = s2 . The simple EJAs of rank 4 are Her4 (R), Her4 ,
+      and Her4 (H), with dimensions 10, 16, and 28, respectively. Under s ≥ 5 and s , 6, s2 is none of these.
+
+Consequently, there exists an EJA isomorphism Φ : EA → HernA . Since Her+nA is the positive cone of HernA , one has Φ(E+A ) =
+Her+nA , and since Φ preserves the trace, Φ(StN (A)) = DennA . Hence StN (A)  DennA .                                      □
+An approach similar to this proof can also be found, for example, in Refs. [27, 29, 40, 49].
+
+
+                                                  2.   Derivation of quantum theory
+
+   We have now proved the no-restriction hypothesis by Theorem 35 and StN (A)  DennA by Theorem 45. It remains to derive
+quantum theory from these facts, which is not difficult. There are several possible routes for this derivation, for example those
+in Refs. [9, 10, 12, 26]. Here we describe the route that applies Theorem 19, “states specify the theory”, of Ref. [9].
+   The trace tr on Hern is the usual matrix trace. For every system A, a linear isomorphism S A : StR (A) → HernA satisfying
+S A (StN (A)) = DennA will be called a representation of A. Since S A preserves the trace, tr ◦S A = trA . A linear isomorphism
+preserving the inner product on a complex Hilbert space will be called unitary. For a unitary matrix V of order n, write AdV for
+the map Hern ∋ X 7→ V XV † ∈ Hern . The map AdV is a linear automorphism of Denn , and therefore preserves the trace, namely
+tr ◦ AdV = tr. Fix an orthonormal basis for each Hern , and let T : Hern ∋ X 7→ X T ∈ Hern denote the corresponding transposition.
+Since this transposition is a linear automorphism of Denn , if S A is a representation of A, then so is T ◦ S A . Put Hn B Cn , and
+denote by Pn the set of all trace-one rank-one projections in Hern .
+   We define uniqueness of purification as follows.
+
+Definition 46 (Uniqueness of purification) The theory is said to satisfy uniqueness of purification if, for every pair of systems
+A and B, whenever normalized pure states Ψ and Ψ′ of AB are both purifications of ρ ∈ StN (A), there exists a reversible channel
+U on B such that Ψ′ = (idA ⊗ U)(Ψ).
+
+  Then the following proposition holds.
+                                                                                                                                                  26
+
+Proposition 47 If an OPT satisfying local equivalence and ES purification also satisfies uniqueness of purification, then it is
+quantum theory.
+
+Proof Let Θ be an OPT satisfying local equivalence and ES purification. By Theorem 45, for every system A, there exists a
+trace-preserving linear isomorphism S A : StR (A) → HernA such that S A (StN (A)) = DennA . We use these isomorphisms to identify
+each StN (A) with DennA . Under this identification, a transformation f ∈ Trans(A, B) is represented by S B ◦ f ◦ S −1A , and tests
+are represented by applying this replacement to each outcome. Thus the resulting isomorphic copy of Θ and the comparison
+quantum theory have the same set of normalized states for every system A, in the sense required by Theorem 19 of Ref. [9].
+The comparison quantum theory is taken on the same system labels, with level nA assigned to system A; this is compatible
+with composition because Lemma 42 gives nAB = nA nB . Since Θ satisfies ES purification and uniqueness of purification, this
+isomorphic copy satisfies the purification principle of Ref. [9]: existence follows from ES purification, and uniqueness for
+arbitrary common purifying systems follows from the uniqueness-of-purification assumption. Quantum theory also satisfies
+the purification principle. Theorem 19 of Ref. [9] is stated in the framework of that paper. In the present terminology, this
+is the framework of OPTs satisfying local discriminability. The theorem says that, if two OPTs satisfying purification and
+local discriminability have the same normalized state space for every system, then the two theories coincide, including their
+transformations and tests. As noted above, local discriminability is equivalent to local equivalence, and the comparison quantum
+theory satisfies local discriminability. Therefore the theorem applies to the relabelled theory and the comparison quantum theory.
+Undoing the relabelling shows that the original theory Θ is quantum theory.                                                      □
+   By Proposition 47, it remains to prove uniqueness of purification for arbitrary purifying systems. The remaining lemmas
+prepare this final step of the proof. For each fixed pair of systems A, B, this step chooses isomorphisms between the state spaces
+and density-matrix state spaces so that product states are represented by tensor products. Lemma 48 classifies the relevant
+bilinear maps: those whose linearization is an isomorphism and which send pairs of pure states to pure states of the composite.
+Lemma 49 applies this classification to choose tensor-compatible representations for the fixed pair A, B. Lemma 50 then shows
+that unitaries on HnB are implemented by reversible channels of B.
+
+Lemma 48 Let m and n be integers with m ≥ 2 and n ≥ 2. Let β : Herm × Hern → Hermn be a bilinear map whose linearization5 is
+a linear isomorphism, and suppose that β(P, Q) ∈ Pmn for all P ∈ Pm and Q ∈ Pn . Then there exist a unitary W : Hm ⊗Hn → Hmn
+and elements ϵ and δ of {id, T} such that
+
+                                              β(M, N) = W(M ϵ ⊗ N δ )W † ,        ∀M ∈ Herm , N ∈ Hern ,
+
+where X id = X.
+
+Proof Let βlin : Herm ⊗ Hern → Hermn be the linearization of β. Every rank-one Hermitian matrix A ∈ Herm and B ∈ Hern can
+be written as A = aP and B = bQ with a and b in R \ {0} and P ∈ Pm , Q ∈ Pn . Hence, by assumption, βlin (A ⊗ B) = abβ(P, Q) is
+a rank-one Hermitian matrix. Since the linearization βlin of β is a linear isomorphism, it is injective. We apply the main theorem
+of Ref. [50] to the injective real-linear map βlin . In the notation of that theorem, l = 2 and the output dimension is N = mn,
+so the zero block is absent. Thus the theorem gives an invertible complex mn × mn matrix W, a sign λ ∈ {−1, 1}, and elements
+ϵ, δ ∈ {id, T} such that
+
+                                             β(M, N) = λW(M ϵ ⊗ N δ )W † ,        ∀M ∈ Herm , N ∈ Hern .
+
+For P ∈ Pm and Q ∈ Pn , the matrix W(Pϵ ⊗ Qδ )W † is nonzero positive semidefinite of rank one. Since β(P, Q) ∈ Pmn is positive,
+the sign must be λ = 1. Moreover, tr β(P, Q) = 1 gives tr(W † W(Pϵ ⊗ Qδ )) = 1 for all P ∈ Pm and Q ∈ Pn . Since Pm and Pn span
+Herm and Hern , respectively, the elements Pϵ ⊗ Qδ span Herm ⊗ Hern . Therefore W † W = Imn , and W is unitary.               □
+
+Lemma 49 Suppose that representations S A of system A and S B of system B are fixed. By replacing, if necessary, the rep-
+resentation of B by T ◦ S B , one can choose a representation of AB as S AB B S A ⊗ S B . This is the unique linear map
+S AB : StR (AB) → HernAB determined by
+
+                                           S AB (ρ ⊗ σ) = S A (ρ) ⊗ S B (σ),      ∀ρ ∈ StN (A), σ ∈ StN (B).
+
+
+
+5 The linearization of β is the unique linear map β
+                                                      lin : Herm ⊗ Hern → Hermn   determined by βlin (M ⊗ N) = β(M, N) (∀M ∈ Herm , N ∈ Hern ).
+                                                                                                                                        27
+
+Proof We first treat the case nA = 1. Put α B S −1  A (I1 ). Then StR (A) = {cα | c ∈ R} and S A (x) = eA (x)I1 for all x ∈ StR (A). Also,
+nAB = nB , and (eA ⊗ idB ) ◦ (α ⊗ idB ) = idB . Since the two real vector spaces have the same dimension, this implies that α ⊗ idB
+is the inverse of eA ⊗ idB . Defining S AB B S B ◦ (eA ⊗ idB ), one obtains S AB (ρ ⊗ σ) = eA (ρ)S B (σ) = S A (ρ) ⊗ S B (σ). The case
+nB = 1 is analogous. We henceforth assume nA and nB are at least 2.
+   Choose an arbitrary representation of AB and denote it by SeAB . Put m B nA and n B nB . Consider the bilinear map
+
+                                   β : Herm × Hern ∋ (M, N) 7→ SeAB (S −1
+                                                                       A (M) ⊗ S B (N)) ∈ Hermn .
+                                                                                 −1
+
+
+
+Its linearization is surjective because product states span StR (AB) by Lemma 13 and SeAB is a linear isomorphism. The domain
+and codomain have the same dimension n2A n2B = n2AB by Lemma 42 and Theorem 45, so the linearization is a linear isomorphism.
+Also, if P ∈ Pm and Q ∈ Pn , then S −1                  −1
+                                           A (P) and S B (Q) are normalized pure states, and their parallel composition is again a
+normalized pure state. Hence β(P, Q) ∈ Pmn . By Lemma 48, there exist a unitary W : Hm ⊗ Hn → Hmn and elements ϵ and δ of
+{id, T} such that β(M, N) = W(M ϵ ⊗ N δ )W † for all M ∈ Herm and N ∈ Hern .
+   Put S 0AB B AdW † ◦SeAB . Then, for all ρ ∈ St+ (A) and σ ∈ St+ (B), S 0AB (ρ ⊗ σ) = S A (ρ)ϵ ⊗ S B (σ)δ . If ϵ = id, put S AB B S 0AB ;
+if ϵ = T, put S AB B T ◦ S 0AB , where the latter T denotes transposition on Hermn . Since transposition maps the set of density
+matrices onto itself, S AB is a representation of AB. Then there exists η ∈ {id, T} such that S AB (ρ ⊗ σ) = S A (ρ) ⊗ S B (σ)η for
+all ρ ∈ St+ (A) and σ ∈ St+ (B). If η = T, replace S B by T ◦ S B , which is again a representation of B. With this choice,
+S AB (ρ ⊗ σ) = S A (ρ) ⊗ S B (σ) for all ρ ∈ St+ (A) and σ ∈ St+ (B). Lemma 13 then implies S AB = S A ⊗ S B .                          □
+
+Lemma 50 Let S B be a representation of system B, and let V be a unitary on HnB . Then Ṽ B S −1       B ◦ AdV ◦S B ∈ TransR (B, B) is
+a reversible channel on B. Note that since Ṽ is a linear map from StR (B) to itself, it is identified with an element of TransR (B, B)
+through the bijection of Lemma 14.
+
+Proof Let C be a conjugate system of B. Since a conjugate system may be replaced by an equivalent one, we may regard B as a
+conjugate system of C. Applying Lemma 49 to C and B, we may replace the representation of B by T ◦ S B , if necessary, and then
+choose a representation S CB of CB as S CB B S C ⊗ S B . After this replacement, we again denote the representation of B by S B .
+                                                                                           B ◦ T ◦ AdV ◦T ◦ S B = S B ◦ AdV ◦S B ,
+If the replacement was made, the original map Ṽ is written in the new representation as S −1                       −1
+
+where V is the complex conjugate of V. Since V is also unitary, after renaming V as V, we may assume Ṽ = S −1   B ◦ AdV ◦S B .
+   Put χ B S C−1 (InC /nC ). Then χ is an internal normalized state of C. Let Ψ ∈ StN (CB) be a purification of χ. Put ΨV B
+(idC ⊗ Ṽ)(Ψ) ∈ StR (CB). For all ρ ∈ St+ (C) and σ ∈ St+ (B), S CB ((idC ⊗ Ṽ)(ρ ⊗ σ)) = AdInC ⊗V (S CB (ρ ⊗ σ)). Hence, by
+Lemma 13, the same equality holds for every ω ∈ StR (CB). Thus idC ⊗ Ṽ = S CB        −1
+                                                                                          ◦ AdInC ⊗V ◦S CB . Since idC ⊗ Ṽ is the
+composition of a linear isomorphism S CB from StN (CB) onto DennCB , a linear automorphism AdInC ⊗V of DennCB , and the inverse
+                −1
+isomorphism S CB   , it is a linear automorphism of StN (CB). A linear automorphism of StN (CB) maps normalized pure states to
+normalized pure states, and hence ΨV is normalized and pure.
+   For every x ∈ StR (B),
+
+                                   eB (Ṽ(x)) = tr(S B (Ṽ(x))) = tr(AdV (S B (x))) = tr(S B (x)) = eB (x).
+
+Hence eB ◦ Ṽ = eB . Therefore
+
+                                     (idC ⊗ eB )(ΨV ) = (idC ⊗ (eB ◦ Ṽ))(Ψ) = (idC ⊗ eB )(Ψ) = χ,
+
+and ΨV is a purification of χ, just like Ψ. Since B is a conjugate system of C, ES purification gives a reversible channel U on B
+such that ΨV = (idC ⊗ U)(Ψ). By Lemma 22, applied with C and B in place of A and Ã, the state χ̃ B (eC ⊗ idB )(Ψ) ∈ StN (B)
+is internal. Since Ψ is a purification of χ̃, and since (idC ⊗ U)(Ψ) = (idC ⊗ Ṽ)(Ψ), Lemma 23, applied with the two systems
+interchanged, implies U = Ṽ. Therefore Ṽ is a reversible channel.                                                             □
+
+Theorem 51 Every OPT satisfying local equivalence and ES purification is quantum theory.
+
+Proof By Proposition 47, it remains only to prove uniqueness of purification. That is, for every system B, whenever Ψ and
+Ψ′ are normalized states of AB and are both purifications of ρ ∈ StN (A), we must show that there exists a reversible channel U
+on B such that Ψ′ = (idA ⊗ U)(Ψ). For this pair A, B, choose representations S A , S B , and S AB such that S AB = S A ⊗ S B , as in
+Lemma 49. Put tr2 B idHernA ⊗ tr. Then
+
+                                          tr2 (S AB (x)) = S A ((idA ⊗ eB )(x)),   ∀x ∈ StR (AB).                                    (D1)
+                                                                                                                                        28
+
+Indeed, by Lemma 49 and eB = tr ◦S B , for every ρ ∈ StN (A) and σ ∈ StN (B), one has
+
+                                     tr2 (S AB (ρ ⊗ σ)) = tr(S B (σ))S A (ρ) = S A ((idA ⊗ eB )(ρ ⊗ σ)).
+
+Lemma 13 then gives Eq. (D1). Substituting x = Ψ and x = Ψ′ into Eq. (D1), and using that both are purifications of ρ, we see
+that both tr2 (S AB (Ψ)) and tr2 (S AB (Ψ′ )) are equal to S A (ρ). Since Ψ and Ψ′ are pure, S AB (Ψ) and S AB (Ψ′ ) are extreme points,
+namely rank-one elements, of DennAB . Hence there exist normalized vectors |ψ⟩ and |ψ′ ⟩ in HnA ⊗ HnB such that S AB (Ψ) = |ψ⟩ ⟨ψ|
+and S AB (Ψ′ ) = |ψ′ ⟩ ⟨ψ′ |. These two rank-one density matrices have the same partial trace over B. By the standard uniqueness of
+finite-dimensional quantum purifications, there is a unitary V on HnB such that |ψ′ ⟩ = (InA ⊗ V) |ψ⟩. Put U B S −1    B ◦ AdV ◦S B . By
+Lemma 50, U is a reversible channel. Moreover,
+
+                    S AB (Ψ′ ) = |ψ′ ⟩ ⟨ψ′ | = (InA ⊗ V) |ψ⟩ ⟨ψ| (InA ⊗ V)† = AdInA ⊗V (S AB (Ψ)) = S AB ((idA ⊗ U)(Ψ)).
+
+Hence Ψ′ = (idA ⊗ U)(Ψ).                                                                                                                 □
+
+
+
+
+ [1] J. von Neumann, Mathematical foundations of quantum mechanics (Princeton University Press, Princeton, NJ, 1932).
+ [2] G. W. Mackey, The mathematical foundations of quantum mechanics: a lecture-note volume (W.A. Benjamin, 1963).
+ [3] P. Busch, P. J. Lahti, and P. Mittelstaedt, The quantum theory of measurement, 2nd Edition (Springer Verlag, Berlin Heidelberg, 1996).
+ [4] M. A. Nielsen and I. L. Chuang, Quantum computation and quantum information (Cambridge university press, Cambridge, 2000).
+ [5] M.-D. Choi, Linear Algebra Appl. 10, 285 (1975).
+ [6] L. Hardy, arXiv preprint quant-ph/0101012 (2001).
+ [7] J. Barrett, Phys. Rev. A 75, 032304 (2007).
+ [8] B. Dakić and Č. Brukner, arXiv preprint arXiv:0911.0695 (2009).
+ [9] G. Chiribella, G. M. D’Ariano, and P. Perinotti, Phys. Rev. A 81, 062348 (2010).
+[10] L. Hardy, arXiv preprint arXiv:1104.2066 (2011).
+[11] L. Masanes and M. P. Müller, New J. Phys. 13, 063001 (2011).
+[12] G. Chiribella, G. M. D’Ariano, and P. Perinotti, Phys. Rev. A 84, 012311 (2011).
+[13] A. Wilce, arXiv preprint arXiv:1206.2897 (2012).
+[14] A. Wilce, in Probability in Physics, edited by Y. Ben-Menahem and M. Hemmo (Springer, 2012) pp. 281–298.
+[15] G. de la Torre, L. Masanes, A. J. Short, and M. P. Müller, Phys. Rev. Lett. 109, 090403 (2012).
+[16] L. Hardy, arXiv preprint arXiv:1303.1538 (2013).
+[17] P. Janotta and R. Lal, Phys. Rev. A 87, 052131 (2013).
+[18] H. Barnum, C. Gaebler, and A. Wilce, Found. Phys. 43, 1411 (2013).
+[19] H. Barnum, M. P. Müller, and C. Ududec, New J. Phys. 16, 123029 (2014).
+[20] L. Hardy, in Quantum Theory: Informational Foundations and Foils (Springer, 2016) pp. 223–248.
+[21] G. M. D’Ariano, G. Chiribella, and P. Perinotti, Quantum theory from first principles: an informational approach (Cambridge University
+     Press, 2017).
+[22] L. Giannelli and G. Chiribella, Phys. Rev. Lett. 136, 060202 (2026).
+[23] E. C. Stueckelberg, Helv. Phys. Acta 33, 458 (1960).
+[24] A. Aleksandrova, V. Borish, and W. K. Wootters, Phys. Rev. A 87, 052106 (2013).
+[25] H. Barnum and A. Wilce, Found. Phys. 44, 192 (2014).
+[26] K. Nakahira, Phys. Rev. A 101, 022104 (2020).
+[27] J. H. Selby, C. M. Scandolo, and B. Coecke, Quantum 5, 445 (2021).
+[28] P. Jordan, J. von Neumann, and E. P. Wigner, Ann. Math. 35, 29 (1934).
+[29] H. Araki, Commun. Math. Phys. 75, 1 (1980).
+[30] A. Wilce, Entropy 20, 227 (2018).
+[31] H. Barnum, M. A. Graydon, and A. Wilce, Quantum 4, 359 (2020).
+[32] T. D. Galley and L. Masanes, Quantum 1, 15 (2017).
+[33] T. D. Galley and L. Masanes, Quantum 2, 104 (2018).
+[34] G. Birkhoff and J. von Neumann, Ann. Math. , 823 (1936).
+[35] S. Abramsky and B. Coecke, in Proceedings of the 19th Annual IEEE Symposium on Logic in Computer Science (IEEE, 2004) pp.
+     415–425.
+[36] B. Coecke, Contemp. Phys. 51, 59 (2010).
+[37] B. Coecke, in Horizons of the Mind. A Tribute to Prakash Panangaden (Springer, 2014) pp. 250–267.
+[38] B. Coecke and A. Kissinger, Picturing quantum processes (Cambridge University Press, 2017).
+[39] J. van de Wetering, arXiv preprint arXiv:1801.05798 (2018).
+[40] J. van de Wetering, J. Math. Phys. 60, 062201 (2019).
+[41] M. Plávala, arXiv preprint arXiv:2103.07469 (2021).
+[42] V. J. Wright, Quantum 5, 588 (2021).
+[43] H. Barnum, C. Ududec, and J. van de Wetering, arXiv preprint arXiv:2306.00362 (2023).
+                                                                                                                               29
+
+[44] M. P. Müller, SciPost Phys. Lect. Notes 28, 1 (2021).
+[45] J.-B. Hiriart-Urruty and C. Lemaréchal, Fundamentals of convex analysis (Springer Verlag, New York, 2001).
+[46] J. Faraut and A. Korányi, Analysis on symmetric cones, Oxford mathematical monographs (Oxford University Press, 1994).
+[47] M. Koecher, Am. J. Math. 79, 575 (1957).
+[48] E. B. Vinberg, Soviet Mathematics Doklady 1, 787 (1960).
+[49] G. Niestegge, Proc. R. Soc. A 476, 20200063 (2020).
+[50] J. Xu, B. Zheng, and A. Fošner, J. Aust. Math. Soc. 98, 407 (2015).
+

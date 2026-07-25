@@ -1,0 +1,180 @@
+                                                                   Born’s rule from almost nothing
+
+
+
+
+arXiv:2006.14175v2 [quant-ph] 26 Jun 2020
+                                                                                  Sabine Hossenfelder
+
+                                                                  Frankfurt Institute for Advanced Studies
+                                                          Ruth-Moufang-Str. 1, D-60438 Frankfurt am Main, Germany
+
+                                                                                          Abstract
+                                                      We here put forward a simple argument for Born’s rule based on the requirement that
+                                                  the probability distribution should not be a function of the number of degrees of freedom.
+
+
+                                            1 Introduction
+                                            Quantum mechanics does not make definite predictions but only predicts probabilities for mea-
+                                            surement outcomes. One calculates these probabilities from the wave-function using Born’s
+                                            rule. In axiomatic formulations of quantum mechanics, Born’s rule is usually added as an
+                                            axiom on its own right. However, it seems the kind of assumption that should not require a
+                                            postulate, but that should instead follow from the physical properties of the theory.
+                                                Since the early days of quantum mechanics, there have thus been many attempts to derive
+                                            Born’s rule from other assumptions: non-contextuality [1], decision theory [2], non-triviality
+                                            [3], and the number of degrees of freedom in composite systems [4, 5, 6]. The argument dis-
+                                            cussed here is most similar to the ones for many worlds presented in [8, 9] and the one using
+                                            environment-assisted invariance [7]. However, as will become clear shortly, the ontological
+                                            baggage of these arguments is unnecessary.
+
+
+                                            2 Argument
+                                            To get started, let |Ψi and |Φi be elements of a vector space over the complex numbers which
+                                            denote points on the complex sphere of dimension N ∈ N+ , i.e. |hΨ|Ψi| = 1 and |hΦ|Φi| = 1.
+
+                                                Claim: The only well-defined and consistent distribution for transition probabilities PN (|Ψi →
+                                            |Φi) on the complex sphere of dimension N which is continuous, independent of N, and in-
+                                            variant under unitary operations is PN (|Ψi → |Φi) = |hΨ|Φi|2 . The continuity assumption is
+                                            unnecessary if one restricts the original space to states of norm K/N or, correspondingly, to
+                                            rational-valued probabilities as a frequentist interpretation would suggest.
+
+                                            By PN being a well-defined probability distribution we mean
+                                                          PN (|Ψi → |Φi) ∈ R ∧ 0 ≤ PN (|Ψi → |Φi) ≤ 1            ∀ |Ψi, |Φi .                  (1)
+
+                                                                                              1
+Hossenfelder                                                                           Born’s Rule
+
+
+By PN being consistent, we mean
+                          N
+                          ∑ PN (|Ψi → |Ψi i) = 1 ∀ |Ψi , hΨi |Ψ j i = δi j ,                   (2)
+                          i=1
+                          PN (|Ψi i → |Ψ j i) = δi j   for       hΨi |Ψ j i = δi j .           (3)
+
+    Proof: Since PN is invariant under unitary operations, transition probabilities can only be
+functions of scalar products, ie PN (|Ψi → |Φi) = PN (hΨ|Φi) ∀ |Ψi, |Φi. This means that PN
+is actually a map from the complex unit sphere of dimension 1 to the interval [0, 1] ∈ R. It
+follows from (3) that P(hΨ|Φi) = 0 whenever hΨ|Φi = 0, because if |Ψi and |Φi are orthogonal,
+one could construct a basis of which they are elements. This means P(0) = 0. That PN is
+independent of N then just means that this function is the same for all N, so we will from now
+on omit the index N.
+    Let |Ψi i, i ∈ {1...N} be an arbitrary orthonormal basis and
+                                                r
+                                      ∗      iθ   1 N
+                                   |Ψ i := e        ∑ |Ψi i ,
+                                                  N i=1
+                                                                                            (4)
+
+where θ is a real number in [0, 2π[. Because of (2) we then have
+                              N                              √
+                            ∑ P(hΨ j |Ψ∗ i) = NP(eiθ / N) = 1 ,                                (5)
+                            j=1
+
+which means
+                                              √
+                                       P(eiθ / N) = 1/N .                                      (6)
+                              e i i with i ∈ {1..N}. With K ∈ N+ , K < N we define
+    Next we use a new basis, |Ψ
+                       r                                     
+             e i :=
+               j          1 K                 (l − 1)( j − 1)
+            |Ψ               ∑   exp    −2πi                    |Ψl i for 1 ≤ j ≤ K ,
+                          K l=1                     K
+              e j i := |Ψ j i for K + 1 ≤ j ≤ N .
+             |Ψ                                                                                (7)
+
+The first K basis-vectors are obviously orthogonal to the last N − K and we already know that
+the last N −K are orthonormal, so it remains to show that the first K basis vectors are orthogonal.
+For this we note that for j, m ≤ K
+                                                            
+                           e j em     1 K              m − j l−1
+                         hΨ |Ψ i = ∑ exp −2πi                       .                           (8)
+                                      K l=1             K
+
+For m = j the sum gives = K, so the norm is = 1 as it should be. For m 6= j the sum is a
+geometric series and we have
+
+                         e j |Ψ
+                              e mi =     1 − exp (−2πi(m − j))
+                        hΨ                                     =0.                             (9)
+                                       1 − exp (−2πi(m − j)/K)
+
+                                                   2
+Hossenfelder                                                                              Born’s Rule
+
+
+    The first basis vector |Ψe 1 i is paralell to |Ψ∗ i in the subspace spanned by the first K ba-
+              i
+sisvectors |Ψ i, therefore the |Ψ e j i’s for 2 ≤ j ≤ K are also orthogonal to |Ψ∗ i. With this, and
+using P(0) = 0, we get
+                  N                         p             N          √
+                 ∑ P(hΨe j |Ψ∗ i) = P(eiθ       K/N) +    ∑ P(eiθ / N) = 1 .                      (10)
+                 j=1                                     j=K+1
+
+And by using (6) we arrive at
+                     p
+                P(eiθ K/N) = K/N            ∀ K, N ∈ N+ , K ≤ N, θ ∈ [0, 2π[ .                    (11)
+
+If one was dealing with probabilitites that only took on rational values, then one can stop here.
+For real-valued probabilities one merely notes that the only continuous function on the complex
+unit sphere with property (11) is P(x) = |x|2 , hence
+
+                            PN (|Ψi → |Φi) = |hΨ|Φi|2            ✷                                (12)
+
+
+3 Discussion
+The verbal summary of this argument is that since the probability distribution has to be invariant
+under unitary operations, we can permute all basis elements, which means that the probabilities
+of a symmetric state like |Ψ∗ i have to be evenly distributed, which fixes them. Then we can
+combine any K-dimensional subset of these basis elements to one whose probability is just the
+sum of probabilities assigned to the previous K basis elements. Again we can do that in arbitary
+permutations and this fixes the probabilities for all K/N. The assumption that the distribution
+is independent of N is essential; it is what allows us to fill in the sphere densely.
+
+
+Acknowledgements
+I thank Scott Aaronson, Sandro Donadi, and Tim Palmer for helpful feedback. This research
+was supported by the German Research Foundation (DFG) and the Franklin Fetzer Fund.
+
+
+References
+ [1] A. M. Gleason, “Measures on the closed subspaces of a Hilbert space,” J. Math. Mech. 6:885893,
+     1957.
+
+ [2] D. Deutsch, “Quantum theory of probability and decisions,” Proc. Royal Soc. A455:31293137
+     (1999) [arXiv:quant-ph/9906015].
+
+ [3] S.    Aaronson, “Is Quantum Mechanics  An  Island                            In     Theoryspace?”,
+     https://www.scottaaronson.com/papers/island.pdf,                            retrieved June 24,
+     2020.
+
+                                                   3
+Hossenfelder                                                                            Born’s Rule
+
+
+ [4] L. Hardy, “Quantum theory from five reasonable axioms,” arXiv:quant-ph/0101012 (2001).
+
+ [5] L. Masanes and M. P. Muller, “A Derivation of quantum theory from physical requirements,” New
+     J. Phys. 13, 063001 (2011) [arXiv:1004.1483 [quant-ph]].
+
+ [6] Dakic B. and Brukner C. , “Quantum Theory and Beyond: Is Entanglement Special?,” in Halvor-
+     son, H. (ed) “Deep Beauty: Understanding the Quantum World through Mathematical Innovation,”
+     Cambridge University Press, 365-392 (2011) [arXiv:0911.0695 [quant-ph]].
+
+ [7] W. H. Zurek, “Environment-assisted invariance, causality, and probabilities in quantum physics,”
+     Phys. Rev. Lett. 90:120404 (2003) [arXiv:quant-ph/0211037].
+
+ [8] L. Vaidman, “Probability in the Many-Worlds Interpretation of Quantum Mechanics,” in
+     Y. Ben-Menahem and M. Hemmo (eds), “The Probable and the Improbable: Under-
+     standing Probability in Physics, Essays in Memory of Itamar Pitowsky,” Springer (2011)
+     http://philsci-archive.pitt.edu/8558/.
+
+ [9] S. M. Carroll and C. T. Sebens, “Many Worlds, the Born Rule, and Self-Locating Uncertainty,” in:
+     D. Struppa and J. Tollaksen (eds) “Quantum Theory: A Two-Time Success Story,” Springer (2014)
+     [arXiv:1405.7907 [gr-qc]].
+
+
+
+
+                                                 4
+

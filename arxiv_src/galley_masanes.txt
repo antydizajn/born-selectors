@@ -1,0 +1,1761 @@
+                                            Classification of all alternatives to the Born rule in
+                                            terms of informational properties
+                                            Thomas D. Galley and Lluis Masanes
+
+                                            Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, United Kingdom
+                                            August 10, 2018
+
+
+                                               The standard postulates of quantum the-                  alternatives to the Born rule and explore their
+                                            ory can be divided into two groups: the                     physical and informational properties.
+                                            first one characterizes the structure and                      More precisely, we provide a complete classifi-
+                                            dynamics of pure states, while the sec-                     cation of all the alternatives to the structure of
+
+
+
+
+arXiv:1610.04859v3 [quant-ph] 13 Jun 2017
+                                            ond one specifies the structure of measure-                 measurements and the formula for outcome prob-
+                                            ments and the corresponding probabilities.                  abilities with the following property: in any sys-
+                                            In this work we keep the first group of pos-                tem with a finite-dimensional Hilbert space, the
+                                            tulates and characterize all alternatives to                number of parameters that is required to specify
+                                            the second group that give rise to finite-                  a mixed state is finite. This property is neces-
+                                            dimensional sets of mixed states. We prove                  sary if state estimation can be performed with a
+                                            a correspondence between all these alter-                   finite number of measurements and no additional
+                                            natives and a class of representations of                   assumptions. We also show that, among all these
+                                            the unitary group. Some features of these                   alternative theories, those which have no restric-
+                                            probabilistic theories are identical to quan-               tion on the allowed effects violate a physical prin-
+                                            tum theory, but there are important dif-                    ciple called “bit symmetry” [4], which is satisfied
+                                            ferences in others. For example, some the-                  by quantum theory. Bit symmetry states that
+                                            ories have three perfectly distinguishable                  any pair of perfectly distinguishable pure states
+                                            states in a two-dimensional Hilbert space.                  can be reversibly mapped to any other. Thus the
+                                            Others have exotic properties such as lack                  Born rule is the only possible probability assign-
+                                            of “bit symmetry”, the violation of “no si-                 ment to measurement outcomes under these re-
+                                            multaneous encoding” (a property similar                    quirements. We hope that these results may help
+                                            to information causality) and the existence                 to settle the above mentioned debate.
+                                            of maximal measurements without phase                          Most other known non-quantum general prob-
+                                            groups. We also analyze which of these                      abilistic theories seem somewhat pathological [5–
+                                            properties single out the Born rule.                        7] with some exceptions such as quantum the-
+                                                                                                        ory over the field of real numbers [8] or quater-
+                                                                                                        nions [9] and theories based on euclidean Jordan
+                                            1 Introduction                                              algebras [10].
+                                                                                                           For example they often violate most of the ax-
+                                            There is a long-standing debate on whether the              ioms used to reconstruct quantum theory, rather
+                                            structure and dynamics of pure states already en-           than just one or two per reconstruction. In par-
+                                            codes the structure of measurements and proba-              ticular, modifying the Born rule without creating
+                                            bilities. This discussion arises within the dynam-          inconsistencies or absurdities has been argued to
+                                            ical description of a quantum measurement, de-              be difficult (see, e.g. [11]).
+                                            coherence theory, and the many-worlds interpre-                For example, if we keep the usual association of
+                                            tation. There have been attempts to derive the              the outcomes of a measurement with the elements
+                                            Born rule [1–3], however these are often deemed             of an orthonormal basis {|ki}, a straightforward
+                                            controversial. In this work we suggest a more               alternative for the probability of |ki given sate
+                                            neutral approach where we consider all possible             |ψi is
+                                                                                                                                    |hk|ψi|α
+                                            Thomas D. Galley: thomas.galley.14@ucl.ac.uk                              P (k|ψ) = P         0    α
+                                                                                                                                                 ,       (1)
+                                                                                                                                    k0 |hk |ψi|
+
+                                                                                                    1
+with α 6= 2. However, this violates the finiteness                 characterized by a list of positive semi-definite
+assumption stated above.                                           operators (Q1 , Q2 , . . . , Qk ) adding up the iden-
+                                                                   tity i Qi = 1, and that the probability of out-
+                                                                       P
+   In this work, we provide many non-quantum
+probabilistic theories with a modified Born rule                   come Qi when the system is in state ψ is given
+which still inherit many of quantum theory’s                       by P (Qi |ψ) = hψ|Qi |ψi (Born’s rule).
+properties. These theories can be used as foils to                    In this article we consider all possible alterna-
+understand quantum theory “from the outside”.                      tives to this second part. For this, we denote by
+In particular, we analyse in full detail all finite-               P (F |ψ) the probability of outcome F given the
+dimensional state spaces where pure states are                     pure state ψ. And we recall that, from an oper-
+rays in a 2-dimensional Hilbert space. We discuss                  ational perspective, the mathematical character-
+properties such as the number of distinguishable                   ization of an outcome F is given by the prob-
+states, bit symmetry, no-simultaneous encoding                     ability of its occurrence for all states. Hence,
+and phase groups for maximal measurements. We                      each outcome F is represented by the function
+also analyze a class of alternative theories which                 F : PCd → [0, 1] defined as F (ψ) = P (F |ψ).
+have a restriction on the allowed effects such that                Note that, unlike in [12], we do not require out-
+they share all the above properties with quantum                   comes F to correspond to those of quantum me-
+theory.                                                            chanics (POVM elements). And even more, a pri-
+   In section 2 we introduce the necessary frame-                  ori, these outcome probability functions (OPFs)
+work and outline the main result showing the                       F are arbitrary; for example, they can be non-
+equivalence between alternative sets of measure-                   linear in |ψihψ| or even discontinuous. How-
+ment postulates and certain representations of                     ever, we show below that, if mixed states are
+the dynamical group. We then find these repre-                     required to have finitely-many parameters then
+sentations. In section 3 we study these alternative                OPFs must be polynomial in |ψihψ|.
+theories starting with a classification of theories
+with pure states given by rays on a 2-dimensional                     In this generalized setup, each measure-
+Hilbert space. We then show that all unrestricted                  ment is characterized by a list of OPFs
+non-quantum theories with pure states given by                     (F1 , F2 , . . . , Fk ) satisfying the normalization con-
+                                                                   dition i Fi (ψ) = 1 for all ψ ∈ PCd . There-
+                                                                             P
+rays on a d-dimensional Hilbert space violate bit
+symmetry. In section 4 we discuss the results and                  fore, each alternative to the Measurement Postu-
+their relation to Gleason’s theorem. Proofs of all                 lates can be characterized by the list of all “al-
+the results are in the appendix.                                   lowed” measurements in each dimension d, e.g.
+                                                                   {(F1 , . . . , Fk ), (F10 , . . . , Fk0 0 ), . . .}. For each alter-
+                                                                   native, we denote the set of OPFs on PCd by
+2 All alternatives to the Measurement                              Fd = {F1 , F2 , . . . , F10 , F20 , . . .}. From an opera-
+Postulates                                                         tional perspective, the set Fd is not completely
+                                                                   arbitrary: the composition of a measurement and
+2.1 Outcome probability functions                                  a unitary generates another measurement. That
+                                                                   is, if F ∈ Fd and U ∈ PU(d) then F ◦ U ∈ Fd .
+The standard formulation of quantum theory can
+be divided in two parts. The first part postu-                        In this generalized setup, a mixed state is an
+lates that the pure states of a system are the                     equivalence class of indistinguishable ensembles.
+rays of a complex Hilbert space1 ψ ∈ PCd , and                     Let (pi , ψi ) be the ensemble where state ψi ∈ PCd
+that the evolution of an isolated quantum sys-                     is prepared with probability pi . Two ensembles
+tem is unitary ψ 7→ U ψ, where U ∈ PU(d) is                        (pi , ψi ) and (p0i , ψi0 ) are indistinguishable in Fd if
+an element of the projective unitary group2 . The
+second part postulates that each measurement is
+                                                                                                             p0i F (ψi0 )
+                                                                                   X                    X
+                                                                                         pi F (ψi ) =                             (2)
+   1
+     The set of rays of a Hilbert space H is called the pro-                         i                   i
+jective Hilbert space, denoted PH.
+   2
+     PU(d) is defined by taking SU(d) and identifying the
+matrices that differ by a global phase U ∼ = eiθ U . For           for all F ∈ Fd . This equation defines the equiva-
+example, the two matrices ±1 ∈ SU(2) correspond to the             lence relation with which the equivalence classes
+same element in PU(2).                                             of ensembles (mixed states) are defined.
+
+                                                               2
+                                                                 • Minimality of V 4 :
+                           U     / Uψ
+                 ψ                                                                     Aff (ΩPCd ) = V .                  (9)
+
+              Ω                        Ω                         • Uniqueness: for any other maps Ω0 , Γ0 , Λ0
+                                                                   satisfying all of the above, there is an in-
+                                                                 vertible linear map L : V → V such that
+               Ωψ               / ΩU ψ
+                          ΓU                                                            Ω0ψ = L(Ωψ ) ,                (10)
+                                                                                        Γ0U = LΓU L−1 ,               (11)
+Figure 1: This diagram expresses the commutation of
+equation (6).                                                                           Λ0F = ΛF L−1 .                (12)
+
+                                                               In this new representation, the affinity of the
+                                                               OPFs ΛF implies the following. All the predic-
+2.2 The convex representation
+                                                               tions for an ensemble (pi , ψi ) can be computed
+In what follows we introduce a different represen-             from the vector ω = i pi Ωψi ∈ V . In more de-
+                                                                                      P
+
+tation for pure states, unitaries and OPFs, which              tail, if a source prepares state ψi with probability
+naturally incorporates mixed states. This repre-               pi then the probability of outcome F is
+sentation is the one used in general probabilistic                    X                     X
+theories [13–16], which is sometimes called the                           pi P (F |ψi ) =       pi ΛF (Ωψi ) = ΛF (ω) .
+convex operational framework [17–20]. Before                          i                     i
+
+starting let us introduce some notation. Given                 Hence, the “mixed state” ω contains all the physi-
+a real vector space V , the general linear group               cal information of the ensemble, in the same sense
+GL(V ) is the set of invertible linear maps T :                as the density matrix ρ = i pi |ψi ihψi | does in
+                                                                                               P
+V → V , and E(V ) is the set of affine3 functions              quantum theory. More precisely, ω is the ana-
+E : V → R.                                                     logue of the traceless part of the density ma-
+                                                               trix ρ − 1 trρ
+                                                                            d , which in the d = 2 case is the
+Result 1. Given a set Fd of OPFs for PCd (en-
+                                                               Bloch vector. So V is the analogue of the space
+coding an alternative to the measurement pos-
+                                                               of traceless Hermitian matrices or Bloch vectors,
+tulates) there is a (possibly infinite-dimensional)
+                                                               not the full space of Hermitian matrices. This
+real vector space V and the maps
+                                                               is why probabilities are affine instead of linear
+               Ω : PCd → V ,                        (3)        functions. For example,in this representation, the
+                                                               maximally   mixed state is always the zero vector
+               Γ : PU(d) → GL(V ) ,                 (4)        R
+                                                                 dψ Ωψ = 0 ∈ V . Also, the linearity of the ac-
+               Λ : Fd → E(V ) ,                     (5)        tion ΓU : V → V implies that, transforming the
+                                                               ensemble as (pi , ψi ) → (pi , U ψi ), is equivalent to
+satisfying the following properties:
+                                                               transforming the mixed state as
+  • Preservation of dynamical structure (see                              X                 X
+    Figure 1):                                                                 pi ΩU ψi =       pi ΓU Ωψi = ΓU ω .
+                                                                           i                i
+
+                      ΓU Ωψ = ΩU ψ ,                (6)        When we include all these mixed states the (full)
+                     ΓU1 ΓU2 = ΓU1 U2 .             (7)        state space S becomes convex:
+
+  • Preservation of probabilistic structure:                                      S = conv ΩPCd ⊂ V .                 (13)
+
+                     ΛF (Ωψ ) = F (ψ) .             (8)        An effect on S is an affine function E : S → [0, 1].
+                                                               In the representation introduced in Result 1,
+   3
+    A function E : V → R is affine if it satisfies             OPFs ΛF are effects. We say that a given set
+E (xω1 + (1 − x)ω2 ) = xE(ω1 )+(1−x)E(ω2 ) for all x ∈ R
+                                                                  4
+and ω1 , ω2 ∈ V . When V is finite-dimensional, each               Here Aff(S) refers to the affine span of vectors in S.
+E ∈ E(V ) can be written in terms of a scalar product          The affine span is defined as all linear combinations of
+as E(ω) = e · ω + c, where e ∈ V and c ∈ R.                    vectors in S where the coefficients add to 1.
+
+
+                                                           3
+of OPFs Fd is unrestricted [21] if it contains all        This, the affinity of ΛF and the continuity of Γ
+effects of the corresponding state space S. That          imply that F : PCd → [0, 1] is continuous.
+is, for every effect E on S there is an OPF F ∈ Fd           We also see that, an unrestricted theory is char-
+such that ΛF = E. When Fd is unrestricted the             acterized by a representation Γ and a reference
+map Λ is redundant, and the theory is character-          vector Ωψ0 ∈ V . But not all pairs (Γ, Ωψ0 ) sat-
+ized by Ω and Γ, which provide the state space S.         isfy (6). Below we prove that only a small class
+When Fd is not unrestricted, the theory can be            of representations Γ allow for (6), and for each of
+understood as an unrestricted one with an extra           these, there is a unique (in the sense of (10)-(12))
+restriction on the allowed effects. Hence, unre-          vector Ωψ0 satisfying (6).
+stricted theories play a special role.                       Any representation of PU(d) is also a represen-
+   The dimension of S (equal to that of V ) cor-          tation of SU(d), and these are all well classified
+responds to the number of parameters that are             in the finite-dimensional case. We now consider
+necessary to specify a general mixed state. In            a family of irreducible representations of SU(d)
+quantum theory this number equal to d2 − 1. De-           which we call Djd . There are many other repre-
+spite the finite dimensionality of PCd the state          sentations of SU(d) but these are not compat-
+space S = conv ΩPCd corresponding to a gen-               ible with the dynamical structure of quantum
+eral Fd , can be infinite-dimensional. When this          theory (6). For any positive integer j, let Djd :
+is the case, general state estimation requires col-                           d
+                                                          SU(d) → GL(RDj ) be the highest-dimensional ir-
+lecting an infinite amount of experimental data,
+                                                          reducible representation inside the reducible one
+which makes this task impossible. Recall that,
+                                                          Symj U ⊗ Symj U ∗ , where Symj U is the projec-
+when performing state estimation in infinite-
+                                                          tion of U ⊗j into the symmetric subspace [22,
+dimensional quantum mechanics, additional as-
+                                                          Appendix 2]. Here U is the fundamental rep-
+sumptions are required; like, for example, an up-
+                                                          resentation of SU(d) acting on Cd . Note that
+per bound on the energy of the state. For this rea-
+                                                          any global phase eiθ U disappears in the prod-
+son, in the rest of the paper, we assume that when
+                                                          uct Symj U ⊗ Symj U ∗ , hence Djd is also an irre-
+the set of pure states PCd is finite-dimensional
+                                                          ducible representation of PU(d). We recall that
+then so is the set of mixed states S.
+                                                          these irreducible representations are real, in the
+   Let us also assume that any mathematical
+                                                          sense that there exists a basis in which all ma-
+transformation T : S → S which can be
+                                                          trix elements of Djd (U ) are real, for all U . The
+arbitrarily-well approximated by physical trans-
+                                                          dimension Djd of the real vector space acted upon
+formations ΓPU(d) should be considered a physical
+transformation T ∈ ΓPU(d) . This means that the           by Djd (U ) is
+group of matrices ΓPU(d) is topologically closed.
+                                                                                   d−2
+Together with the homomorphism property (7)                                 2j             j 2
+                                                                                   Y       
+                                                               Djd =           +1       1+     ,         (16)
+and the finite-dimensionality of V this implies                            d−1             k
+                                                                                    k=1
+that Γ : PU(d) → GL(V ) is a continuous group
+homomorphism (this is shown in appendix A.1.1).           (see [22, p.224]).
+In other words, Γ is a representation of the Lie             Note that quantum theory corresponds to j =
+group PU(d).                                              1. In figure 2 the weight diagrams of the quantum
+                                                          (D13 ) and lowest dimensional non-quantum (D23 )
+2.3 Classification results                                representations of su(3) (the Lie algebra of SU(3))
+In quantum mechanics all pure states ψ can be re-         are shown. For d = 2, Dj2 are the SU(2) irre-
+lated to a fixed state ψ0 via a unitary ψ = U ψ0 .        ducible representations with integer spin j, which
+This and equation (6) imply that, given the repre-        are also irreducible representations of SO(3) ∼  =
+sentation Γ and the image of the fixed pure state         PU(2). For d ≥ 3, these irreducible represen-
+ψ0 → Ωψ0 , we can obtain the image of any pure            tations are also denoted with the Dynkin label
+state as                                                  (j, 0, . . . , 0, j).
+                                                             | {z }
+              Ωψ = ΩU ψ0 = ΓU Ωψ0 .           (14)             d−3
+
+Now note that, for any OPF F , we can write                                         d
+                                                          Result 2. Let ωjd ∈ RDj be the unique (up to
+        F (ψ) = F (U ψ0 ) = ΛF (ΓU Ωψ0 ) .    (15)        proportionality) invariant vector Djd (U )ωjd = ωjd
+
+                                                      4
+for all elements of the subgroup                                Result 3 (Faithfulness). When d ≥ 3 the map
+                                                                Ω is always injective. When d = 2 the map Ω
+      eiα 0 · · · 0
+                            
+                                                                is injective if and only if J contains at least one
+     0
+                      
+                                                               odd number.
+ U =
+     ..
+                       ,                u ∈ SU(d − 1) .
+     .   e−iα/(d−1) u 
+                       
+                                                                In this work we are specially interested in faithful
+       0                                                        state spaces. Because if two pure states in PCd
+                                        (17)                    are indistinguishable, then, from an operational
+Each finite-dimensional representation Ω :                      point of view, they become the same state.
+PCd → Rn and Γ : PU(d) → GL(Rn ) satisfy-
+ing (6), (7), (9) is of the form
+                       M
+                                                                2.4 A simpler characterization
+                ΓU =         Djd (U ) ,              (18)
+                                                                In this section we present a different representa-
+                       j∈J
+                       M                                        tion for all these alternative theories that makes
+               Ωψ0 =         ωjd ,                   (19)       them look closer to quantum theory. For this,
+                       j∈J
+                                                                we have to relax the “minimality of V ” property
+where J is any finite set of positive integers.                 (given by equation (9)).
+                                                                   For any ψ ∈ PCd and U ∈ PU(d) let
+  Each set J corresponds to an unrestricted the-
+ory, and clearly the dimension of the state space                               Ωψ = |ψihψ|⊗N ,                (21)
+n = j∈J Djd . Quantum theory corresponds to
+      P
+                                                                                          ⊗N        †⊗N
+                                                                              ΓU ω = U         ωU         ,    (22)
+J = {1} and n = d2 − 1. Now, let us analyze a
+simple example: quantum theory with d = 2. In                   where N is a positive integer and ω is a Hermi-
+this case, the subgroup SU(d−1) = {1} is trivial,               tian matrix acting on the symmetric subspace of
+and the subgroup (17) is eZt where                              (Cd )⊗N . It can be seen that this representation
+                                     !                          decomposes as
+                        i 0
+                Z=                       .           (20)
+                        0 −i                                                       N
+                                                                                   M
+                                                                                          d
+                                                                            ΓU =         PN,j ⊗ Djd (U ) ,     (23)
+The action of this subgroup on the Bloch vec-                                      j=0
+tor has two invariant states (0, 0, ±1). But, as
+                                                                         d is a projector whose rank depends on
+                                                                where PN,j
+the result says, both are the same vector up to
+                                                                N, j, d. The rank of projector PN,j d   counts the
+a proportionality factor. Also note that the two
+state spaces generated by the two reference vec-                number of copies of representation Djd . For ex-
+tors ω12 = (0, 0, ±1) are related as in (10)-(12).              ample rankPN,0d = 1 and rankP d
+                                                                                                 N,N = 1. Also, we
+   A consequence of Result 2 is that all finite-                         d
+                                                                define D0 to be the trivial irreducible representa-
+dimensional group actions Γ are polynomials of                  tion.
+the fundamental action U . Alternative (1) is                      The fact that representation (21)-(22) contains
+not polynomial, and hence needs an infinite-                    the trivial irreducible representation, allows for
+dimensional representation V . This shows our                   effects to be linear instead of affine function.
+previous claim that an infinite number of param-                Hence, all effects can be written as
+eters is necessary to specify a mixed state in this
+alternative theory.                                                        P (E|ψ) = tr(E|ψihψ|⊗N ) ,          (24)
+   A desirable feature of any alternative to the
+measurement postulates Fd is faithfulness: for                  where E is a Hermitian matrix. However, this
+any pair pure states ψ, ψ 0 ∈ PCd there is a                    matrix E does not need to be positive semi-
+measurement F ∈ Fd which distinguish them                       definite. For example, any N -party entanglement
+F (ψ) 6= F (ψ 0 ). When this does not happen, the               witness W has negative eigenvalues but gives a
+two states ψ, ψ 0 become operationally equivalent.              positive value tr(W |ψihψ|⊗N ) ≥ 0 for all ψ. An
+Faithfulness translates to the injectivity of the               example of this is given in Section 3.1.
+map Ω : PCd → V . The following result tells us                   If we want to use notation (21)-(22) to repre-
+which of the representations (18)-(19) are faith-               sent the alternative theory characterized by J ,
+ful.                                                            then we have to set N ≥ max J and constrain
+
+                                                            5
+(a)                                                            3.1 Three distinguishable states in C2
+                                                               Result 4. The d = 2 state space J = {1, 2}
+                                                               has at least three perfectly distinguishable states
+                                                               when all effects are allowed.
+
+                                                               (Result independently obtained in [23].) The irre-
+                                                               ducible representations Dj2 are given by the sym-
+                                                               metric product Dj2 (U ) = Sym2j U [22, p.150],
+                                                               where U is the fundamental representation on C2 .
+(b)                                                            According to Result 3, these are faithful when j is
+                                                               odd (Ω injective). To prove Result 4 we first show
+                                                               that the unfaithful PC2 theory J 0 = {2} corre-
+                                                               sponds to a quantum PC3 system restricted to the
+                                                               real numbers (i.e. PR3 ), and hence has 3 distin-
+                                                               guishable states. By including the trivial repre-
+                                                               sentation, the representation J 0 can be expressed
+                                                               as: Sym4 U ⊕Sym0 U = Sym2 (Sym2 U ) [22, p.152].
+                                                               Using the fact that Sym2 U is the quantum repre-
+                                                               sentation, the states generated by applying J 0 to
+                                                               the reference state can be expressed as the rank-
+                                                               one projectors
+
+                                                                        |φihφ| = D12 (U )ω12 [D12 (U )ω12 ]T ,   (25)
+Figure 2: (a) The weight diagram of the irreducible rep-
+resentation of su(3) with j = 1. This is the adjoint           where ω12 ∈ R3 is a unit Bloch vector and hence
+representation and corresponds to quantum theory. (b)          |φi ∈ R3 with hφ|φi = 1. This is the state space
+The weight diagram of the irreducible representation of        of a 3-dimensional quantum system restricted to
+su(3) with j = 2. This corresponds to the simplest             the real numbers PR3 , and hence, has three dis-
+non-quantum state space for PC3 .                              tinguishable states.
+                                                                  Coming back to J = {1, 2}, this theory
+                                                               has transformations given by the representation
+the allowed effects to only have support on the
+                                                               Sym4 U ⊕ Sym2 U ⊕ Sym0 U and hence it is faith-
+subspaces of (23) with j ∈ J . The fact that for
+                                                               ful. It has at least three distinguishable states
+some j ∈ J the representations Djd may be re-
+                                                               since one can make measurements with support
+peated is irrelevant. We can restrict the effects
+                                                               on the blocks Sym4 U ⊕ Sym0 U to distinguish the
+to act on a single copy or not. In the second case
+                                                               three states. It may be the case that by mak-
+the action of the effect becomes the average of its
+                                                               ing measurements with support in both blocks
+action in each copy.
+                                                               one could distinguish more states. We now con-
+                                                               sider families of alternative theories with dynam-
+                                                               ics SU(2) and find various properties which dis-
+3 Phenomenology of the alternative                             tinguish them from the qubit.
+theories
+                                                               3.2 Irreducible d = 2 theories
+In this section we explore the properties of the
+alternative theories classified in the previous sec-           In this section we define a class of d = 2 theories
+tion. We first consider the case d = 2 for both ir-            and explore which properties they have in com-
+reducible and reducible representations, and later             mon with the qubit, and which properties distin-
+we generalize to d ≥ 3. Before considering these               guish them from quantum theory. We denote by
+families of theories we provide an example of a                T2I the class of non-quantum d = 2 theories which
+specific theory of PC2 which differs significantly             are faithful, unrestricted (all effects allowed) and
+from quantum theory.                                           have irreducible Γ. According to Result 3, each
+
+                                                           6
+of these theories is characterized by an odd in-             This result follows directly from Result 6 and
+teger j ≥ 3, such that J = {j}, or equivalently              from the fact that there does not exist any re-
+Γ = Dj2 .                                                    versible transformation which maps a pair of
+                                                             antipodal states (representations of orthogonal
+3.2.1   Number of distinguishable states                     rays) to a pair of non-antipodal states (represen-
+                                                             tations of non-orthogonal rays).
+An important property of a system is the max-
+imal number of perfectly distinguishable states
+it has. This quantity determines the amount of               3.2.3   Phase invariance of measurements
+information that can be reliably encoded in one              We now consider the concept of phase groups
+system. For instance a classical bit has two dis-            of measurements following [24, 25]. The phase
+tinguishable states, as does a qubit. Distinguish-           group T of a measurement (E1 , ..., En ) is the max-
+able states of a qubit are orthogonal rays in the            imal subgroup of the transformation group of the
+Hilbert space, or equivalently, antipodal states on          state space S which leaves all outcome probabil-
+the Bloch sphere.                                            ities unchanged:
+   The following result tells us about the similar-
+ities of the theories in T2I with respect to quan-                        Ei ◦ ΓU = Ei ∀ U ∈ T .            (26)
+tum mechanics. It also applies to other theories,
+because it does not require the assumption of un-            For example, in the case of the qubit and a mea-
+restricted effects.                                          surement in the Z basis, the phase group associ-
+                                                             ated to this measurement is T = {eZt : t ∈ R},
+Result 5. Any d = 2 theory with irreducible Γ
+                                                             where (20). We maintain the historical name
+has a maximum of two perfectly distinguishable
+                                                             “phase group”, although in general, it need not
+states.
+                                                             be abelian.
+However all these theories have an important dif-               A measurement which distinguishes the max-
+ference with quantum theory.                                 imum number of pure states in a state space is
+                                                             often called a maximal measurement [24]. For
+Result 6. All theories in T2I have pairs of non-             a qubit, these are the projective measurements
+orthogonal (in the underlying Hilbert space) rays            (since they perfectly distinguish two states) which
+which are perfectly distinguishable.                         have a phase group U(1).
+We also prove that two rays ψ, φ ∈ PC2 are or-
+                                                             Result 8. All theories in T2I have maximal mea-
+thogonal if and only if they are represented by
+                                                             surements with trivial phase groups T = {1}.
+antipodal states Ωψ = −Ωφ . The existence of
+distinguishable non-antipodal states entails that            These maximal measurements with trivial phase
+theories in T2I have exotic properties not shared            groups are those used to distinguish non-
+by qubits. We discuss a few of these in what fol-            antipodal states. We note that the antipodal
+lows.                                                        states can be distinguished by measurements with
+                                                             U(1) phase groups (as in quantum theory). We
+3.2.2   Bit symmetry                                         observe that contrary to [24] we find maximal
+Bit symmetry, as defined in [4], is a property of            measurements with trivial phase groups in a non-
+theories whereby any pair of pure distinguishable            classical theory. This is because unlike [24] we
+states (ω1 , ω2 ) can be mapped to any other pair            do not consider all allowed transformations which
+pure of distinguishable states (ω10 , ω20 ) with a re-       map states to states, but only the transformations
+versible transformation U belonging to the dy-               ΓU .
+namical group, i.e. ΓU ω1 = ω10 and ΓU ω2 = ω20 .
+The qubit is bit symmetric since distinguishable             3.2.4   No simultaneous encoding
+states are orthogonal rays, and any pair of or-
+                                                             No simultaneous encoding [26] is an information-
+thogonal rays can be mapped to any other pair
+                                                             theoretic principle which states that if a system is
+of orthogonal rays via a unitary transformation.
+                                                             used to perfectly encode a bit it cannot simulta-
+Result 7. All theories in T2I violate bit symme-             neously encode any other information (similarly
+try.                                                         for a trit and higher dimensions). More precisely,
+
+                                                         7
+consider a communication task involving two dis-                                              Qubit    T2I   T̃2I   T2R
+tant parties, Alice and Bob. Similarly as in the                  Distinguishable states       2        2     2     ≥2
+                                                                  Bit symmetry                 X       X      X      X
+scenario for information causality [27], suppose
+                                                                  Phase invariant group        X       X      X      ?
+that Alice is given two bits a, a0 ∈ {0, 1}, and                  No simultaneous encoding     X       X      X      ?
+Bob is asked to guess only one of them. He will
+base his guess on information sent to him by Al-                    Figure 3: Summary of results for d = 2 theories.
+ice, encoded in one T2I system. Alice prepares
+the system with no knowledge of which of the two
+bits, a or a0 , Bob will try to guess. No simultane-                We call a theory pure-state dual if the only
+ous encoding imposes that, in a coding/decoding                  allowed effects are “proportional” to pure states.
+strategy in which Bob can guess a with probabil-                 That is, for every allowed effect, there is a pure
+ity one, he knows nothing about a0 . That is, if                 state ψ and a pair of normalization constants α, β
+b, b0 are Bob’s guesses for a, a0 then                           such that
+
+P (b|a, a0 ) = δba ⇒ P (b0 |a, a0 = 0) = P (b0 |a, a0 = 1)                     E(ω) = α(ΩTψ · ω) + β .              (27)
+
+where δba is the Kronecker tensor.                               All theories in T̃2I have a maximum of two distin-
+   As an example consider a qubit. Alice decides                 guishable states, and all pairs of distinguishable
+to perfectly encode bit a, which she can only do                 states are antipodal.
+by encoding a = 0 and a = 1 in two perfectly
+                                                                 Result 10. All theories in T̃2I are bit symmetric,
+distinguishable states. Without loss of generality
+                                                                 have phase groups for all maximal measurements
+she can choose to encode a = 0 in |0i and a = 1 in
+                                                                 and obey no-simultaneous encoding.
+|1i, with h0|1i = 0. She now also needs to encode
+a0 whilst keeping a perfectly encoded. Since, |0i is
+the only state which is perfectly distinguishable                3.3 Reducible d = 2 theories
+from |1i, we have that both a = 0, a0 = 0 and
+                                                                 We consider the set of all unrestricted faithful
+a = 0, a0 = 1 combinations must be assigned to
+                                                                 non-quantum state spaces generated by reducible
+|0i. Similarly a = 1, a0 = 0 and a = 1, a0 = 1
+                                                                 representations of SU(2). These representations
+combinations must be assigned to |1i. In this
+                                                                 are given by equation (18) with d = 2 and |J | > 1
+case we see that whilst Bob can perfectly guess
+                                                                 containing at least one odd number. We denote
+the value of a if he chooses to, if he chooses to
+                                                                 the set of all these theories T2R .
+guess the value of a0 he cannot do so. Hence this
+                                                                    For theories in T2R the number of distinguish-
+property is met by qubits, however
+                                                                 able states can be more than two (as shown for
+Result 9. All theories in T2I violate no simulta-                J = {1, 2} in Section 3.1). It is in general a dif-
+neous encoding.                                                  ficult task to find the number of distinguishable
+                                                                 states. However we find:
+We see that the above three properties: bit sym-
+metry, existence of phase groups for maximal                     Result 11. All theories in T2R violate bit sym-
+measurements and no-simultaneous encoding sin-                   metry.
+gle out the qubit amongst all T2I theories.
+                                                                   That is, there are pairs of distinguishable pure
+                                                                 states (ψ1 , ψ2 ) which cannot be mapped to an-
+3.2.5   Restriction of effects                                   other pair of distinguishable states (ψ10 , ψ20 ) with
+The study of theories in T2I has shown that they                 a reversible transformation U belonging to the
+differ from quantum theory in many ways. We                      dynamical group. This implies that
+now consider a new family of theories T̃2I , which
+is constructed by restricting the effects of the the-
+ories in T2I . These theories turn out to be closer                Bit symmetry singles out quantum theory
+to quantum theory in that they obey all the above                  amongst all d = 2 unrestricted faithful state
+properties. This approach is similar to the self-                  spaces (both irreducible and reducible).
+dualization procedure outlined in [21] (which also
+recovers bit symmetry).
+
+                                                             8
+3.4 Arbitrary d                                             bit symmetric. In the case of d = 2, the num-
+                                                            ber of distinguishable states was bounded for ir-
+Having studied in detail different families of d = 2
+                                                            reducible representations, and further properties
+theories, we now consider properties of arbitrary-
+                                                            which single out quantum theory were found.
+d unrestricted theories. We also show that the
+                                                               In order to fully develop these alternative the-
+property of bit symmetry singles out quantum
+                                                            ories it is necessary to determine how the state
+theory in all dimensions. This is proven by show-
+                                                            spaces studied compose. This would then allow
+ing that all faithful PCd state spaces have embed-
+                                                            us to study important properties related to mul-
+ded within them faithful (reducible) PCd−1 state
+                                                            tipartite systems.
+spaces. We then show that if a state space PCd−1
+                                                               Gleason’s theorem [28] can be understood as
+violates bit symmetry, then any state space PCd
+                                                            a derivation of the Born rule. Gleason assumes
+it is embedded in also does. Using a proof by
+                                                            that measurements are associated with orthogo-
+induction we find:
+                                                            nal bases and shows that states must be given
+Result 12. All unrestricted non-quantum the-                by density matrices and measurement outcome
+ories with pure states PCd and transformations              probabilities by the Born rule. This is a differ-
+Djd are not bit symmetric.                                  ent approach to the one presented in this paper.
+                                                            In this work we show that, assuming that pure
+This result shows that the Born rule can be sin-            states are rays on a Hilbert space and time evo-
+gled out amongst all possible probability assign-           lution is unitary, the Born rule can be derived (or
+ments from the following set of assumptions.                singled out) from the requirement of bit symme-
+                                                            try. We allow for measurements to take any form,
+                                                            not just being associated with orthogonal bases
+                                                            in the corresponding Hilbert space. Unlike Glea-
+  The Born rule is the unique probability as-
+                                                            son’s theorem this applies in the case d = 2 and
+  signment satisfying: (i) no restriction on the
+                                                            may arguably provide a more physical justifica-
+  allowed effects, and (ii) bit symmetry.
+                                                            tion for the Born rule. There exists a derivation
+                                                            of Gleason’s theorem for POVM’s [29] which is
+                                                            closer in spirit to our approach than the original.
+Although many works in GPT’s only consider un-              However we emphasise that in our work we begin
+restricted theories no-restriction remains an as-           from the structure of pure states and dynamics to
+sumption of convenience with a less direct phys-            derive that of measurements. In Gleason’s theo-
+ical or operational meaning. Bit symmetry how-              rem (and its extension) it is the structure of mea-
+ever is a property which has computational and              surements which are assumed and that of states
+physical significance as discussed in [4]. It is gen-       derived from it.
+erally linked to the possibility of reversible com-            Future work will be focused on multipartite
+putation, since bit symmetric theories allow any            systems and post-measurement state update rules
+logical bit (pair of distinguishable states) of the         for the alternative theories analysed in this work.
+theory to be reversibly transformed into any other          This will allow us to consider more general in-
+logical bit.                                                formation processing tasks for these novel proba-
+                                                            bilistic theories.
+
+4 Conclusion
+                                                            5 Acknowledgements
+In this work we have considered theories with the
+same structure and dynamics for pure states as              We are grateful to Howard Barnum, Jonathan
+quantum theory but different sets of OPF’s (not             Barrett, Markus Mueller, Jonathan Oppenheim,
+necessarily following the Born rule). These alter-          Matthew Pusey, Jonathan Richens and Tony
+native theories were shown to be in correspon-              Short for valuable discussions. We acknowledge
+dence with certain class of representations of the          the helpful referee comments which allowed us to
+unitary group. Moreover these theories (assum-              correct the proofs of Lemma 2 and Result 7 as
+ing no restriction on the effects) were shown to            well as clarify some technical points about the
+differ from quantum theory in that they are not             continuity of the OPF’s. TG is supported by the
+
+                                                        9
+EPSRC Centre for Doctoral Training in Deliver-                    Island In Theoryspace? eprint arXiv:quant-
+ing Quantum Technologies. LM is supported by                      ph/0401062. 2004.
+the EPSRC.                                                   [12] Y. D. Han and T. Choi. Quantum Probabil-
+                                                                  ity assignment limited by relativistic causal-
+                                                                  ity. Sci. Rep.. 6, 22986. July 2016.
+  References                                                 [13] L. Hardy.       Quantum theory from five
+                                                                  reasonable axioms.       eprint arXiv:quant-
+ [1] David Deutsch. Quantum theory of proba-                      ph/0101012. January 2001.
+     bility and decisions. Proceedings of the Royal          [14] Jonathan Barrett. Information processing in
+     Society of London A: Mathematical, Physical                  generalized probabilistic theories. Phys. Rev.
+     and Engineering Sciences. 455, 3129-3137.                    A. 75, 032304. March 2007.
+     1999.
+                                                             [15] Lluís Masanes and Markus P. Muller. A
+ [2] Wojciech Hubert Zurek. Probabilities from                    derivation of quantum theory from physical
+     entanglement, born’s rule pk = | ψk |2 from                  requirements. New Journal of Physics. 13,
+     envariance. Phys. Rev. A. 71, 052105. May                    063001. 2011.
+     2005.
+                                                             [16] C. Brukner B. Dakic. Quantum Theory
+ [3] David Wallace. How to Prove the Born Rule.                   and Beyond: Is Entanglement Special? In
+     In Adrian Kent Simon Saunders, Jon Barrett                   H. Halvorson, editor, Deep Beauty - Under-
+     and David Wallace, editors, Many Worlds?                     standing the Quantum World through Math-
+     Everett, Quantum Theory, and Reality. Ox-                    ematical Innovation. pages 365–392. Cam-
+     ford University Press. 2010.                                 bridge University Press. 2011.
+ [4] Markus P. Müller and Cozmin Ududec.                     [17] Robin Giles. Foundations for Quantum Me-
+     Structure of reversible computation deter-                   chanics. Journal of Mathematical Physics.
+     mines the self-duality of quantum theory.                    11, 2139. 1970.
+     Phys. Rev. Lett.. 108, 130401. Mar 2012.                [18] Bogdan Mielnik. Generalized quantum me-
+ [5] David Gross, Markus Müller, Roger Colbeck,                   chanics. Communications in Mathematical
+     and Oscar C. O. Dahlsten. All reversible dy-                 Physics. 37, 221–256. 1974.
+     namics in maximally nonlocal theories are               [19] G. Chiribella, G. M. D’Ariano, and
+     trivial. Phys. Rev. Lett.. 104, 080402. Feb                  P. Perinotti. Probabilistic theories with pu-
+     2010.                                                        rification. Physical Review A. 81, 062348.
+ [6] Sabri W Al-Safi and Anthony J Short. Re-                     jun 2010.
+     versible dynamics in strongly non-local box-            [20] H. Barnum, J. Barrett, L. Orloff Clark,
+     world systems. Journal of Physics A: Math-                   M. Leifer, R. Spekkens, N. Stepanik,
+     ematical and Theoretical. 47, 325303. 2014.                  A. Wilce, and R. Wilke. Entropy and infor-
+ [7] Sabri W Al-Safi and Jonathan Richens. Re-                    mation causality in general probabilistic the-
+     versibility and the structure of the local state             ories. New Journal of Physics. 12, 033024.
+     space. New Journal of Physics. 17, 123001.                   mar 2010.
+     2015.                                                   [21] Peter Janotta and Raymond Lal. General-
+ [8] L. Hardy and W. K. Wootters.               Lim-              ized probabilistic theories without the no-
+     ited Holism and Real-Vector-Space Quan-                      restriction hypothesis. Physical Review A.
+     tum Theory. Foundations of Physics. 42,                      87, 052131. 2013.
+     454-473. March 2012.                                    [22] William Fulton and Joe Harris. Representa-
+ [9] D. Finkelstein, J.M. Jauch, and D. Speiser.                  tion theory : a first course. Graduate texts
+     Notes on Quaternion Quantum Mechanics.                       in mathematics. Springer-Verlag. New York,
+     CERN publications: European Organization                     Berlin, Paris. 1991.
+     for Nuclear Research. CERN. 1959.                       [23] Jonathan Barrett. private communication.
+[10] H. Barnum, M. Graydon, and A. Wilce.                    [24] Andrew J P Garner, Oscar C O Dahlsten,
+     Composites and Categories of Euclidean                       Yoshifumi Nakata, Mio Murao, and Vlatko
+     Jordan Algebras. eprint ArXiv:1606.09331                     Vedral. A framework for phase and inter-
+     quant-ph. June 2016.                                         ference in generalized probabilistic theories.
+[11] Scott Aaronson. Is Quantum Mechanics An                      New Journal of Physics. 15, 093044. 2013.
+
+                                                        10
+[25] Ciarán M Lee and John H Selby. Generalised          A Proofs
+     phase kick-back: the structure of computa-
+     tional algorithms from physical principles.         A.1 The convex representation (proof of Re-
+     New Journal of Physics. 18, 033023. 2016.           sult 1)
+[26] L. Masanes, M. P. Muller, R. Augusiak, and          Let us fix the value of d and the set of OPFs
+     D. Perez-Garcia. Existence of an informa-           Fd . Also, we assume that all OPFs of the form
+     tion unit as a postulate of quantum theory.         F ◦ U are contained in Fd , for all U ∈ PU(d) and
+     Proceedings of the National Academy of Sci-         F ∈ Fd . And recall that, if this is not the case,
+     ences. 110, 16373-16377. 2013.                      we can always re-define Fd to include them. Be-
+                                                         fore defining the representation (Ω, Γ, Λ) of Re-
+[27] M. Pawłowski, T. Paterek, D. Kaszlikowski,
+                                                         sult 1, it is convenient to define a temporary
+     V. Scarani, A. Winter, and M. Żukowski. In-
+                                                         one (Ω̃, Γ̃, Λ̃) in which states Ω̃ψ are represented
+     formation causality as a physical principle.
+                                                         by a list of outcome probabilities. For this, we
+     nature. 461, 1101-1104. October 2009.
+                                                         take a minimal subset {F (1) , F (2) , F (3) , . . .} ⊆ Fd
+[28] Andrew M. Gleason. Measures on the Closed           that affinely generates Fd . That is, for any
+     Subspaces of a Hilbert Space. pages 123–133.        F ∈ Fd there are constants c(0) , c(1) , c(2) , . . . ∈ R
+                                                         such that F = c(0) + r c(r) F (r) . This con-
+                                                                                         P
+     Springer Netherlands. Dordrecht. 1975.
+                                                         struction requires the minimal generating subset
+[29] Carlton M Caves, Christopher A Fuchs, Ki-
+                                                         {F (1) , F (2) , . . .} to be countable, but it can still
+     ran K Manne, and Joseph M Renes. Gleason-
+                                                         be infinite. This does not pose any loss of gener-
+     type derivations of the quantum probability
+                                                         ality, because, from an operational point of view,
+     rule for generalized measurements. Founda-
+                                                         the characterization of arbitrary states would be
+     tions of Physics. 34, 193–209. 2004.
+                                                         impossible.
+[30] Karl Heinrich. Hofmann and Sidney A. Mor-              If we represent the pure state ψ by the list of
+     ris. The structure of compact groups : a            probabilities
+     primer for students, a handbook for the ex-
+                                                                   P (F (1) |ψ)     F (1) (ψ)
+                                                                                                         
+     pert. Berlin, Boston: De Gruyter. third edi-
+                                                                  P (F (2) |ψ)   F (2) (ψ) 
+                                                                                           
+     tion, revised and augmented edition. 2013.
+                                                                  P (F (3) |ψ)   F (3) (ψ)  ∈ V ,
+                                                           Ω̃ψ =               =           
+[31] Ingemar Bengtsson and Karol Zyczkowski.                     
+                                                                        ..
+                                                                                 
+                                                                                        ..
+                                                                                              
+     Geometry of Quantum States. Cambridge                               .               .
+     University Press. 2006. Cambridge Books                                                           (28)
+     Online.                                             then we can use the rules of probability to extend
+                                                         this definition to mixed states. For example, the
+[32] M. L. Whippman. Branching Rules for Sim-            probability of outcome F when the system is pre-
+     ple Lie Groups. Journal of Mathematical             pared in the ensemble (pi , ψi ) is
+     Physics. 6, 1534-1539. October 1965.                                         X                     X
+                                                          P (F |(pi , ψi )i ) =       pi P (F |ψi ) =       pi F (ψi ) .
+[33] W.J. Holman and L.C. Biedenharm. The                                         i                     i
+     Representations and Tensor Operators of the                                                       (29)
+     Unitary Groups U(n). In Ernest M. Loebl,            Therefore, the probabilistic representation of en-
+                                                                             P
+     editor, Group Theory and its Applications.          semble (pi , ψi ) is i pi Ω̃ψi . And the set of all
+     pages 1 – 73. Academic Press. 1971.                 states, pure and mixed, is
+[34] Roe Goodman and Nolan R. Wallachs.                                      S̃ = conv Ω̃PCd .                      (30)
+     Symmetry, Representations, and Invariants.
+     Springer-Verlag New York. New York. 2009.              In the representation Ω̃, any probability F (ψ)
+                                                         is either a component of the vector Ω̃ψ or an affine
+[35] Fernando Antoneli,     Michael Forger,              function of its components. Hence, for any F ,
+     and Paola Gaviria.        Maximal sub-              there is an affine function Λ̃F : V → R such that
+     groups of compact Lie groups.    eprint
+     ArXiv:math/0605784. 2006.                                          Λ̃F (Ω̃ψ ) = F (ψ) ∀ ψ .                    (31)
+                                                           Any U can be seen as a relabeling of the pure
+                                                         states PCd , hence, {(F (1) ◦ U ), (F (2) ◦ U ), . . .} ⊆
+
+                                                    11
+Fd is also a minimal generating subset. There-                  All the results of this section are valid when V
+fore, there is an affine map Γ̃U : V → V such                is finite- and infinite-dimensional. In the rest of
+that                                                         the appendices, only the finite-dimensional case
+             Ω̃U ψ = Γ̃U (Ω̃ψ ) ∀ U, ψ .  (32)               is considered.
+  Next, we define a new representation Ω, Γ, Λ in
+which ΓU : V → V is linear. This new represen-               A.1.1   Continuity of homomorphisms Γ
+tation is that of Result 1. For this, we need to
+                                                             The number of parameters that define a mixed
+define the maximally mixed state
+                                                             state in S is equal to the dimension of V =
+                                                             conv S. Hence, the requirement that general
+                       Z
+             ω̃mm =        dU Γ̃U (Ω̃ψ ) ,       (33)
+                       PU(d)                                 mixed states in S can be estimated with finite
+                                                             means implies that V is finite-dimensional. Now,
+where dU is the Haar measure and ψ is any pure               we recall that in the probabilistic representation
+state. We also note that the maximally mixed                 Ω̃, the entries of states ω̃ ∈ S̃ are bounded.
+state is invariant under any unitary: Γ̃U (ω̃mm ) =          Hence, due to (34), the same is true in S. This
+ω̃mm for any U . Now, we define the new repre-               implies that the absolute value of all matrix ele-
+sentation as                                                 ments of the group ΓPU(d) are also bounded.
+                Ωψ = Ω̃ψ − ω̃mm ,                (34)           Now, we argue that, from a physical point of
+                                                             view, the group of transformations ΓPU(d) must
+             ΓU (ω) = Γ̃U (ω̃) − ω̃mm ,          (35)        be topologically closed. This follows from the
+             ΛF (ω) = Λ̃F (ω̃) ,                 (36)        fact that any mathematical transformation that
+                                                             can be approximated arbitrarily well by physi-
+which extends to general mixed states as ω =                 cal transformations should be a physical trans-
+ω̃ − ω̃mm . Using (31) and (32) we obtain (6),               formation too. In summary, the fact that the set
+(7). In this representation, the maximally mixed             ΓPU(d) ⊆ Rn is bounded and closed implies that
+state is the zero vector ωmm = 0 ∈ V . Now,                  it is compact. And this is the premise of the fol-
+recalling that ωmm is invariant under unitaries,             lowing theorem.
+we have that ΓU (0) = 0, which together with the                It is proven in Theorem 5.64 of [30, p.167] that
+affinity of ΓU implies that ΓU : V → V is linear,            any group homomorphism Γ : PU(d) → G in
+for all U .                                                  which G is compact must be continuous.
+   To continue with the proof of Result 1, we note
+that the affinity of Λ̃F implies that of ΛF ; and
+that (30) implies (9).                                       A.2 Preservation of dynamical structure (Re-
+   Now, it only remains to prove uniqueness. Let             sult 2)
+us suppose that there are other maps Ω0 , Γ0 , Λ0            The stabilizer subgroup Gψ ≤ PU(d) of a pure
+with the properties stated in Result 1. These                state ψ ∈ PCd is the set of unitaries U leaving the
+properties imply the existence of an affine func-            state invariant U ψ = ψ. If the state ψ 0 is related
+tion L̃ such that                                            to ψ via ψ 0 = U ψ, then their corresponding sta-
+                     Λ0 (1) (Ω0ψ )                           bilizer subgroups are related via Gψ0 = U Gψ U † .
+                                          
+        F (1) (ψ)
+                    F                                      Therefore, all stabilizers are isomorphic.
+                    0        0
+       (2)                             0
+       F (ψ)  =  ΛF (2) (Ωψ )  = L̃(Ωψ ) .
+Ω̃ψ =                             
+            ..             ..                                   Equation (7) implies that Γ is a representation
+             .              .                                of SU(d). Following the premises of Result 2,
+                                                 (37)        this representation is finite-dimensional. Hence,
+Which in turn implies the existence of another               we can decompose Γ into real irreducible repre-
+affine function L such that Ωψ = L(Ω0ψ ). Accord-            sentations
+ing to the properties stated in Result 1, both ΓU                               Γ=
+                                                                                      M
+                                                                                          Γr .               (38)
+and Γ0U are linear; which implies that the maxi-                                      r
+mally mixed state in both representations is the
+                      0                                      Using the same partition into real linear sub-
+zero vector ωmm = ωmm     = 0 ∈ V . The affine map
+                                                             spaces, we also decompose the map
+L also changes the representation of the maxi-
+mally mixed state ωmm = L(ωmm   0 ). But 0 = L(0)                                    M
+                                                                                Ω=        Ωr .              (39)
+is only possible if L is not just affine, but linear.                                 r
+
+
+                                                        12
+Equation (6) independently holds for each sum-                subgroup Gψ has an invariant vector, are those
+mand ΓrU Ωrψ = ΩrU ψ . In particular ΓrU Ωrψ = Ωrψ            in which D(Z) has at least one zero eigenvalue.
+for all U ∈ Gψ , which implies that each Γr has a             These are the integer spin representations. Also,
+Gψ -invariant subspace.                                       the multiplicity of this eigenvalue is always one,
+   Now, let us concentrate on the d ≥ 3 case. To              implying that, as in the d ≥ 3 case, the map Ω is
+figure out the structure of the stabilizer subgroup,          completely determined up to equivalence trans-
+we consider the state ψ0 = (1, 0, . . . , 0), and note        formations of the type (10)-(12).
+that the group Gψ0 is the set of unitaries of the
+form (17). Hence, when d ≥ 3, all stabilizers are
+                                                              A.3 Faithfulness (Result 3)
+isomorphic to U(1) × SU(d − 1).
+Lemma 1. The finite-dimensional irreducible                   Let us prove that when d ≥ 3 the map Ω specified
+representations of SU(d) that have U(1)×SU(d−                 in Result 2 is injective. We start by assuming the
+1)-invariant vectors are the Djd introduced above.            opposite: there are two different pure states ψ 6=
+Additionally, the vector is always unique (up to              ψ 0 which are mapped to the same vector Ωψ =
+a constant).                                                  Ωψ0 . This vector must be invariant under the
+                                                              action of the two stabilizer subgroups: ΓU Ωψ =
+This lemma, proven in appendix A.12, tells us                 Ωψ for all U ∈ Gψ and all U ∈ Gψ0 . Now, note
+that most of the irreducible representations of               that if ΓU Ωψ = ΓU 0 Ωψ = Ωψ then also ΓU U 0 Ωψ =
+SU(d) do not have a vector which is invariant                 Ωψ . Hence, the stabilizer group of the vector Ωψ
+under U(1) × SU(d − 1), and hence violate (6).                contains the group {U U 0 |∀ U ∈ Gψ , U 0 ∈ Gψ0 }.
+As mentioned above, the SU(d) representations
+Djd are also PU(d) representations, which is what             Lemma 2. When d ≥ 3 the group SU(d) can
+is required (see Result 1). A technical point                 be generated by two stabilizer subgroups SU(d −
+(fully addressed in appendix A.12.6) arises. The              1) × U(1) of two distinct rays on PCd .
+representations we are looking for act on real
+vector spaces, however the representation theory              This lemma, proven in Appendix A.13, shows
+tools used to find the Djd deal with representa-              that the group generated by any two stabilizer
+tions acting on complex vector spaces. A repre-               subgroups is the full group SU(d). Therefore, the
+sentation which is irreducible on a real space is             vector Ωψ is invariant under any transformation
+not necessarily irreducible on a complex space.               ΓU . This implies that all states ψ 0 are mapped
+We have found all complex irreducible repre-                  to the same vector Ωψ0 = Ωψ and have exactly
+sentations (which are also real irreducible) with             the same outcome probabilities. Equivalently, all
+the correct properties, however it may be the                 functions F ∈ Fd are constant.
+case that there are real irreducible representa-                 Now, let us analyze the d = 2 case. In what
+tions which are complex reducible which were not              follows we prove that, the map Ωr associated to
+found with the methods used. It is shown in ap-               an irreducible representation Γr = Dj2 is injec-
+pendix A.12.6 that the Djd are the only real irre-            tive when j is odd. Hence, the global map Ω is
+ducible representations with the required proper-             injective if it contains at least one summand Ωr
+ties.                                                         that is injective. An irreducible representation of
+   A very convenient fact is that there is a single           SU(2) can be expressed as a symmetric power of
+one-dimensional invariant subspace. Hence, the                the fundamental representation [22, p.150]:
+maps Ωr are completely determined up to a fac-
+tor. However, this factor does not play any role,                             Dj2 = Sym(2j) D21 ,           (40)
+                                                                                              2
+since it can be modified via an equivalence trans-
+formation L of the type (10)-(12). If there were              where D21 is the fundamental representation of
+multiple trivial invariant subspace, one could con-                    2
+                                                              SU(2) acting on C2 , with basis {ψ0 , ψ1 }. The
+struct different alternatives to the measurement
+                                                              action of the Lie algebra element Z on this basis
+postulates having the same representation Γ.
+                                                              is:
+   In the case d = 2, the stabilizer subgroup Gψ
+is isomorphic to U(1). This subgroup is gener-
+                                                                                Zψ0 = iψ0 ,                 (41)
+ated by a single Lie algebra element (e.g. Z).
+The irreducible representations D in which, the                                 Zψ1 = −iψ1 .                (42)
+
+
+                                                         13
+Given Dj2 , we take as reference state Ωjψ0 , the 0         A.4 Distinguishable states in T2I (Result 5)
+eigenstate of Dj2 (Z) (since ψ0 is invariant under
+                                                            The proof is by contradiction: we assume the ex-
+all transformations generated by Z).
+                                                            istence of 3 distinguishable states, and show that
+                  2                                         any distinguishing measurement has an outcome
+               eDj (Z)t Ωjψ0 = Ωjψ0 .          (43)
+                                                            with a negative probability for certain states.
+                                                            Hence the maximum number of perfectly distin-
+The 0 eigenstate is given by Ωjψ0 = ψ0⊗j ⊗ ψ1⊗j
+                                                            guishable states is two. Since effects are affine
+(where the product is the symmetric product) [22,
+                                                            functions we can write an effect E as a pair (e, c).
+p.150]. All states can be obtained by applying a
+unitary to the reference state: Ωjψ = Dj2 (U )Ωjψ0 .                            E(ω) = e · ω + c .              (48)
+We call UZ the set of transformations generated
+                                                            A measurement is a set of effects {Ei } such that
+by Z. All states ψ 6= ψ0 are of the form ψ =                P                                              P
+                                                               Ei (ω) = 1 for all states ω; this entails ei = 0
+U ψ0 , U ∈/ UZ .                                                 P
+                                                            and      ci = 1. If three states ω1 , ω2 and ω3 are
+   We show that for j odd there are no states
+                                                            distinguishable then there exists a measurement
+U ψ0 , U ∈/ UZ such that Dj2 (U )Ωjψ0 = Ωjψ0 hence
+                                                            which distinguishes them of the following form:
+ψ0 and ψ are mapped to distinct states. For j
+                                                            {E1 = (c1 , e1 ), E2 = (c2 , e2 ), E3 = (c3 , e3 )}, with
+even we show that there is a U ∈   / UZ such that
+                                                            Ei (ωj ) = δij . This entails
+Ωjψ = Dj2 (U )Ωjψ0 = Ωjψ0 and hence the represen-
+tation is not faithful. A generic U ∈ SU(2) acting                               ei · ωi = 1 − ci .             (49)
+on C2 has the following action:
+                                                            From Result 3 there exists an antipodal state −ωi
+               ψ0 → αψ0 + βψ1 ,                             for every ωi in theories in T2I . We compute the
+                                                            outcome probabilities for these antipodal states:
+               ψ1 → α∗ ψ1 − β ∗ ψ0 ,           (44)
+                                                                    Ei (−ωi ) = ei · (−ωi ) + ci = −1 + 2ci     (50)
+where |α|2 + |β|2 = 1. The action Dj2 (U ) on Ωjψ0
+                                                            The sum of these three measurement outcomes
+is the same as that of U ⊗2j since Ωjψ0 belongs to          probabilities is:
+the symmetric subspace.                                       X
+                                                                     Ei (−ωi ) = −3 + 2(c1 + c2 + c3 ) = −1 (51)
+            ψ0⊗j → (αψ0 + βψ1 )⊗j ,                             i
+
+            ψ1⊗j → (α∗ ψ1 − β ∗ ψ0 )⊗j .       (45)         Therefore at least one of the outcome probabili-
+                                                            ties is negative and therefore not legitimate. By
+We now determine which unitaries U preserve the             contradiction this proves there is no measurement
+state:                                                      which perfectly distinguishes three states in these
+                                                            theories.
+ ψ0⊗j ψ1⊗j = (αψ0 +βψ1 )⊗j (α∗ ψ1 −β ∗ ψ0 )⊗j . (46)
+                                                            A.5 Distinguishable non-antipodal states in T2I
+This only holds when either α or β is 0. When               (Result 6)
+β = 0 this corresponds to a U ∈ UZ . When α = 0
+we have:                                                    In this section we show that for each non-
+                                                            quantum theory in T2I there exists a measurement
+            ψ0⊗j ψ1⊗j = (−1)j ψ0⊗j ψ1⊗j ,      (47)         of the form M = {(e, c), (−e, 1 − c)} with e ∝
+                                                            ω0† · Dj2 (X)† which perfectly distinguishes pairs
+since by unitarity requirement |β| = 1. For even j          of non antipodal states lying on the D(UX (t))ω0
+                     / UZ , such that Dj2 (U )Ωjψ0 =
+there is a unitary U ∈                                      orbit.
+Ωjψ0 hence the map Ω is not injective. It maps                 Theories in T2I are generated by representa-
+orthogonal rays to the same state. For odd j any            tions Dj2 with j odd. The dimension of such repre-
+unitary U ∈/ UZ maps Ωjψ0 to a different state              sentations is n = 2j + 1. We write UK (t) = eKt/2
+and so the map Ω is injective. Moreover we see              for an arbitrary element of the Lie Algebra K.
+that U ψ0 = ψ1 and hence orthogonal rays ψ0                 We will use the following elements of su(2):
+and ψ1 are mapped to antipodal states Ωψ0 and                                                   !
+Ωψ1 = −Ωψ0 for odd j and to the same state                                              i 0
+                                                                                Z=                    ,         (52)
+Ωψ0 = Ωψ1 for even j.                                                                   0 −i
+
+                                                       14
+                                !
+                         0 i                                           malised) state is −ωj2 . This will be the antipodal
+                X=                  ,                      (53)
+                         i 0                                           state. The manifold of pure states can be gener-
+                                    !                                  ated in the following manner:
+                1          i i
+              H=√                        ,                 (54)
+                  2        i −i
+                                                                                  ω(s, t) = Dj2 (UZ (s))Dj2 (UX (t))ωj2 .   (56)
+                              Dj2 (K)t
+We note that Dj2 (eKt/2 ) = e     . The reference
+state is chosen to be invariant under all UZ (t):
+                                                                       This is just a 2-sphere (embedded in a space of
+               Dj2 (UZ (t))ωj2 = ωj2 ,                     (55)        dimension n) parametrised by polar angle s and
+                                                                       azimuthal angle t. The generators of the irre-
+which implies Dj2 (Z)ωj2 = 0. The 0-weight sub-                        ducible (unitary) representations of SU(2) can be
+space is one dimensional, the other possible (nor-                     written as [31, p.387]:
+
+                                            √                                                                   
+                                              2j
+                               0              2            √ 0            0             0           0        0
+                           √                                                                                    
+                           2j                              2(2j−1)
+                                         √ 0                              0             0           0        0
+                                                                                                                 
+                           2                                 2                                                  
+                                                                         ..
+                                                                                                                
+                                             2(2j−1)
+                                                                            .
+                                                                                                                
+                           0                                 0                         0           0        0 
+                                              2                                                                 
+              Dj2 (X) = i  0
+                                                            ..                        ..                        
+                                                                                                                            (57)
+                                              0                 .         0               .
+                                                                                               √ 0          0  
+                                                                        ..                       2(2j−1)        
+                           0                 0               0             .                                0 
+                                                                                   √ 0             2
+                                                                                                            √
+                                                                                                                 
+                                                                                      2(2j−1)
+                                                                                                                
+                           0                                                                                 2j 
+                                             0               0           0             2          √
+                                                                                                    0        2 
+                                                                                                    2j
+                               0              0               0           0             0           2        0
+                                                                                                  
+                                                 j     0       0 0            0         0       0
+                                                                                                 
+                                      0 j−1                   0 0            0         0       0 
+                                                                                                 
+                                                             ..                                   
+                                      0
+                                         0                      . 0      0  0    0 
+                           2
+                          Dj (Z) = i  0  0                    0 0        0  0    0  .                                     (58)
+                                                                                    
+                                                                         .
+                                                                                    
+                                                                       0 ..
+                                                                                    
+                                      0  0                       0          0    0 
+                                                                                    
+                                      0
+                                         0                       0    0 0 −j + 1 0 
+                                                 0     0          0    0 0   0    −j
+
+
+    We define k = j + 1 where D(K)(k,k) is the                         is ωkX . Hence we use ωkZ for the reference state
+central element of the matrices D(K) for some                          ωj2 (since it is the 0 eigenstate of the Z operator).
+Lie algebra element K. It is clear that in this                        The 0 eigenstate of D(X) corresponds to the state
+basis the reference state (0 eigenstate of Dj2 (Z))                    ωkX which is equal to D(UY (− π2 ))ωkZ (and is in-
+is:                                                                    variant under D(UX (t))). These 0 eigenstates of
+                   (ωj2 )i = δik .             (59)                    Lie Algebra matrices D(K) correspond to states
+                                                                       since they have the correct invariance properties,
+In the following we drop the explicit reference to                     that is, invariant under eiD(K)t .
+the representation, and use D(U ) for Dj2 (U ). We
+                        K for the i eigenstate of
+now use the notation ωk+i                                                 As shown in the proof of Result 3 these state
+the representation matrix D(K) of the Lie Alge-                        spaces have antipodal states for all states. Con-
+bra element K. Here i runs from −j to j. In the                        sider an effect which has as maximum ωm will
+case of the diagonal operator D(Z) we observe                          have as minimum −ωm . This effect may be noisy
+that an eigenvector with eigenvalue i has a sin-                       (i.e. not have values 0 and 1 for the minimum
+gle entry at position k + i. The zero eigenstate                       and maximum) but will be proportional to an ef-
+(ωkZ )m = δkm which is just a vector with a sin-                       fect which is tight (gives values 0 and 1 on the
+gle entry at position k (the central entry). The                       minimum and maximum). Hence any tight ef-
+0 eigenstate of the operator D(X) for example                          fect which has as maximum ωm will distinguish
+
+                                                                  15
+it from −ωm . In the following we show that                              es · ωX (t) will only have two terms corresponding
+there exist effects which have 2 global maxima                           to the k − 1 and k + 1 entries of each vector.
+and minima when applied to the manifold of pure
+states. These effects are proportional to tight ef-                       es · ωt =
+fects which distinguish ω0 and −ω0 and also dis-
+                                                                              p
+                                                                              j(j + 1) is                               (64)
+                                                                          i           (e ωX (t)k−1 + e−is ωX (t)k+1 ) .
+tinguish ω0 and ω1 (for ω1 6= −ω0 ).                                            2
+   Since effects (e, c) are of the form e · ω(s, t) + c,
+we need only consider e · ω(s, t) to establish the                       This is real valued for all values of s, hence it
+number of global extrema and their locations. We                         must be the case that ωX (t)k−1 = ωX (t)k+1 and
+now prove the effect (e, c) with e = (ωkZ )† D(X)†                       both are imaginary (or both real and ωX (t)k−1 =
+(up to normalisation) perfectly distinguishes non-                       −ωX (t)k+1 ). However since the ωkY state be-
+antipodal states in all representations. Here we                         longs to the orbit ωX (t) and has the property
+use the † since the specific representation of the                       (ωkY )k−1 = (ωkY )k+1 it must be the former.
+states have complex entries (even though the vec-                                             q
+tor space spanned by the states is a real vector                                  es · ωt =       j(j + 1)ωX (t)k+1 cos(s) .   (65)
+space). We first show that e gives real values
+when applied to the state space (whose states                            The maxima and minima of this function occur
+span a real vector space). There is a basis for the                      for s = 0 (or π but this corresponds to the same
+representation where all entries are real which is                       orbit). Hence we need to find the maxima and
+related to this representation by AD(U )A−1 . It                         minima of the function:
+acts on states as Aω and effects as eA−1 . Hence
+(ωjZ )† A−1 ·AD(U )A−1 Aω is real for all ω (since it                    f (s, t = 0) = g(t) = e · D(UX (t))ωkZ
+is an inner product of vectors with real entries).
+This is equal to e · ω for all omega. Hence e ap-                                                   = (ωkZ )† D(X)† · D(UX (t))ωkZ
+plied to the state space is real valued.                                                            = (ωkX )† D(Z)† · D(UZ (t))ωkX .
+   We study the maxima and minima of f (s, t) =                                                                                 (66)
+e · ω(s, t) which corresponds to applying e to the
+entire manifold of pure states:                                             Where we have used H the Hadamard trans-
+                                                                         formation defined above which changes the ba-
+      f (s, t) = e · D(UZ (s))D(UX (t))ωkZ .                (60)         sis from Z to X: HZH † = X. Moreover
+                                                                         HUZ (t)H † = UX (t). Therefore:
+We consider the first part (a row vector)
+                                                                          D(UX (t))ωkZ = D(H)D(UZ (t))D(H)† ωkZ , (67)
+                    D(Z)s
+      es = e e              = (ωkz )† D(X)† eD(Z)s ,        (61)
+                                                                         we note that D(H)† ωkZ is a 0 eigenstate of D(X)
+for which entries are 0 apart from entries k ± 1:                        and is therefore equal to ωkX .
+                                 p                                         We now evaluate the second part of g(t) :
+                                     j(j + 1) ∓is                        D(UZ (t))ωkX where ωkX is a normalised zero eigen-
+                  (es )k±1 = i               e    .         (62)
+                                       2                                 vector of D(X) and has the following form:
+We can write this as:                                                                                            
+                                                                                                            aj
+                                                                                                            0
+                                                                                                             
+                                                                                                             
+                                                                                                             
+es =                                                                                                a
+                                                                                                     (j−2) 
+                                                                                                              
+             p                       p                                                                       
+                 j(j + 1) is             j(j + 1) −is                                                  0     
+(0, ..., i               e , 0, i                e , 0, ..., 0) .                              X
+                                                                                                   
+                                                                                                         .
+                                                                                                              
+                   2                       2                                                  ωk = 
+                                                                                                        ..    ,
+                                                                                                              
+                                                                                                                               (68)
+                                                            (63)                                             
+                                                                                                        0
+                                                                                                             
+                                                                                                             
+                                                                                                             
+   We now determine the second part of the func-                                                    −a       
+                                                                                                       (j−2) 
+tion f (s, t): D(UX (t))ωkZ . Since ωkZ has a single                                                    0
+                                                                                                             
+                                                                                                             
+entry equal to 1 at position k this just selects                                                           −aj
+the k th column of D(UX (t)), we call these states
+ωX (t); they form an orbit. The inner product                            where |an | > |am | for n > m.
+
+                                                                    16
+                                                                        two minima/maxima in [π, 2π). We now show
+                                                                      that for j > 1 the global maximum/minimum
+                               aj eijt                                  does not occur for tm = π/2.
+                                  0
+                                 
+              
+              
+                                  
+                                                                          We first note that g(0) = 0, hence a global
+              
+                          a(j−2) ei(j−2)t
+                                  
+                                                                       maximum is positive and a global minimum is
+                                 
+                                 0
+                                                                       negative. We first compute g(π/2) and show that:
+                                  ..
+                                 
+       Zt X
+    D(e )ωk = 
+              
+                                   .
+                                  
+                                   .                       (69)         g(π/2) > 0 → g(π/(2j)) > g(π/2). This implies
+                                                                      that g(π/2) cannot be a global maximum, since
+                       0
+                                 
+                                                                        if it is positive there is a τ = π/(2j) such that
+                                 
+                         −i(j+2)t
+                                 
+               −a
+                  (j−2) e
+                                  
+                                                                      g(τ ) > g(π/2). Similarly we show that g(π/2) <
+                       0
+                                 
+                                                                      0 → g(π/(2j)) < g(π/2) which entails that when
+                               −aj e−ijt                                g(π/2) is negative it cannot be a global minimum.
+                                                                        Hence the global extrema of g(t) do not occur for
+  We can also determine (ωkX )† D(Z)† :                                 t = π/2 when j > 1.
+(ωkX )† D(Z)† =                                                                                  j
+                                                                                                 X              l−1
+(ja∗j , 0, (j − 2)a∗j−2 , 0, ...., 0, (j − 2)a∗j−2 , 0, ja∗j ) .                g(π/2) =                   (−1) 2 l |al |2 .   (72)
+                                                                                               l=1,l odd
+                                                           (70)
+                                                                        We note that:
+We can now compute g(t):
+                                                                           l|al |2 > (l − 2)|al−2 |2 ,       l odd, l > 1 .    (73)
+      g(t) = (ωkX )† D(Z)† · D(UZ (t))ωkX
+                     j
+                     X                                     (71)         Since each term in g(π/2) alternates sign and the
+            =2                 l |al |2 sin(kt) .                       absolute value of each term increases for each
+                  l=1, l odd                                            l the sign of g(π/2) is determined by that of
+                                                                                                 j−1
+|an | > |am | for n > m hence |an |2 > |am |2 for                       its highest term (−1) 2 l |aj |2 . This implies
+n > m. We restrict ourselves to the interval                            g(π/2) > 0 for j = 5, 9, 13, .... We consider
+[0, 2π). We have been considering non-quantum                           these cases. The last term (which is the largest)
+                                                                             j−1
+theories with j > 1, however we briefly describe                        (−1) 2 j |aj |2 is always positive. We observe that
+what this effect would correspond to for the quan-                      the sum of the remaining terms is negative. This
+tum case. When j = 1 (i.e k = 2) there is a sin-                        implies:
+gle maximum occurring for tm = π/2. Hence the                                          g(π/2) − j|aj |2 < 0 ,          (74)
+global minimum occurs for t = 3π/2. The two                             We now determine
+states distinguished by this effect are antipodal
+                                                                                                 j
+and correspond to the D(X) eigenstates. Indeed                                       π       X                    kπ
+                                                                                g(      )=           l |al |2 sin( ) .         (75)
+we observe that this effect is just given by the                                     2j                           2j
+                                                                                           l=1,l odd
+tangent to ω2Z (image of the ray |0i) in the D(X)
+direction which is proportional to ω2X . We know                        The arguments in each of the sin functions in
+                                                                           π
+that this effect gives the outcome probability of                       g( 2j ) are always between 0 and π2 , hence each
+being in the ω2X state (image of the |+i ray) which                     term is positive. Therefore:
+is maximal for ω2X and minimal for −ω2X (image                                                π
+of the |−i ray).                                                                         g(      ) − j|al |2 > 0 .             (76)
+                                                                                              2j
+   We now show that g(t) has two global maxima
+and two global minima for j > 1. g(t) = g(π − t),                       Combining equations 74 and 76 we obtain
+                                                                           π
+therefore given a maximum/minimum we can find                           g( 2j ) > g( π2 ) when g( π2 ) > 0 . This shows that
+another (unless tm = π/2). Moreover since g(t) =                        the maximum of the function does not occur for
+−g(t + π) given a maximum/minimum we can                                t = π/2. The function therefore has at least two
+find a minimum/maximum. To prove our claim                              maxima in the interval [0, π].
+we need to find a global maximum/minimum in                                For j = 3, 7, 11, ... the same argument can be
+the interval [0, π). If this extremum occurs for a                      applied to show that the function has two minima
+value which is not π/2 then we can find the other                       within the interval [0, π] and hence two maxima
+maximum/minimum in the same interval and the                            within [π, 2π].
+
+                                                                   17
+  This entails that there exists a global maximum             transformations which map Ωφ to itself. These
+which is separated from a global minimum by a                 correspond to the U(1) subgroup UZ (t) (or a dis-
+value which is not π. Hence there exist states                crete subgroup of this subgroup). These transfor-
+which are distinguishable but are not antipodal.              mations do not map Ωφ to itself (nor to −Ωψ ) and
+                                                              hence do not preserve the outcome probabilities
+A.6 Bit symmetry (Result 7)                                   of the effect. The only other possible transforma-
+                                                              tions which preserve the outcome probabilities for
+In theories belonging to T2I images of the orthog-            these 4 states are of the form:
+onal rays ψ0 and ψ1 are antipodal states Ωψ0
+and Ωψ1 with Ωψ0 = −Ωψ1 . These states can                                       U ψ = φ⊥ ,
+be perfectly distinguished using the measurement
+                                                                                  U φ = ψ⊥ .
+(e, 12 ), (−eT , 12 ) where e = ΩTψ0 /2. From Result 6
+there exists a state Ωψ2 which is distinguishable             In order for a phase group to exist U † must also
+from Ωψ0 and not antipodal to it. Due to the                  preserve the outcome probabilities:
+faithfulness of Ω for j odd we have ψ2 6= ψ1 . Since
+ψ1 is the unique ray orthogonal to ψ0 in PC2 ψ2 is                               U † ψ = φ⊥ ,
+not orthogonal to ψ0 . There is no unitary which
+                                                                                 U †φ = ψ⊥ ,
+maps the pair of orthogonal rays (ψ0 , ψ1 ) to the
+pair of non-orthogonal rays (ψ0 , ψ2 ). Hence there           entailing that U † = U . The only U ∈ PU(2)
+exist pairs of distinguishable states which are not           which has this property is the identity. Therefore
+related by a reversible transformation belonging              the only phase group of this maximal measure-
+to the dynamical group.                                       ment is the trivial one.
+
+A.7 Phase groups in T2I (Result 8)                            A.8 No-simultaneous encoding (Result 9)
+We show that the maximal measurement (from                    All theories in T2I have pairs of non-antipodal
+the proof of Result 6) which distinguishes two                states ω0 and ω1 which are perfectly distinguish-
+non-antipodal states Ωψ and Ωφ in theories T2I                able. The measurement which distinguishes them
+cannot have a phase group. Without loss of gen-               perfectly, also distinguishes −ω0 and −ω1 .
+erality we choose ψ to be invariant under trans-
+formations UZ (t). The phase group of a measure-                              Ei (ωj ) = δij ,              (77)
+ment is a subgroup of the transformation group                              Ei (−ωj ) = −δij + 1 .          (78)
+which leaves all outcome probabilities of the mea-
+surement unchanged. This measurement has ex-                  A first bit a can be perfectly encoded as follows:
+actly two maxima and two minima on the state
+space (as shown in the proof of Result 6). We call                          a = 0 → ω0 or − ω1 ,
+E one of the effects which compose this measure-                            a = 1 → ω1 or − ω0 .
+ment:
+                                                              The second bit a0 can be encoded as:
+             E(Ωψ ) = E(−Ωφ ) = 1 ,
+              E(Ωφ ) = E(−Ωψ ) = 0 .                                        a0 = 0 → ω0 or ω1 ,
+                                                                          a0 = 1 → −ω1 or − ω0 .
+The states Ωψ and Ωφ are the images of non-
+orthogonal rays on C2 . We now show that there                For example if Alice needed to encode the bits
+is no subgroup of the transformation group which              a = 0 , a0 = 0 she would choose the state ω0 . Ac-
+leaves the outcome probabilities of the 4 states              cording to the scenario Alice encodes her bits a
+Ωψ , Ωφ , −Ωψ and −Ωφ invariant (which are the                and a0 in a single system and sends it to Bob. He
+images of ψ, φ , ψ ⊥ and φ⊥ ). This is sufficient             then tries to guess one of the bits. If he chooses
+that there is no phase group for this measure-                to guess the value of bit a he can do so with
+ment. Such a phase group must either preserve                 certainty (using the measurement which perfectly
+the states, or map them to states which give the              distinguishes ω0 and −ω1 from −ω0 and ω1 ). If
+same outcome probabilities. For example it must               Bob chooses to guess the value of bit a0 he can use
+either preserve ψ or map it to φ⊥ . First consider            another effect to obtain partial information about
+
+                                                         18
+whether the state is ω0 or ω1 or whether the state          entire state space S has pairs of distinguishable
+is −ω1 or − ω0 . This could be any effect which             states which are images of orthogonal rays and
+partially distinguishes ω0 +ω
+                           2
+                             1
+                               from − ω0 +ω
+                                         2 . Since
+                                           1
+                                                            pairs which are not images of orthogonal rays.
+neither of these is the maximally mixed state such             If the generators contain a single faithful block
+an effect exists.                                           j = 1 (with all others unfaithful) then a mea-
+                                                            surement on that block can distinguish a pair
+A.9 Pure-state dual theories (Result 10)                    of states (which are images of orthogonal rays).
+                                                            The unfaithful blocks have pairs of distinguish-
+A two outcome measurement is a pair of effects              able states which are not images of orthogonal
+E1 = (e, c) and E2 = (−e, 1 − c). In theories               rays. This follows from the fact that orthogonal
+with irreducible Γ (for d = 2) for each pure state          rays are mapped to the same state in unfaithful
+Ωψ ∈ S (where S is the state space) the state               representations and that the unfaithful block are
+−Ωψ also exists. For a pure state dual theory we            also state spaces when considered alone. Since
+impose that effects are proportional to states and          all state spaces have at least two distinguish-
+tight. Hence the effects are given by:                      able states it follows that pairs of states which
+                   ΩTψ                                      are not images of orthogonal rays can be distin-
+              {e =     |ψ ∈ PC2 } .            (79)         guished using effects with support in the unfaith-
+                    2
+                                                            ful blocks.
+The set of effects is such that for every e the lin-           Therefore all theories in T2R have pairs of dis-
+ear functional −e also exists. Two outcome mea-             tinguishable states which are images of orthogo-
+surements are of the form M = {(e, 12 ), (−e, 12 )}.        nal rays and pairs which are not; these theories
+The linear functional e has a single maximum                violate bit symmetry.
+for state ΩTψ and a single minimum for −ΩTψ .
+Hence the only states which are distinguishable
+                                                            A.11 Proof of Result 12
+are antipodal. This entails that the state spaces
+are bit symmetric. The fact that for all effects            In order to show that all unrestricted state spaces
+there is a single maximum/minimum entails that              are not bit symmetric we first need to establish
+no-simultaneous encoding holds. Given a func-               how a PCd−1 state space is embedded in a PCd
+tional e there is a U(1) subgroup which leaves Ωψ           state space. In the following we assume that all
+and hence e invariant. Hence every measurement              state spaces are unrestricted.
+M = {(e, 12 ), (−e, 21 )} has a U(1) phase group.
+                                                            Lemma 3. Given a theory of PCd correspond-
+A.10 Bit symmetry in T2R (Result 11)                        ing to maps Ω and Γ, where the highest weight
+                                                            representation in Γ is Djd , the image of a PCd−1
+Consider a theory in T2R ; its state space S is a
+                                                            subspace of PCd under Ω is equivalent to a state
+direct sum of state spaces of theories in T2I :
+                                                            space of a PU(d − 1) theory with representation
+                   S=
+                        M
+                              Sj .             (80)         Γ0 , whose highest weight component is Djd−1 .
+                        j∈J
+                                                               This lemma is proven in appendix A.14. It fol-
+Moreover S has at least one faithful block in the           lows from the lemma that any non-quantum PC3
+decomposition. In the case where this block is              (i.e. which has a block Dj3 with j > 1) state space
+non-quantum we denote it by k (k > 1, k odd).               when restricted to a PC2 subspace is equivalent to
+We assume all effects are allowed. Now consider             a non-quantum state space with a representation
+effects with support solely on subspace k. The              which has a block Dj2 (if j is even it must also be
+state space restricted to this subspace is just a           the case that the representation has a block with j
+state space corresponding to a theory with j = k            odd since the representation of states is faithful).
+( and hence in T2I ). There exists a measurement            Hence the restricted state space belong to T2R . By
+(with support just in this subspace) which can              Result 11 this PC2 state space is not bit symmet-
+distinguish pairs of non-antipodal states (by Re-           ric, that is to say it has pairs of distinguishable
+sult 6). Moreover there also exists a measure-              states which have different (Hilbert space) inner
+ment (with support only in this subspace) which             products. Moreover the PC3 state space is not
+distinguishes pairs of antipodal states. Hence the          bit symmetric since there are no transformations
+
+                                                       19
+in PU(3) mapping pairs of states with different              their partition (even if the map from partitions to
+Hilbert space inner products.                                representations of SU(d) is many to one). Since
+   Any non-quantum PCd state space (i.e. which               partitions differing by a constant give the same
+has a block Djd with j > 1) has a PCd−1 subspace             representation we fix λd = 0. This requirement
+which is equivalent to a state space associated              fixes a representation of SU(d) for each λ.
+to a reducible representation which has a block
+Djd−1 . If the PCd−1 subspace is not bit symmet-             A.12.2   U(1) × SU(d − 1) invariant subspaces
+ric (i.e. the Hilbert space inner product between
+two pairs of distinguishable state is not the same)          For a representation λ of SU(d) acting on V to
+then the PCd state space is not bit symmetric                have an U(1)×SU(d−1)-invariant vector v means
+either (since even considering the whole PU(d)               the following. If we take the representation of a
+transformation group its elements will still only            U(1) × SU(d − 1) subgroup (which is reducible)
+map between pairs of states with the same inner              and consider its action on v, it leaves v invariant.
+product).                                                    The reducible representation of U(1) × SU(d − 1)
+   Hence by induction any non-quantum PCd                    is composed of irreducible blocks. If we decom-
+(d ≥ 2) unrestricted state space is not bit sym-             pose v according to these blocks, we see that
+metric.                                                      the components of v in these subspaces (for non-
+                                                             trivial representations of U(1) × SU(d − 1)) will
+                                                             not be left invariant by all of the transformations
+A.12 Proof of Lemma 1                                        U(1)×SU(d−1) (since each block is irreducible, so
+A.12.1   Partitions, U(d) and SU(d)                          cannot have invariant subspaces within it). How-
+                                                             ever if one of the blocks corresponds to a trivial
+A partition λ is a set of d integers such that λ1 ≥          representation of U(1) × SU(d − 1) then it will
+λ2 ≥ ... ≥ λd−1 ≥ λd ≥ 0. We define the size                 leave that component of v invariant. Thus we
+of the partition |λ| = ni=1 λi = k and say that
+                          P
+                                                             can choose v to have support just in those sub-
+λ is a partition of k into d parts. We use square            spaces which correspond to trivial representations
+brackets to denote λ = [λ1 , ..., λd ].                      in the decomposition of λ when restricting to a
+   Each partition λ is associated to an irreducible          U(1) × SU(d − 1) subgroup.
+representation πdλ of U(d) [32]. Moreover any ir-               We now find the representations λ such that
+reducible representation πdλ of U(d) is also an irre-        there exists at least one trivial representation of
+ducible representation of SU(d) [32] . By this we            U(1)×SU(d−1) when λ is restricted to this U(1)×
+mean that if we consider a subgroup πdλ (U ), U ∈            SU(d − 1) subgroup.
+SU(d) this representation is not reducible. Two
+irreducible representations λ(1) and λ(2) of U(d),           A.12.3   Branching rule for U(d) → U(d − 1)
+when restricted to SU(d), are equivalent repre-
+                                        (1)    (2)           Restricting representations of groups to sub-
+sentations of SU(d) if and only if λi − λi is
+constant for all i [32].                                     groups leads to a reducible representation of the
+   A representation of SU(d) corresponding to a              subgroup given by a branching rule. We intro-
+partition λ and a representation of SU(d) corre-             duce the necessary tools.
+sponding to λ + c are therefore equivalent. Hence              We consider a partition λ = [λ1 , ..., λn ]. A
+an irreducible representation of SU(d) is charac-            partition µ = [µ1 , ..., µn−1 ] is said to interlace λ
+terised by the differences between elements of a             when:
+partition λ. We can map λ to (λ1 − λ2 , λ2 −
+                                                                  λ1 ≥ µ1 ≥ ... ≥ λn−1 ≥ µn−1 ≥ λn            (81)
+λ3 , ..., λd−1 − λd ) which is a vector of positive
+integers of size d − 1 which is the same for λ
+                                                             The branching rule from U(d) to U(d − 1) is as
+and λ + c for all c . This vector (λ1 − λ2 , λ2 −
+                                                             follows. Let U(d) have irreducible representation
+λ3 , ..., λd−1 − λd ) is the previously introduced
+                                                             πdλ acting on a space Vλ . Then there is a unique
+Dynkin index (which is in one-to-one correspon-
+                                                             decomposition of Vλ into subspaces under the ac-
+dence with irreducible representations of SU(d)).
+                                                             tion of U(d − 1) [33, p.19]:
+We use square brackets to differentiate a partition
+from a Dynkin index. In the following it will be
+                                                                                       M
+                                                                                Vλ =        Vµ ,              (82)
+useful to describe representations of SU(d) using                                       µ
+
+
+                                                        20
+where the sum is over every µ which interlaces λ                      in proof of theorem 8.1.2 of [34, p.364]. We con-
+and Vµ is a carrier space for an irreducible repre-                   sider a matrix A ∈ U(d):
+sentation of U(d − 1) labelled by µ.
+                                                                                           eit
+                                                                                                                            
+
+         Branching rule for SU(d) → SU(d − 1) ×                                                    eit
+                                                                                                                            
+A.12.4                                                                                                                      
+                                                                                A=                           ..
+                                                                                                                              ,       (86)
+U(1)                                                                              
+                                                                                                                  .
+                                                                                                                             
+                                                                                                                             
+The restriction of πdλ (a representation of U(d))                                                                      eit
+to an SU(d) subgroup is an irreducible represen-
+tation of SU(d) with partition λ (which for SU(d)                     And a matrix B ∈ U(d − 1):
+is defined up to a constant). This representation                                                                               
+                                                                                   1
+acts irreducibly on Vλ . The subgroup U(d − 1) is                                              d
+                                                                                       e−i d−1 t
+                                                                                                                                
+given by:
+                                                                                                                                
+                                                                          B=                                                     .   (87)
+                                                                                                                                
+                                                                                                     ..
+                                                                                                       .                      
+     1   0       ···   0
+                                                                                                                                
+                                                                                                                         d
+ 
+  0
+                                                                                                                  e−i d−1 t
+                     , U(d−1) U(d−1) = 1 . (83)
+                    
+                              †
+  .
+  .. U                                                              We note that AB = C for the above defined U(1)
+       (d−1)×(d−1) 
+     0                                                                subgroup. We determine the action of A and B
+                                                                      on Vλ which will allow us to know that of C. The
+It’s action on Vλ decomposes as a direct sum of                       action of A on the whole carrier space Vλ is mul-
+Vµ . We wish to consider the action of SU(d − 1)                      tiplication by a scalar eit|λ| . Similarly the action
+on Vλ . This subgroup is given by:                                    of B (which belongs to the U(d−1) subgroup and
+                                                                    commutes with all elements of U(d − 1)) on each
+                                                                                                                  d
+   1 0 ··· 0                                                          subspace Vµ is multiplication by e−i d−1 t|µ| [34,
+                   
+  0                                                                 theorem 8.1.2. (proof) , p.364]. Hence we can
+                     , U(d−1)×(d−1) ∈ SU(d−1) .
+                   
+  .
+  .. U                                                              compute the action of the U(1) subgroup on each
+       (d−1)×(d−1) 
+   0                                                                  subspace which is multiplication by :
+                                             (84)                                          d                             d
+                                                                               eit|λ| e−i d−1 t|µ| = eit(|λ|− d−1 |µ|) ,               (88)
+U(d − 1) acts on each Vµ irreducibly and restrict-
+ing an irreducible representation of U(d − 1) to                      Hence the action of this U(1) subgroup on the
+SU(d−1) gives an irreducible representation with                      carrier space Vλ acts by scalar multiplication on
+the same partition. Hence the SU(d − 1) acts ir-                      each Vµ (where the scalar can be the same for dif-
+reducibly on each Vµ in the decomposition. The                        ferent µ). We can now summarise: given a rep-
+branching rule SU(d) → SU(d − 1) is the same as                       resentation πdλ of SU(d) acting on Vλ there exists
+U(d) → U(d − 1) [32].                                                 a decomposition (into invariant subspaces) under
+   We now establish the branching U(d) →                              the action of SU(d − 1) × U(1) given by:
+SU(d − 1) × U(1) subgroup. The U(1) part cor-
+                                                                                                    M
+responds to all matrices C of the following form:                                          Vλ =               Vµ ,                     (89)
+                                                                                                   µ
+                 eit
+                           −i                                         where the sum is over every µ which intertwines
+                       e d−1 t
+                                                   
+                                                   
+     C=
+       
+                                 ..                  .
+                                                    
+                                                          (85)        λ. The µ determine irreducible representations
+       
+                                     .             
+                                                                     of SU(d − 1) acting on each subspace. The U(1)
+                                            −i                                                  d
+                                          e d−1 t                     parts acts like eit(|λ|− d−1 |µ|) on each subspace.
+
+We note that this U(1) subgroup commutes with
+                                                                      A.12.5 Representation of SU(d) with trivial rep-
+the SU(d − 1) subgroup hence its action will leave
+                                                                      resentations under the action of SU(d − 1) × U(1)
+the subspaces Vµ invariant. Therefore the space
+Vλ decomposes into Vµ invariant subspaces under                       We can now address the problem of finding which
+the action of SU(d − 1) × U(1). We now establish                      representations of SU(d) are such that their re-
+the action of the U(1) subgroup on these sub-                         striction to SU(d − 1) × U(1) contains a trivial
+spaces. We use a similar technique as that found                      representation of SU(d − 1) × U(1).
+
+                                                                 21
+   A trivial representation of SU(d − 1) has                    SU(d) × U(1) (moreover this vector is unique up
+Dynkin coefficients (0, ...0) and hence partition               to normalisation).
+µ = [µ1 , ...µd−1 ] where µ1 = µ2 = ... = µd−1 .
+Hence representations of SU(d) which contain                    A.12.6 A comment on real and complex irre-
+trivial representations of SU(d−1) in this decom-               ducibility
+position will have partitions λ where λ2 = λ3 =
+... = λn−1 = µ1 , following the requirement that                In this work we are interested in classifying
+µ intertwine λ.                                                 certain representations of the dynamical group
+   We now consider the requirement that the U(1)                SU(d). These representations act on state spaces
+action is trivial. Since the action of U(1) on Vµ               which span real vector spaces.
+                      d                                            All the representation theory results used
+is given by eit(|λ|− d−1 |µ|) , it is trivial when |λ| −        above concern representations acting on complex
+  d
+d−1 |µ| = 0. We note that some authors multiply                 vectors spaces. A representation which acts on a
+the U(1) charge by a constant so that it is an                  complex vector space is real if it can be expressed
+integer value. Since we are considering only 0                  in a basis where all the matrix elements are real.
+U(1) charge this will not concern us.                           This is the case of the irreducible representa-
+   We can now add this requirement on λ to the                  tions Djd . These representations are irreducible
+preceding one: λ2 = λ3 = ... = λd−1 = µ1 . As                   when acting on both complex and real vector
+stated above we are considering λd = 0 in order                 spaces. However not all real irreducible represen-
+to identify one representation of SU(d − 1) with                tations correspond to complex irreducible repre-
+each partition λ. We have                                       sentations. There are reducible representations
+                  |µ| = (d − 1)µ1 ,                (90)         acting on a complex vector space whose action is
+                                                                irreducible when acting on a real vector space.
+and                                                             We have found all real irreducible representa-
+               |λ| = λ1 + (d − 2)µ1 ,              (91)         tions which are also complex irreducible which
+                                                                meet our criteria. However it may be the case
+We substitute this into the requirement |λ| −
+ d                                                              that there are representations which are real ir-
+d−1 |µ| = 0:
+                                                                reducible but complex reducible which meet our
+            λ1 + (d − 2)µ1 − dµ1 = 0                            criteria. If this is the case our approach would
+                                                   (92)         not have found them. We now show that there
+                                 λ1 = 2µ1
+                                                                are no such representations satisfying the invari-
+Hence the representation πnλ of SU(d) with par-                 ance properties we require.
+tition [2µ1 , µ1 , ..., µ1 , 0] which corresponds to               A real representation Γ which is irreducible on
+Dynkin label (µ1 , 0, ..., 0, µ1 ) meets the require-           a real vector space but reducible on a complex one
+ments. This shows that any representation of                    can be block diagonalised in the following form
+SU(d) with Dynkin label (j, 0, ..., 0, j) (for any              Γ = ρ ⊕ ρ̄ [22, Exercise 3.39, p. 41]. For example
+positive integer j) has a trivial subspace under                consider the following representation of SO(2) ∼ =
+the action of SU(d) × U(1). We now show that                    U(1):                              !
+these representations have a single trivial repre-                                cos(θ) sin(θ)
+                                                                                                      .        (93)
+sentation in the decomposition. These are repre-                                 −sin(θ) cos(θ)
+sentations with partition λ = [2j, j, ..., j, 0]. Un-
+                                                                This is irreducible when acting on R2 . However
+der the branching rule into SU(d−1)×U(1) trivial
+                                                                its action on C2 can be diagonalised as follows:
+representations correspond to partitions µ have
+                                                                                               !
+components µi which are all equal (in order for                                     eiθ  0
+the SU(d − 1) component to be trivial) and these                                         −iθ
+                                                                                                   .          (94)
+                                                                                     0 e
+must be equal to j. There is a single such µ of
+this form. This shows that there is a unique triv-              Hence there may be representations which are
+ial representation in the decomposition.                        real irreducible which have SU(d − 1) × U(1) in-
+   The representations of SU(d) of the form                     variant vectors but are complex reducible. All
+(j, 0, ..., 0, j) correspond to the representations             real irreducible representations are either: com-
+Djd . These are the only representations of SU(d)               plex irreducible or complex reducible of the form
+(and PU(d)) which leave a vector invariant under                ρ + ρ̄.
+
+                                                           22
+   Let us consider a real irreducible representa-           As can be seen by the generators ψ is the unique
+tion Γ which is complex reducible. There exists             ray stabilized by this subgroup. Hence distinct
+a transformation L such that Γ = L(ρ ⊕ ρ̄)L−1 .             rays ψ and ψ 0 have distinct stabilizer groups
+We now ask the same question: does there exist              (which are equivalent up to conjugation). This
+a vector which is invariant under the subgroup              is not the case for SU(2) for example; the U(1)
+H = SU(d − 1) × U(1). Let us call this vector v.            stabilizer of |0i also stabilizes |1i.
+We have:                                                       The two subgroups Gψ and Gψ0 (which stabi-
+                   Γ|H v = v .               (95)           lizes ψ 0 ) are maximal subgroups of SU(d) [35]. A
+                                                            maximal subgroup H of G is a proper subgroup
+We observe that if such a vector exists then
+                                                            (i.e. H 6= G) such that if H ≤ K ≤ G then
+the (complex) vector L−1 v is invariant under
+                                                            H = K or K = G. The group H generated by
+L−1 Γ|H L = ρ|H ⊕ ρ̄|H . Moreover if there exists a
+                                                            these two groups Gψ and Gψ0 is not equal to ei-
+vector w which is left invariant by ρ|H ⊕ ρ̄|H then
+                                                            ther Gψ and Gψ0 . Hence it is equal to the full
+the vector Lw is left invariant under Γ|H . Hence
+                                                            group SU(d).
+if we show that there are no vectors left invari-
+ant under ρ|H ⊕ ρ̄|H then there are no vectors left
+invariant under Γ|H .                                       A.14 Proof of Lemma 3
+   There exists a vector w invariant under ρ|H ⊕            A.14.1    Embeddedness of simple theories
+ρ̄|H if and only if this representation (obtained by
+restricting ρ ⊕ ρ̄) has at least one trivial compo-         In this section we look at theories which do not
+nent. This is only possible if at least one of the          obey the constraint given by (9) and study how
+representations ρ|H or ρ̄|H has one or more trivial         PCd−1 subspaces are embedded in PCd state
+components.                                                 space. We consider a PCd state space, which can
+   Here ρ and ρ̄ are complex irreducible repre-             be generated by applying all transformations ΓU
+sentations of SU(d). The only such representa-              to a reference state Ω0 = |0ih0|⊗N :
+tions with a SU(d − 1) × U(1) invariant vector
+                                                                  ΓU Ω0 = U ⊗N |0ih0|⊗N U †⊗N
+are of the form Djd which is real (and we observe                                                                  (98)
+Djd = D̄jd ). Hence there are no representations                          = SymN U |0ih0|⊗N SymN U † ,
+which are complex reducible but real irreducible
+which have these invariant vectors.                         The action of the product SymN U ⊗ SymN U †
+                                                            can be decomposed (using known rules for Young
+                                                            tableaux) as:
+A.13 Proof of Lemma 2
+We consider two SU(d − 1) × U(1) stabilizer sub-            (N, 0, ..., 0) ⊗ (0, ..., 0, N )
+groups of two distinct rays on PCd (d ≥ 3). Con-            = (0, ..., 0) ⊕ (1, 0, ..., 0, 1) ⊕ ... ⊕ (N, 0, ..., 0, N ) .
+sider a ray ψ with stabilizer group Gψ .The Lie al-                                                                 (99)
+gebra gψ which generates this group has elements
+Xψ (corresponding to U(1))                                  In our previous notation this is just:
+                                                                                       N
+                     i 0 ··· 0                                                    ΓU =
+                                                                                         M
+                                                                                                Did .             (100)
+                                
+                    0                                                                   i=0
+              Xψ =  .           ,            (96)
+                                
+                    .. − i I
+                                                            The state space is given by Hermitian matri-
+                                 
+                        d−1 d−1 
+                     0                                      ces acting on the symmetric subspace of (Cd )⊗n .
+                                                            However it is not immediately clear that every
+and elements Yψ (corresponding to the SU(d − 1)
+                                                            summand in (100) acts on the space of Hermitian
+group)
+                                                            matrices (which is the state space). For example
+                                                            when we generate the state space by acting with
+                          
+       0 0       ···   0
+     
+      0
+                           
+                                                           a reducible representation on a reference state, if
+Yψ =  .                    , A = −A† , Tr(A) = 0 .        the reference state does not have support in ev-
+                          
+      ..         A                                         ery block of the representation then there are cer-
+                           
+                          
+          0                                                 tain components of the representation which are
+                                               (97)         superfluous (since they do not act on the state
+
+                                                       23
+space). The dimension of the space of Hermitian                   this U(1) action) which we call the α = 0 sub-
+matrices is:                                                      space. Moreover the image of |0i is uniquely de-
+                                          !2                      termined as the trivial subspace D0d−1 (which is
+                             d+n−1                                invariant under the whole subgroup). However
+               Dω =                                  (101)
+                               n                                  we do not know if the image of the PCd−1 sub-
+                                                                  space spans the whole α = 0 subspace. We show
+Using the dimension formula for the representa-
+                                                                  that it must have support in the subspace Djd−1
+tions Djd given by (16) and requiring that the rep-
+                                                                  (which is part of the α = 0 subspace).
+resentation of the transformations acts on a space
+                                                                    We first consider a reducible theory described
+of dimension Dω we see that every summand in
+                                                                  with representation:
+(100) acts on the state space. Hence we see that
+these theories are equivalent to reducible theo-                                               j
+                                                                                               M
+ries of PCd with J = {1, 2, ..., N }. We consider                                    Γ=              Did .      (106)
+                                                                                               i=0
+a PCd−1 subspace of the Hilbert space and see
+which subspace of the state space it corresponds                  This corresponds to a reducible theory as char-
+to. It can be generated from the state |1ih1|⊗N                   acterised above. We call its state space S. Con-
+by applying an SU(d − 1) subgroup:                                sidering a PCd−1 subspace gives a state space S 0
+                                                                  with representation:
+               U ⊗N |1ih1|⊗N U †⊗N ,                 (102)
+                                                                                           j
+                                                                                     0
+                                                                                                 Did−1 .
+                                                                                           M
+With:                                                                              Γ =                          (107)
+                                                
+                                                                                           i=0
+                         1     0    ···      0
+                                                                  We observe that the state space with representa-
+                                 
+                0                
+            U = .                                   (103)
+                                 
+                .. U
+                                  
+                                                                 tion Γ is equivalent to a direct sum of state spaces
+                     (d−1)×(d−1)                                with representation Dkd for k = 1, ..., j. We label
+                         0                                        these state spaces Sk . We write:
+We notice that this state space is just a PCd−1                                                j
+                                                                                               M
+state space of the type described above with rep-                                    S=              Sk .       (108)
+resentation:                                                                                   k=0
+                             N
+                     0
+                                   Did−1 .                        Moreover reducing a state space Sk gives a PCd−1
+                             M
+                  Γ =                                (104)
+                             i=0                                  state space with a representation inside the direct
+                                                                  sum (i.e. which may or may not have support in
+A.14.2   Embeddedness of irreducible theories                     each representation):
+We consider a PCd theory with representation                                             k
+                                                                                               Did−1 .
+                                                                                         M
+Djd . We want to know the state space correspond-                                                               (109)
+                                                                                         i=0
+ing to a PCd−1 subspace. We consider a basis
+{|0i , |1i , ..., |d − 1i} and determine the image of             We have seen that the restriction of S gives a
+all states of the form α1 |1i + ... + αd−1 |d − 1i.               state space S 0 with support in block Djd−1 . More-
+These are all the states (apart from |0i) which are               over since S is a direct sum of state spaces Sk it
+invariant under the U(1) group of the SU(d−1)×                    must be the case that (at least) one of these Sk
+U(1) subgroup specified in the proof of Lemma 2.                  reduces to a state space with support in Djd−1 .
+From Lemma 4 (proven in appendix A.15) we                         The state space Sj is the only state space in the
+know that restricting the representation Djd to a                 direct sum in (108) which can have support in
+SU(d − 1) × U(1) subgroup gives a reducible rep-                  Djd−1 when restricted. That is to say the reduc-
+resentation of SU(d − 1) × U(1). Moreover the                     tion of Sj (with representation Djd ) gives a PCd−1
+U(1) action is trivial for the following blocks:                  state space with support in block Djd−1 .
+                         j
+                               Did−1 .
+                         M
+                                                     (105)        A.14.3   Embeddedness of arbitrary reducible theo-
+                         i=0                                      ries
+The image of α1 |1i + ... + αd−1 |d − 1i therefore                From the above considerations we see that an ir-
+lies in this subspace (since it is invariant under                reducible theory J = j of PCd when restricted to
+
+                                                             24
+a PCd−1 subspace must give a state space which                 and hence every µ which meets the above condi-
+has support in the subspace Djd−1 , and hence cor-             tion for having 0 U(1) charge is in the decompo-
+responds to a theory of PCd−1 which has a repre-               sition. Hence there are j + 1 subspaces Vµ where
+sentation which contains at least a block Djd−1 . A            the action of U(1) is trivial. If we express the rep-
+reducible theory of PCd J = j1 , ..., jn has a state           resentations acting on these in terms of Dynkin
+space S which is a direct sum of state spaces Sji .            notation we observe that µ = [2j−b, j, ..., j, 2j−b]
+The restriction of S to a PCd−1 subspace is equiv-             becomes (j − b, 0, 0..., j − b) for b = 0, ..., j. The
+alent to restricting each of the Sji state spaces.             terms in the direct sum are therefore just the rep-
+Hence the restriction of S to PCd−1 will have sup-             resentations Did−1 for i = 0, ..., j.
+port in at least subspaces Dkd−1 for k = j1 , ..., jn .
+   The Lemma follows directly from this.
+
+A.15 Proof of Lemma 4
+Lemma 4. Consider a representation Djd and its
+decomposition under a SU(d−1)×U(1) subgroup.
+The reducible representation of SU(d − 1) × U(1)
+has blocks with various U(1) charges. The sub-
+space with 0 U(1) charge is acted upon by the
+representation of SU(d − 1):
+                      j
+                      M
+                             i
+                            Dd−1 .               (110)
+                      i=0
+
+Similarly to Lemma 1 we label Djd with partition
+λ = [2j, j, j...., j, 0]. The restriction to a SU(d −
+1) × U(1) subgroup acts reducibly on the carrier
+space Vλ as:                M
+                       Vλ =     Vµ ,             (111)
+                             µ
+
+where the sum is over every µ which intertwines
+λ and Vµ is a carrier space for an irreducible rep-
+resentation of SU(d − 1) with partition µ . The
+µ which intertwine λ are of the form:
+
+ µ = [a, j, j, ..., b], 2j ≥ a ≥ j , j ≥ b ≥ 0 . (112)
+
+We have |λ| = dj and |µ| = (d − 3)j + a + b.
+From Lemma 1 we have the condition that the
+                              d
+U(1) charge is 0 when |λ| − d−1  |µ| = 0. We now
+substitute in the relevant expressions:
+
+              d
+      |λ| −      |µ| = 0
+            d−1
+             d
+      dj −      ((d − 3)j + a + b) = 0           (113)
+           d−1
+      (d − 1)j − (d − 3)j − a − b = 0
+      a = 2j − b .
+
+This entails that when b = 0, a = 2j, when
+b = 1, a = 2j − 1... and when b = j, a = j. Every
+possible µ (intertwining λ) is in the direct sum
+
+                                                          25
+
