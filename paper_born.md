@@ -396,7 +396,7 @@ The author used generative AI systems for conceptual exploration, drafting, stru
 
 [3] T. D. Galley and L. Masanes, "Classification of all alternatives to the Born rule in terms of informational properties," *Quantum* **1**, 15 (2017). arXiv:1610.04859. doi:10.22331/q-2017-07-14-15.
 
-[4] A. Lax, "Fixed-PVM Born Rule Uniqueness from Fisher Non-Expansion and Operational Calibration," arXiv:2604.27339 (2026, preprint).
+[4] A. Lax, "The Born Rule for Projective Measurements from Metric Non-Expansion and Calibration," arXiv:2604.27339 (2026, updated 2026-07-23).
 
 [5] A. Gleason, "Measures on the closed subspaces of a Hilbert space," *J. Math. Mech.* **6**, 885-893 (1957).
 
